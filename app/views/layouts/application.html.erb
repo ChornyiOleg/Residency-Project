@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CitizenshipProject</title>
+    <title>Residency</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,27 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  <div class="content">
+    <!--top-header-->
+    <%= render 'include/home/top_header' %>
+    <!--top-header-->
+
+    <!--notifications-->
+    <%= render 'include/home/notifications' %>
+    <!--notifications-->
+
+    <!--bottom-header-->
+    <%= render 'include/home/bottom_header' %>
+    <!--bottom-header-->
+
+    <div>
+      <%= yield %>
+    </div>
+
+    <!--footer-->
+    <%= render 'include/home/footer' %>
+    <!--footer-->
+
+  </div>
+   </body>
 </html>
