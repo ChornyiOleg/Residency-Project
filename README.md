@@ -3,9 +3,16 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+
+CITIZENSHIP and Residency project
+
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 3.0.3
+* Rails - 7.0.2.3
+* esbuild
+* Bootstrap 5
+
 
 * System dependencies
 
