@@ -8,24 +8,25 @@ CITIZENSHIP and Residency project
 
 Things you may want to cover:
 
-* Ruby version - 3.0.3
+* * Configuration
+* 
+  Ruby version - 3.0.3
 * Rails - 7.0.2.3
 * esbuild
 * Bootstrap 5
+* 
+* 
+* How to run
 
+rvm use ruby-3.0.3
 
-* System dependencies
+bundle install
 
-* Configuration
+Team:
 
-* Database creation
+PM: Anton Iukhymchuk
 
-* Database initialization
+RoR developers: Anton Shemiakin and Oleg Chornyi
 
-* How to run the test suite
+QA engineers: Mary Artemenko and Victoria Bondar
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
