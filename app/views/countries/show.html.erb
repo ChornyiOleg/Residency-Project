@@ -1,0 +1,20 @@
+<div>
+    <%= @country.name %>
+</div>
+
+<div class="container">
+  <div class="row row-cols-2">
+    <% @residences.each do |records| %>
+      <div class="col">
+        <dl>
+          <dt> <%= records.name %> </dt>
+          <dt> <%= records.cost %> </dt>
+        </dl>
+        <%= image_tag("#{records.image}") %>
+        <%= link_to 'Show', records, class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+  <%== pagy_nav(@pagy) %>
+  <%== pagy_info(@pagy) %>
+</div>
