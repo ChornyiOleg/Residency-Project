@@ -1,0 +1,36 @@
+<h1>Edit Post</h1>
+
+<% if @post.errors.any? %>
+  <h2>The following errors prevented the post from saving:</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |msg|%>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%#= render 'form' %>
+
+<%#= button_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
+
+<%= link_to 'Back', posts_path %>

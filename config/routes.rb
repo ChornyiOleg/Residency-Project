@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  get "home/index"
-  root to: "home#index"
+  resources :posts, path: 'blog'
+  get 'blog', to: 'home#blog'
+  get 'about', to: 'home#about'
+  get 'home/index'
+  root to: 'home#index'
 end

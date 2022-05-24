@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <%= link_to 'Home', root_path, class: 'nav-link active' %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -17,10 +17,9 @@
             Countries
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/countries/1">Portugal</a></li>
-            <li><a class="dropdown-item" href="/countries/2">Panama</a></li>
-            <li><a class="dropdown-item" href="/countries/3">Montenegro</a></li>
-            <li><a class="dropdown-item" href="/countries">All countries</a></li>
+            <li><a class="dropdown-item" href="#">Portugal</a></li>
+            <li><a class="dropdown-item" href="#">Panama</a></li>
+            <li><a class="dropdown-item" href="#">Montenegro</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
@@ -31,15 +30,15 @@
             Programs
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/programs/1">Citizenship</a></li>
-            <li><a class="dropdown-item" href="/programs/2">Residency</a></li>
+            <li><a class="dropdown-item" href="#">Citizenship</a></li>
+            <li><a class="dropdown-item" href="#">Residency</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <%= link_to 'About', about_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <%= link_to 'Blog', blog_path, class: 'nav-link' %>
         </li>
 
         <li class="nav-item dropdown">
@@ -82,8 +81,8 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" action="/search">
-        <input class="form-control me-2" name="q" type="text" placeholder="Search" aria-label="Search">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
