@@ -256,6 +256,7 @@ DEPENDENCIES
   devise
   jbuilder
   jsbundling-rails
+  nokogiri
   omniauth
   omniauth-facebook
   omniauth-github
