@@ -4598,3 +4598,795 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.5ms | Allocations: 4643)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:15:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220524124747_create_order.rb
+20220524130542_delete_key.rb
+
+
+):
+  
+activerecord (7.0.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4247334737822579865)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrder (20220524124747)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "info" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "orders" ADD "user_id" bigint[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "residences" ADD "order_id" bigint[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE INDEX "index_residences_on_order_id" ON "residences" ("order_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220524124747"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeleteKey (20220524130542)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "residences" DROP COLUMN "order_id"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "orders" ADD "residence_id" bigint[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE INDEX "index_orders_on_residence_id" ON "orders" ("residence_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220524130542"]]
+  [1m[36mTRANSACTION (26.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4247334737822579865)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:16:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 99.7ms | Allocations: 23382)
+  Rendered include/home/_top_header.html.erb (Duration: 2.1ms | Allocations: 877)
+  Rendered include/home/_notifications.html.erb (Duration: 1.3ms | Allocations: 249)
+  Rendered include/home/_bottom_header.html.erb (Duration: 1.0ms | Allocations: 128)
+  Rendered include/home/_footer.html.erb (Duration: 1.0ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 28134)
+Completed 200 OK in 133ms (Views: 120.6ms | ActiveRecord: 0.0ms | Allocations: 33876)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:16:11 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 3638)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-25 20:16:11 +0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.0ms | Allocations: 1538)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 123.3ms | Allocations: 24722)
+  Rendered include/home/_top_header.html.erb (Duration: 0.9ms | Allocations: 260)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 133.3ms | Allocations: 27800)
+Completed 200 OK in 168ms (Views: 136.5ms | ActiveRecord: 7.1ms | Allocations: 37306)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-05-25 20:16:15 +0300
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"scoop7@ukr.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "scoop7@ukr.net"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 2.7ms | Allocations: 4290)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"scoop7@ukr.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 384)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 9376)
+  Rendered include/home/_top_header.html.erb (Duration: 0.6ms | Allocations: 201)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 12306)
+Completed 200 OK in 354ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 14229)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-05-25 20:16:19 +0300
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"scoop7@ukr.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "scoop7@ukr.net"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 8ms (ActiveRecord: 1.9ms | Allocations: 1832)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"scoop7@ukr.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 372)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 9219)
+  Rendered include/home/_top_header.html.erb (Duration: 0.5ms | Allocations: 197)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 12018)
+Completed 200 OK in 327ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 12647)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-05-25 20:16:21 +0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 495)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 8449)
+  Rendered include/home/_top_header.html.erb (Duration: 1.2ms | Allocations: 260)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 11488)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 13262)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-05-25 20:16:39 +0300
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"scoop7@ukr.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scoop7@ukr.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("admin", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["admin", nil], ["created_at", "2022-05-25 17:16:40.019116"], ["updated_at", "2022-05-25 17:16:40.019116"], ["email", "scoop7@ukr.net"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", ""], ["uid", ""]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/programs/1
+Completed 302 Found in 347ms (ActiveRecord: 6.3ms | Allocations: 17570)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:16:40 +0300
+Processing by ProgramsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (1.1ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+Completed 404 Not Found in 48ms (ActiveRecord: 7.3ms | Allocations: 5196)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=1):
+  
+app/controllers/programs_controller.rb:10:in `show'
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-05-25 20:16:40 +0300
+Processing by Users::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms | Allocations: 1950)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:16:40 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 10.9ms | Allocations: 5493)
+  Rendered home/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 9400)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 238)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 12272)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.5ms | Allocations: 12629)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:16:44 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 3.8ms | Allocations: 3750)
+  Rendered home/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 7582)
+  Rendered include/home/_top_header.html.erb (Duration: 1.4ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 10304)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.6ms | Allocations: 10640)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:16:48 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+Completed 404 Not Found in 54ms (ActiveRecord: 1.3ms | Allocations: 2376)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=1):
+  
+app/controllers/programs_controller.rb:10:in `show'
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:16:58 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 5.2ms | Allocations: 3724)
+  Rendered home/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 7372)
+  Rendered include/home/_top_header.html.erb (Duration: 0.8ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 10134)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.6ms | Allocations: 10440)
+
+
+Started GET "/countries/1" for 127.0.0.1 at 2022-05-25 20:17:01 +0300
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Load (1.0ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:10:in `show'
+Completed 404 Not Found in 25ms (ActiveRecord: 6.9ms | Allocations: 5043)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Country with 'id'=1):
+  
+app/controllers/countries_controller.rb:10:in `show'
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:17:06 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 2.7ms | Allocations: 3787)
+  Rendered home/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 7596)
+  Rendered include/home/_top_header.html.erb (Duration: 0.5ms | Allocations: 213)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 10376)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.4ms | Allocations: 10713)
+
+
+Started GET "/blog" for 127.0.0.1 at 2022-05-25 20:17:09 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 5193)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 3.9ms | Allocations: 1121)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 9395)
+Completed 200 OK in 61ms (Views: 50.6ms | ActiveRecord: 5.4ms | Allocations: 11114)
+
+
+Started GET "/blog" for 127.0.0.1 at 2022-05-25 20:17:13 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1240)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 4.6ms | Allocations: 1016)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5119)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 3.9ms | Allocations: 5457)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-05-25 20:17:18 +0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 4.0ms | Allocations: 172)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 13.2ms | Allocations: 1026)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 4070)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.4ms | Allocations: 4379)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:17:44 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 4.6ms | Allocations: 3775)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 7432)
+  Rendered include/home/_top_header.html.erb (Duration: 0.9ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.3ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 10153)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.6ms | Allocations: 10461)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:17:46 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 3.7ms | Allocations: 3721)
+  Rendered home/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 7369)
+  Rendered include/home/_top_header.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 10090)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.4ms | Allocations: 10398)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-05-25 20:17:48 +0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 54)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 6.7ms | Allocations: 1026)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3934)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.4ms | Allocations: 4242)
+
+
+Started GET "/blog" for 127.0.0.1 at 2022-05-25 20:17:49 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1240)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 5.3ms | Allocations: 1016)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 1.9ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 5107)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 1.1ms | Allocations: 5428)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2022-05-25 20:17:53 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 1.0ms | Allocations: 2395)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=2):
+  
+app/controllers/programs_controller.rb:10:in `show'
+Started GET "/blog" for 127.0.0.1 at 2022-05-25 20:17:59 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1241)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 3.8ms | Allocations: 1016)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5162)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.9ms | Allocations: 5481)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:21:12 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.3ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+Completed 404 Not Found in 42ms (ActiveRecord: 11.7ms | Allocations: 11231)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=1):
+  
+app/controllers/programs_controller.rb:10:in `show'
+Started GET "/blog" for 127.0.0.1 at 2022-05-25 20:21:19 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2963)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 4.1ms | Allocations: 1139)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 7258)
+Completed 200 OK in 36ms (Views: 27.0ms | ActiveRecord: 4.8ms | Allocations: 8832)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-05-25 20:21:20 +0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 112)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 6.5ms | Allocations: 1217)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4439)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms | Allocations: 5298)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:21:21 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 8.1ms | Allocations: 4678)
+  Rendered home/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 8364)
+  Rendered include/home/_top_header.html.erb (Duration: 0.8ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 11112)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.5ms | Allocations: 11436)
+
+
+Started GET "/countries/1" for 127.0.0.1 at 2022-05-25 20:21:24 +0300
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:10:in `show'
+Completed 404 Not Found in 22ms (ActiveRecord: 7.5ms | Allocations: 5010)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Country with 'id'=1):
+  
+app/controllers/countries_controller.rb:10:in `show'
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:21:33 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 14.5ms | Allocations: 3786)
+  Rendered home/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 7612)
+  Rendered include/home/_top_header.html.erb (Duration: 0.6ms | Allocations: 213)
+  Rendered include/home/_notifications.html.erb (Duration: 0.5ms | Allocations: 34)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 10392)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.5ms | Allocations: 10730)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-05-25 20:21:33 +0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 54)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/include/home/_top_header.html.erb:51
+  Rendered include/home/_top_header.html.erb (Duration: 5.2ms | Allocations: 1027)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3947)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.4ms | Allocations: 4255)
+
+
+Started GET "/countries" for 127.0.0.1 at 2022-05-25 20:21:38 +0300
+Processing by CountriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:3
+  Rendered countries/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1061)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 286)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4173)
+Completed 200 OK in 29ms (Views: 15.9ms | ActiveRecord: 3.2ms | Allocations: 7160)
+
+
+Started GET "/countries/2" for 127.0.0.1 at 2022-05-25 20:21:45 +0300
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:10:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.8ms | Allocations: 2503)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Country with 'id'=2):
+  
+app/controllers/countries_controller.rb:10:in `show'
+Started POST "/__web_console/repl_sessions/66106f67fbb7c28cd32f160c5169d1b1/trace" for 127.0.0.1 at 2022-05-25 20:21:52 +0300
+Started GET "/countries" for 127.0.0.1 at 2022-05-25 20:23:08 +0300
+Processing by CountriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:3
+  Rendered countries/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 644)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 231)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3535)
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 1.5ms | Allocations: 5827)
+
+
+Started GET "/countries/1" for 127.0.0.1 at 2022-05-25 20:23:12 +0300
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Load (1.9ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:10:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 2.4ms | Allocations: 2412)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Country with 'id'=1):
+  
+app/controllers/countries_controller.rb:10:in `show'
+Started GET "/countries" for 127.0.0.1 at 2022-05-25 20:25:41 +0300
+Processing by CountriesController#index as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCountry Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:3
+  Rendered countries/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 644)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 231)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3535)
+Completed 200 OK in 28ms (Views: 11.4ms | ActiveRecord: 7.4ms | Allocations: 5843)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:25:45 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.5ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 1.0ms | Allocations: 2378)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Program with 'id'=1):
+  
+app/controllers/programs_controller.rb:10:in `show'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (2.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Portugal"], ["created_at", "2022-05-25 17:26:55.429673"], ["updated_at", "2022-05-25 17:26:55.429673"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (1.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Panama"], ["created_at", "2022-05-25 17:26:55.443582"], ["updated_at", "2022-05-25 17:26:55.443582"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Montenegro"], ["created_at", "2022-05-25 17:26:55.454234"], ["updated_at", "2022-05-25 17:26:55.454234"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Create (1.5ms)[0m  [1m[32mINSERT INTO "programs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Citizenship"], ["created_at", "2022-05-25 17:26:55.479349"], ["updated_at", "2022-05-25 17:26:55.479349"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProgram Create (0.7ms)[0m  [1m[32mINSERT INTO "programs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Residency"], ["created_at", "2022-05-25 17:26:55.490870"], ["updated_at", "2022-05-25 17:26:55.490870"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.6ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResidence Create (4.6ms)[0m  [1m[32mINSERT INTO "residences" ("name", "address", "image", "cost", "created_at", "updated_at", "country_id", "program_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Residency"], ["address", "asd"], ["image", "data:image/jpeg;base64,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"], ["cost", 150000.0], ["created_at", "2022-05-25 17:26:55.560287"], ["updated_at", "2022-05-25 17:26:55.560287"], ["country_id", 1], ["program_id", 1]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-05-25 20:27:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:89
+  Rendered orders/_form_for_home.html.erb (Duration: 10.6ms | Allocations: 7107)
+  Rendered home/index.html.erb within layouts/application (Duration: 140.1ms | Allocations: 40706)
+  Rendered include/home/_top_header.html.erb (Duration: 1.9ms | Allocations: 847)
+  Rendered include/home/_notifications.html.erb (Duration: 0.8ms | Allocations: 249)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.7ms | Allocations: 128)
+  Rendered include/home/_footer.html.erb (Duration: 0.6ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 153.6ms | Allocations: 45411)
+Completed 200 OK in 171ms (Views: 147.6ms | ActiveRecord: 11.3ms | Allocations: 51150)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:27:09 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+  [1m[36mResidence Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/controllers/programs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering programs/show.html.erb within layouts/application
+  [1m[36mResidence Load (0.7ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/views/programs/show.html.erb:7
+  Rendered programs/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 7523)
+  Rendered include/home/_top_header.html.erb (Duration: 0.6ms | Allocations: 244)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 10590)
+Completed 200 OK in 90ms (Views: 27.8ms | ActiveRecord: 15.8ms | Allocations: 31090)
+
+
+Started GET "/residences/1" for 127.0.0.1 at 2022-05-25 20:30:07 +0300
+Processing by ResidencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResidence Load (0.5ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/residences_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering residences/show.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 52.0ms | Allocations: 10419)
+  Rendered residences/show.html.erb within layouts/application (Duration: 54.9ms | Allocations: 11017)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 240)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 14066)
+Completed 200 OK in 88ms (Views: 60.6ms | ActiveRecord: 6.8ms | Allocations: 17857)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:30:47 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+  [1m[36mResidence Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/controllers/programs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering programs/show.html.erb within layouts/application
+  [1m[36mResidence Load (0.7ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/views/programs/show.html.erb:7
+  Rendered programs/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 843)
+  Rendered include/home/_top_header.html.erb (Duration: 0.6ms | Allocations: 217)
+  Rendered include/home/_notifications.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3684)
+Completed 200 OK in 40ms (Views: 18.4ms | ActiveRecord: 3.5ms | Allocations: 6885)
+
+
+Started GET "/programs/2" for 127.0.0.1 at 2022-05-25 20:30:49 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.4ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+  [1m[36mResidence Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 2]]
+  ↳ app/controllers/programs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering programs/show.html.erb within layouts/application
+  [1m[36mResidence Load (0.8ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 2]]
+  ↳ app/views/programs/show.html.erb:7
+  Rendered programs/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 700)
+  Rendered include/home/_top_header.html.erb (Duration: 0.7ms | Allocations: 231)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3550)
+Completed 200 OK in 35ms (Views: 19.7ms | ActiveRecord: 2.4ms | Allocations: 6499)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2022-05-25 20:30:54 +0300
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProgram Load (0.7ms)[0m  [1m[34mSELECT "programs".* FROM "programs" WHERE "programs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/programs_controller.rb:10:in `show'
+  [1m[36mResidence Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/controllers/programs_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering programs/show.html.erb within layouts/application
+  [1m[36mResidence Load (0.6ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."program_id" = $1[0m  [["program_id", 1]]
+  ↳ app/views/programs/show.html.erb:7
+  Rendered programs/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 814)
+  Rendered include/home/_top_header.html.erb (Duration: 0.9ms | Allocations: 217)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3650)
+Completed 200 OK in 36ms (Views: 15.9ms | ActiveRecord: 2.7ms | Allocations: 6572)
+
+
+Started GET "/residences/1" for 127.0.0.1 at 2022-05-25 20:30:55 +0300
+Processing by ResidencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResidence Load (0.7ms)[0m  [1m[34mSELECT "residences".* FROM "residences" WHERE "residences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/residences_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering residences/show.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 4.1ms | Allocations: 1174)
+  Rendered residences/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1332)
+  Rendered include/home/_top_header.html.erb (Duration: 1.1ms | Allocations: 208)
+  Rendered include/home/_notifications.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered include/home/_bottom_header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered include/home/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4168)
+Completed 200 OK in 33ms (Views: 20.4ms | ActiveRecord: 1.2ms | Allocations: 6413)
+
+
