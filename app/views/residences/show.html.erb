@@ -10,3 +10,9 @@
 <p>
   <%= @residence.cost %>
 </p>
+
+<div>
+  <% if user_signed_in? %>
+    <%= render 'orders/form' %>
+  <% end %>
+</div>

@@ -12,4 +12,11 @@ Rails.application.routes.draw do
   get 'about', to: 'home#about'
   get 'home/index'
   root to: 'home#index'
+  post 'home/index', to: 'orders#create'
+  get 'search', to: 'residences#search'
+  resources :residences do
+    resources :orders
+  end
+  resources :countries
+  resources :programs 
 end

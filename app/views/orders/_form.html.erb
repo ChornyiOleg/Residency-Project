@@ -1,0 +1,24 @@
+<div class="text-center">
+    <%= form_with model: [@residence, @residence.orders.build] do |f| %>
+  
+        <p>
+            <%= f.label 'Name' %>
+            <br>
+            <%= f.text_field :name, required: true %>
+        </p>
+        <p>
+            <%= f.label 'Phone' %>
+            <br>
+            <%= f.text_field :phone, required: true %>
+        </p>
+        <p>
+            <%= f.label 'how can we halp you' %>
+            <br>
+            <%= f.text_area :info, required: true %>
+        </p>
+        <p>
+            <%= f.submit 'Place an Order', class: 'btn btn-dark mb-5' %>
+        </p>
+
+    <% end %>
+</div>

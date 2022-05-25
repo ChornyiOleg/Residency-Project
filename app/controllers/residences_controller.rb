@@ -2,7 +2,7 @@ class ResidencesController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @residences = Residence.find(params[:id])
+    @residence = Residence.find(params[:id])
   end
 
   def search
