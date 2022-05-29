@@ -1,8 +1,38 @@
+<div class="container">
 
-<h1>Create an Post</h1>
-<%= form_for @post do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :content %>
-  </p>
-<% end %>
+  <%= form_with(model: post) do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <ul class="list-unstyled">
+          <% post.errors.each do |error| %>
+            <li class="alert alert-danger"><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <div class="field py-2">
+      <%= form.label :name, class: "pb-2" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="field py-2">
+
+      <%= form.label :content, class: "pb-2" %>
+      <%= form.text_area :content, class: "form-control", row: 40 %>
+
+
+    </div>
+
+    <div class="field py-2">
+      <%= form.label :image, class: "img-fluid" %>
+      <%= form.text_field :image, class: "form-control" %>
+      <%#= form.file_field :image, class: "form-control" %>
+    </div>
+
+    <div class="actions py-2 d-flex justify-content-center d-flex align-items-center">
+      <%= form.submit(class: "btn btn-success btn-lg") %>
+    </div>
+  <% end %>
+</div>
