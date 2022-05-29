@@ -1,19 +1,76 @@
-<h1>Listing all posts</h1>
-<p>
-  <%= link_to "Create new post", new_post_path %>
-</p>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Content</th>
-  </tr>
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.name %></td>
-      <td><%= post.content %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
+<div class="container">
+  <p id="notice" class="text-center my-3 fs-3 text-secondary" id="notice"><%= notice %></p>
 
-    </tr>
+  <h1 class="container text-center p-3 mb-2 bg-light text-dark">Posts</h1>
+
+  <h1>
+    Posts:
+    <%= @posts.count %>
+    /
+    <%= Post.count %>
+  </h1>
+  <div class="text-center">
+    <%= link_to_unless_current "10 posts", posts_path(items: 10) %> |
+    <%= link_to_unless_current "50 posts", posts_path(items: 50) %>
+
+  </div>
+
+
+
+
+  <br>
+
+
+  <% if @posts.empty? %>
+    <div class="text-center">
+      <h2>The posts list is empty at the moment...</h2>
+    </div>
+    <hr>
+  <% else %>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-sm align-middle">
+        <thead class="container text-center">
+        <tr>
+
+          <th>Title</th>
+          <th>Content</th>
+          <th>Image</th>
+
+        </tr>
+        </thead>
+
+        <tbody class="container">
+
+        <% @posts.each do |post| %>
+          <tr class="container text-center">
+            <td><%= post.name %></td>
+            <td class="text-start"><%= post.content %></td>
+            <td><%= image_tag(post.image, width: '200', class: "mx-auto d-block") %></td>
+
+            <td>
+              <div class="d-flex p-2 bd-highlight mb-3 align-items-center">
+                <%= link_to 'Show', post, class: "btn btn-success" %> |
+
+                  <%= link_to 'Edit', edit_post_path(post), class: "btn btn-secondary" %> |
+                  <%= button_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to delete the post?' }, class: "btn btn-danger" %>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   <% end %>
-</table>
+</div>
+
+<div class="d-flex justify-content-center d-flex align-items-center">
+  <%= link_to 'New Post', new_post_path, class: "btn btn-success btn-lg" %>
+</div>
+<div class="d-flex justify-content-center d-flex align-items-center">
+
+</div>
+<hr>
+<div class="d-flex justify-content-center d-flex align-items-center">
+  <%= render 'posts/pagination', locals: { pagy: @pagy } %>
+</div>

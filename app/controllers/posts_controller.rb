@@ -1,57 +1,135 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
 
-  def new
-    @post = Post.new
-  end
+#   def new
+#     @post = Post.new
+#   end
+#
+#   def create
+#     #render plain: params[:article].inspect
+#     @post = Post.new(post_params)
+#     if @post.save
+#       flash[:notice] = "Post was successfully created"
+#       redirect_to post_path(@post)
+#     else
+#       render 'new'
+#     end
+#   end
+#
+#   def show
+#
+#   end
+#
+#   def edit
+#
+#   end
+#
+#   def update
+#
+#     if @post.update(post_params)
+#       flash[:notice] = "Post was updated"
+#       redirect_to post_path(@post)
+#     else
+#       flash[:notice] = "Post was not updated"
+#       render 'edit'
+#     end
+#   end
+#
+#   def index
+#     @pagy, @posts = pagy(Post.order(created_at: :desc), items: 5)
+#   end
+#
+#   def destroy
+#     @post.destroy
+#     flash[:notice] = "Post was deleted"
+#     redirect_to posts_path
+#   end
+#
+#
+#   private
+#   def post_params
+#     params.require(:post).permit(:name, :content)
+#   end
+#
+#   def set_post
+#     @post = Post.find(params[:id])
+#   end
+# end
 
-  def create
-    #render plain: params[:article].inspect
-    @post = Post.new(post_params)
+
+# GET /posts
+# GET /posts.json
+def index
+  @pagy, @posts = pagy(Post.order(created_at: :desc), items: 5)
+end
+
+def search
+  @posts = Post.where('content ILIKE ? OR title ILIKE ?', "%#{params[:query]}%", "%#{params[:query]}%")
+  @pagy, @records = pagy(@posts, items: 8)
+  render :index
+end
+
+# GET /posts/1
+# GET /posts/1.json
+def show
+
+end
+
+# GET /posts/new
+def new
+  @post = Post.new
+end
+
+# GET /posts/1/edit
+def edit
+end
+
+# POST /posts
+# POST /posts.json
+def create
+  @post = Post.new(post_params)
+   respond_to do |format|
     if @post.save
-      flash[:notice] = "Post was successfully created"
-      redirect_to post_path(@post)
+      format.html { redirect_to @post, notice: "Post was successfully created." }
+      format.json { render :show, status: :created, location: @post }
     else
-      render 'new'
+      format.html { render :new }
+      format.json { render json: @post.errors, status: :unprocessable_entity }
     end
   end
-
-  def show
-
-  end
-
-  def edit
-
-  end
-
-  def update
-
+end
+# PATCH/PUT /posts/1
+# PATCH/PUT /posts/1.json
+def update
+  respond_to do |format|
     if @post.update(post_params)
-      flash[:notice] = "Post was updated"
-      redirect_to post_path(@post)
+      format.html { redirect_to @post, notice: "Post was successfully updated." }
+      format.json { render :show, status: :ok, location: @post }
     else
-      flash[:notice] = "Post was not updated"
-      render 'edit'
+      format.html { render :edit }
+      format.json { render json: @post.errors, status: :unprocessable_entity }
     end
   end
+end
 
-  def index
-    @posts = Post.all
+# DELETE /posts/1
+# DELETE /posts/1.json
+def destroy
+  @post.destroy
+  respond_to do |format|
+    format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+    format.json { head :no_content }
   end
+end
 
-  def destroy
-    @post.destroy
-    flash[:notice] = "Post was deleted"
-    redirect_to posts_path
-  end
+private
+# Use callbacks to share common setup or constraints between actions.
+def set_post
+  @post = Post.find(params[:id])
+end
 
-
-  private
-  def post_params
-    params.require(:post).permit(:name, :image, :content)
-  end
-
-  def set_post
-    @post = Post.find(params[:id])
-  end
+# Only allow a list of trusted parameters through.
+def post_params
+  params.require(:post).permit(:name, :content, :image)
+end
 end

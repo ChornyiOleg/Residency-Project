@@ -1,36 +1,11 @@
-<h1>Edit Post</h1>
+<div class="container">
+  <h1 class="mt-3 text-center">Editing Post</h1>
 
-<% if @post.errors.any? %>
-  <h2>The following errors prevented the post from saving:</h2>
-  <ul>
-    <% @post.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+  <%= render 'form', post: @post %>
 
-<%= form_for @post do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+  <div class="d-flex justify-content-center d-flex align-items-center">
+    <%= link_to 'Show', @post, class: "btn btn-secondary my-3 btn-lg" %> &nbsp;|&nbsp;
+    <%= link_to 'Back', posts_path, class: "btn btn-secondary my-3 btn-lg" %>
+  </div>
 
-  <p>
-    <%= f.file_field :image %>
-  </p>
-
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-
-<%= render 'form' %>
-
-<%= button_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this article?"}, class: "btn btn-xs btn-danger" %>
-
-<%= link_to 'Back', posts_path %>
+</div>
