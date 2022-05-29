@@ -301,7 +301,6 @@ DEPENDENCIES
   rails (~> 7.0.2, >= 7.0.2.3)
   sassc-rails
   simple_form
-  sprockets-rails
   stimulus-rails
   trestle
   turbo-rails (~> 1.0.0)
