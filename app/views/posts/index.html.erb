@@ -74,3 +74,306 @@
 <div class="d-flex justify-content-center d-flex align-items-center">
   <%= render 'posts/pagination', locals: { pagy: @pagy } %>
 </div>
+
+<!--==================================================-->
+<!----- start visapro breatcome Area ----->
+<!--==================================================-->
+<div class="breatcome-area d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breatcome-content text-center">
+          <div class="breatcome-content-title">
+            <h1>Blog 2Column</h1>
+          </div>
+          <div class="breatcome-content-text">
+            <ul>
+              <li><a href="index.html">Home </a> <i class="fas fa-chevron-right"></i> <span>Blog 2Column</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!----- start visapro----BLOG---- Area ----->
+<!--==================================================-->
+<div class="blog-area style-four pt-65 pb-60">
+  <div class="container">
+    <div class="row pt-20">
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+
+                <div class="post-catgory">
+                  <a href="#">Working Visa</a>
+                  <a href="#">Working Visa</a>
+                </div>
+              </div>
+
+              <% @posts.each do |post| %>
+                <tr class="container text-center">
+                  <td><%= post.name %></td>
+                  <td class="text-start"><%= post.content %></td>
+                  <td><%= image_tag(post.image, width: '200', class: "mx-auto d-block") %></td>
+
+                  <td>
+                    <div class="d-flex p-2 bd-highlight mb-3 align-items-center">
+                      <%= link_to 'Show', post, class: "btn btn-success" %> |
+
+
+                      <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <%= post.name %>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>><%= post.content %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+              <% end %>
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+                <a href="#"><img src="bol.jpg" alt=""></a>
+                <div class="post-catgory">
+                  <a href="#">Student Visa</a>
+                </div>
+              </div>
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+                <a href="#"><img src="bol2.jpg" alt=""></a>
+                <div class="post-catgory">
+                  <a href="#">Immigration Visa</a>
+                </div>
+              </div>
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+                <%= image_tag("bol2.jpg", alt: "about")%>
+                <div class="post-catgory">
+                  <a href="#">Immigration Visa</a>
+                </div>
+              </div>
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+                <a href="#"><%= image_tag("bol2.jpg", alt: "about")%></a>
+                <div class="post-catgory">
+                  <a href="#">Immigration Visa</a>
+                </div>
+              </div>
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="dreamit-single-blog-box">
+              <div class="dreamit-blog-thumb">
+                <a href="#"><%= image_tag("bol2.jpg", alt: "about")%></a>
+                <div class="post-catgory">
+                  <a href="#">Immigration Visa</a>
+                </div>
+              </div>
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <h3>March 24, 2021</h3>
+              </div>
+              <div class="dreamit-blog-content">
+                <div class="dreamit-blog-title">
+                  <h2>
+                    <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                  </h2>
+                </div>
+                <div class="dreamit-blog-text">
+                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="pagiation">
+              <div class="page-number pt-30">
+                <ul>
+                  <li><a class="active" href="blog-grid.html">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="sidebar-box">
+          <div class="sidebar-search">
+            <input type="text" name="search" placeholder="Search">
+            <button type="text" name="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-title">
+            <h2>Categories</h2>
+          </div>
+          <div class="dreamit-section-bar mb-20"></div>
+          <div class="sidebar-category">
+            <ul>
+              <li><a href="business-visa.html">Business Visa</a></li>
+              <li><a href="immigration-visa.html">Immigration Visa</a></li>
+              <li><a href="pr-visa.html">PR Visa</a></li>
+              <li><a href="student-visa.html">Student Visa</a></li>
+              <li><a href="working-visa">Working Visa</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="celender-box">
+          <div class="widget-items mb-40">
+            <div class="calender-area">
+              <div class="widget-title">
+                <h2>Calender</h2>
+                <div class="dreamit-section-bar mb-20"></div>
+                <span></span>
+              </div>
+              <div class="tag-item">
+                <div class="curr-month"><b>january</b></div>
+                <div class="all-days">
+                  <ul>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>T</li>
+                    <li>W</li>
+                    <li>T</li>
+                    <li>F</li>
+                    <li>S</li>
+                  </ul>
+                </div>
+                <div class="all-date">
+                  <ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-title">
+            <h2>Tag cloud</h2>
+          </div>
+          <div class="dreamit-section-bar mb-20"></div>
+          <div class="sidebar-cloud">
+            <a href="bootstrap.html">Bootstarap</a>
+            <a href="business.html">Business</a>
+            <a href="corporatr.html">corporatr</a>
+            <a href="Portfolio-visapro.html">Portfolio</a>
+            <a href="responsive.html">Responsive</a>
+            <a href="Technology.html">Technology</a>
+          </div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-title">
+            <h2>archives</h2>
+          </div>
+          <div class="dreamit-section-bar mb-20"></div>
+          <div class="sidebar-archives">
+            <ul>
+              <li><a href="#">March 2021</a></li>
+              <li><a href="#">April 2021</a></li>
+              <li><a href="#">May 2021</a></li>
+              <li><a href="#">June 2021</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sidebar-box">
+          <div class="sidebar-title">
+            <h2>meta</h2>
+          </div>
+          <div class="dreamit-section-bar mb-20"></div>
+          <div class="sidebar-meta">
+            <ul>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#">Entries feed</a></li>
+              <li><a href="#">Comments feed</a></li>
+              <li><a href="#">WordPress.org</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

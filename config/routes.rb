@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :posts, path: 'blog'
   get 'blog', to: 'home#blog'
   get 'about', to: 'home#about'
+  get 'contact', to: 'home#contact'
   get 'home/index'
   root to: 'home#index'
   post 'home/index', to: 'orders#create'
@@ -18,5 +19,7 @@ Rails.application.routes.draw do
     resources :orders
   end
   resources :countries
-  resources :programs 
+  resources :programs
+
+
 end

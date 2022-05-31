@@ -1,171 +1,979 @@
 <!-- inside app/views/home/index.html.erb -->
 <!--banner-starts-->
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag("montenegro-main.jpg", alt: "montenegro" ) %>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag("portugal-main.jpg", alt: "portugal" ) %>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag("panama-main.jpg", alt: "panama" ) %>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+<!--<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">-->
+<!--  <div class="carousel-indicators">-->
+<!--    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--  </div>-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item active">-->
+      <%#= image_tag("montenegro-main.jpg", alt: "montenegro" ) %>
+<!--      <div class="carousel-caption d-none d-md-block">-->
+<!--        <h5>First slide label</h5>-->
+<!--        <p>Some representative placeholder content for the first slide.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="carousel-item">-->
+      <%#= image_tag("portugal-main.jpg", alt: "portugal" ) %>
+<!--      <div class="carousel-caption d-none d-md-block">-->
+<!--        <h5>Second slide label</h5>-->
+<!--        <p>Some representative placeholder content for the second slide.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="carousel-item">-->
+      <%#= image_tag("panama-main.jpg", alt: "panama" ) %>
+<!--      <div class="carousel-caption d-none d-md-block">-->
+<!--        <h5>Third slide label</h5>-->
+<!--        <p>Some representative placeholder content for the third slide.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">-->
+<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Previous</span>-->
+<!--  </button>-->
+<!--  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">-->
+<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--    <span class="visually-hidden">Next</span>-->
+<!--  </button>-->
+<!--</div>-->
 <!--banner-ends-->
-<div class="b-example-divider"></div>
+<!--<div class="b-example-divider"></div>-->
 
-<div class="container px-4 py-5" id="hanging-icons">
-  <h2 class="pb-2 border-bottom">Hanging icons</h2>
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col d-flex align-items-start">
-      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+<!--<div class="container px-4 py-5" id="hanging-icons">-->
+<!--  <h2 class="pb-2 border-bottom">Hanging icons</h2>-->
+<!--  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">-->
+<!--    <div class="col d-flex align-items-start">-->
+<!--      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+<!--        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <h2>Featured title</h2>-->
+<!--        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>-->
+<!--        <a href="#" class="btn btn-primary">-->
+<!--          Primary button-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col d-flex align-items-start">-->
+<!--      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+<!--        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <h2>Featured title</h2>-->
+<!--        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>-->
+<!--        <a href="#" class="btn btn-primary">-->
+<!--          Primary button-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col d-flex align-items-start">-->
+<!--      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+<!--        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <h2>Featured title</h2>-->
+<!--        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>-->
+<!--        <a href="#" class="btn btn-primary">-->
+<!--          Primary button-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<hr>-->
+<!--<div>-->
+  <%# if user_signed_in? %>
+    <%#= render 'orders/form_for_home' %>
+  <%# end %>
+<!--</div>-->
+<!--<hr>-->
+<!--<div class="container-fluid">-->
+<!--<form class="row g-3">-->
+<!--  <div class="col-md-6">-->
+<!--    <label for="inputEmail4" class="form-label">Email</label>-->
+<!--    <input type="email" class="form-control" id="inputEmail4">-->
+<!--  </div>-->
+<!--  <div class="col-md-6">-->
+<!--    <label for="inputPassword4" class="form-label">Password</label>-->
+<!--    <input type="password" class="form-control" id="inputPassword4">-->
+<!--  </div>-->
+<!--  <div class="col-12">-->
+<!--    <label for="inputAddress" class="form-label">Address</label>-->
+<!--    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">-->
+<!--  </div>-->
+<!--  <div class="col-12">-->
+<!--    <label for="inputAddress2" class="form-label">Address 2</label>-->
+<!--    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">-->
+<!--  </div>-->
+<!--  <div class="col-md-6">-->
+<!--    <label for="inputCity" class="form-label">City</label>-->
+<!--    <input type="text" class="form-control" id="inputCity">-->
+<!--  </div>-->
+<!--  <div class="col-md-4">-->
+<!--    <label for="inputState" class="form-label">State</label>-->
+<!--    <select id="inputState" class="form-select">-->
+<!--      <option selected>Choose...</option>-->
+<!--      <option>...</option>-->
+<!--    </select>-->
+<!--  </div>-->
+<!--  <div class="col-md-2">-->
+<!--    <label for="inputZip" class="form-label">Zip</label>-->
+<!--    <input type="text" class="form-control" id="inputZip">-->
+<!--  </div>-->
+<!--  <div class="col-12">-->
+<!--    <div class="form-check">-->
+<!--      <input class="form-check-input" type="checkbox" id="gridCheck">-->
+<!--      <label class="form-check-label" for="gridCheck">-->
+<!--        Check me out-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="col-12">-->
+<!--    <button type="submit" class="btn btn-primary">Sign in</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+<!--</div>-->
+<!--<hr>-->
+
+<!--<div class="container-fluid">-->
+
+<!--<div class="card-group">-->
+<!--  <div class="card">-->
+    <%#= image_tag("montenegro-main.jpg", alt: "montenegro" ) %>
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title">Card title</h5>-->
+<!--      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="card">-->
+    <%#= image_tag("portugal-main.jpg", alt: "portugal" ) %>
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title">Card title</h5>-->
+<!--      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>-->
+<!--      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="card">-->
+    <%#= image_tag("panama-main.jpg", alt: "panama" ) %>
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title">Card title</h5>-->
+<!--      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>-->
+<!--      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--==================================================-->
+<!-- start caursel slider-->
+<!--==================================================-->
+<div class="slider-section style-three d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="dreamit-slider-content">
+          <h4>#1 Immigration Agency </h4>
+          <h1>Worldwide Agency</h1>
+          <h2>For Immigration</h2>
+          <div class="rs-video">
+            <div class="animate-border">
+              <a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://www.youtube.com/watch?v=BsTpnBtqBOU&ab_channel=WsCubeTech">
+                <i class="fa fa-play"></i>
+              </a>
+            </div>
+            <span>See Our Introduction</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">
-          Primary button
-        </a>
+      <div class="col-lg-4 p-0 wow fadeInRight animated" data-wow-delay="800ms">
+        <div class="row">
+          <div class="contact_from_box">
+            <div class="contact_title pb-4">
+              <h3>Request a Appointment</h3>
+            </div>
+            <form id="contact_form" action="mail.php" method="POST" >
+              <div class="col-lg-12">
+                <div class="form_box mb-15">
+                  <input type="text" name="name"  placeholder="Name">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form_box mb-15">
+                  <input type="email" name="email" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form_box mb-15">
+                  <input type="text" name="phone" placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <select class="appointment-select-country">
+                  <option>Select Visa</option>
+                  <option>Business Visa</option>
+                  <option>Student Visa</option>
+                  <option>Family Visa</option>
+                  <option>Tour Visa</option>
+                </select>
+              </div>
+              <div class="col-lg-12">
+                <div class="quote_btn">
+                  <button class="btn" type="submit">Send Request</button>
+                </div>
+              </div>
+            </form>
+            <p class="form-message"></p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+  </div>
+</div>
+<!--==================================================-->
+<!--start visapro country Area-->
+<!--==================================================-->
+<div class="country-section-title-area style-three pt-100 pb-200">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="dreamit-section-title pb-30">
+          <div class="dreamit-section-main-title">
+            <h1 class="text-white">Immigration And Citizenship</h1>
+            <h2 class="text-white">Choose Your Country!</h2>
+          </div>
+        </div>
       </div>
-      <div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">
-          Primary button
-        </a>
+      <div class="col-lg-5">
+        <div class="dreamit-content-text">
+          <p>We provide expert team to create great value for there in immigration for you. Our certified & reliable Immigration Consultant professionals can.</p>
+        </div>
       </div>
     </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+  </div>
+</div>
+<div class="country-area style-two upper pb-85">
+  <div class="container">
+    <div class="row mar-top">
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("bangladesh.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("bangladesh-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>bangladesh</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">
-          Primary button
-        </a>
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("australia.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("australia-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>australia</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("brazil.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("brazil-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>brazil</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-content text-center">
+          <p href="#">The Most Trusted Immigration and Visa Consultant. <a href="#">View All Country !</a></p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<hr>
-<div>
-  <% if user_signed_in? %>
-    <%= render 'orders/form_for_home' %>
-  <% end %>
-</div>
-<hr>
-<div class="container-fluid">
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </div>
-</form>
 
-</div>
-<hr>
-
-<div class="container-fluid">
-
-<div class="card-group">
-  <div class="card">
-    <%= image_tag("montenegro-main.jpg", alt: "montenegro" ) %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <%= image_tag("portugal-main.jpg", alt: "portugal" ) %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <%= image_tag("panama-main.jpg", alt: "panama" ) %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<!--==================================================-->
+<!----- start visapro about- Area ----->
+<!--==================================================-->
+<div class="about-area style-five pb-70 pt-60">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="row">
+          <div class="about-thumb">
+            <%= image_tag("new6.png", alt: "about")%>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="dreamit-section-title pb-15">
+          <div class="dreamit-section-sub-title">
+            <h5>ABOUT VISAPRO</h5>
+          </div>
+          <div class="dreamit-section-main-title">
+            <h1>Immigration Services From</h1>
+            <h2>Experienced Lawyers</h2>
+          </div>
+          <div class="dreamit-section-bar mb-45"></div>
+          <div class="dreamit-content-text">
+            <p>We have been counselling students for educational opportunities in Foreign countrie.</p>
+          </div>
+          <div class="dreamit-section-bold-text">
+            <p>There are may experienced engineer for your immigration service. We give the best immigration service for you.</p>
+          </div>
+          <div class="barfiller-box pt-10">
+            <div class="barfillr-content">
+              <div class="barfiller-title">
+                <h3>Immigration Consultency</h3>
+              </div>
+            </div>
+            <div id="bar1" class="barfiller">
+              <div class="tipWrap">
+                <span class="tip"></span>
+              </div>
+              <span class="fill" data-percentage="80"></span>
+            </div>
+          </div>
+          <div class="barfiller-box pt-2">
+            <div class="barfillr-content">
+              <div class="barfiller-title">
+                <h3>Student Consultency</h3>
+              </div>
+            </div>
+            <div id="bar2" class="barfiller">
+              <div class="tipWrap">
+                <span class="tip"></span>
+              </div>
+              <span class="fill" data-percentage="95"></span>
+            </div>
+          </div>
+        </div>
+        <div class="about-btn pt-2">
+          <a href="#">read more <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!--==================================================-->
+<!----- start visapro about- Area ----->
+<!--==================================================-->
+<div class="agency-section pt-90 pb-40">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="dreamit-section-title pb-15">
+          <div class="dreamit-section-sub-title">
+            <h5>OUR AGENCY</h5>
+          </div>
+          <div class="dreamit-section-main-title">
+            <h1 class="text-white">Since 1850 We Have</h1>
+            <h2 class="text-white">Branches All Over World</h2>
+          </div>
+          <div class="dreamit-section-bar mb-45"></div>
+          <div class="dreamit-content-text">
+            <p>Duis nunc sodales conubia ad laoreet aliquet nostra. Eleifend lacinia and prasent hendrerit quisque penatibus erat. At pulvinar integer semper the ridiculus lectus condimentum obor tise verodar capmtaso morin prointer nibh posuere lorente focusing.</p>
+          </div>
+          <div class="dreamit-section-bold-text">
+            <p>Muis nunc sodales conubia ad laoreet aliquet nostra. Eleifend lacinia and prasent hendrerit quisque penatibus erat. At pulvinar integer semper the ridiculus lectus condimentum obor tise verodar.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="agency-thumb">
+          <%= image_tag("map2.png", alt: "about")%>
+        </div>
+      </div>
+    </div>
+    <div class="row upper10">
+      <div class="col-lg-3 col-md-6">
+        <div class="single-counter-text">
+          <div class="counter-icon">
+            <i class="flaticon-microchip"></i>
+          </div>
+          <div class="counter-content">
+            <h1 class="counter">3060</h1>
+            <h3>+</h3>
+          </div>
+          <div class="counter-title-style-2">
+            <h4>student</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-counter-text">
+          <div class="counter-icon">
+            <i class="flaticon-global"></i>
+          </div>
+          <div class="counter-content">
+            <h1 class="counter">200</h1>
+            <h3>+</h3>
+          </div>
+          <div class="counter-title-style-2">
+            <h4>Immigration</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-counter-text">
+          <div class="counter-icon">
+            <i class="flaticon-time"></i>
+          </div>
+          <div class="counter-content">
+            <h1 class="counter">10</h1>
+            <h3>k+</h3>
+          </div>
+          <div class="counter-title-style-2">
+            <h4>Universities</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-counter-text">
+          <div class="counter-icon">
+            <i class="flaticon-compass"></i>
+          </div>
+          <div class="counter-content">
+            <h1 class="counter">500</h1>
+            <h3>+</h3>
+          </div>
+          <div class="counter-title-style-2">
+            <h4>Country</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!-- stsrt visapro exprernce Area-->
+<!--==================================================-->
+<div class="course-section style-two pt-90 pb-70">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="dreamit-section-title pb-30 text-center">
+          <div class="dreamit-section-sub-title">
+            <h5>VISA CATEGORY</h5>
+          </div>
+          <div class="dreamit-section-main-title">
+            <h1 class="text-black">Choose Your Immigration</h1>
+            <h2 class="text-black">Visa Services</h2>
+          </div>
+          <div class="dreamit-section-bar center mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="course_list owl-carousel ">
+        <div class="col-lg-12">
+          <div class="single-course-box">
+            <div class="course-thumb">
+              <%= image_tag("coach.jpg", alt: "about")%>
+            </div>
+            <div class="course-icon">
+              <i class="flaticon-intelligent"></i>
+            </div>
+            <div class="course-content">
+              <div class="course-title">
+                <a href="#"><h2>IELTS Coaching</h2></a>
+              </div>
+              <div class="course-content-text">
+                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
+              </div>
+              <div class="course-btn">
+                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-course-box">
+            <div class="course-thumb">
+              <%= image_tag("coac3.jpg", alt: "about")%>
+            </div>
+            <div class="course-icon">
+              <i class="flaticon-compass"></i>
+            </div>
+            <div class="course-content">
+              <div class="course-title">
+                <a href="#"><h2>TOEFL</h2></a>
+              </div>
+              <div class="course-content-text">
+                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
+              </div>
+              <div class="course-btn">
+                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-course-box">
+            <div class="course-thumb">
+              <%= image_tag("coach4.jpg", alt: "about")%>
+            </div>
+            <div class="course-icon">
+              <i class="flaticon-laptop"></i>
+            </div>
+            <div class="course-content">
+              <div class="course-title">
+                <a href="#"><h2>Graduate Re Exam</h2></a>
+              </div>
+              <div class="course-content-text">
+                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
+              </div>
+              <div class="course-btn">
+                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-course-box">
+            <div class="course-thumb">
+              <%= image_tag("coach5.jpg", alt: "about")%>
+
+            </div>
+            <div class="course-icon">
+              <i class="flaticon-content-writing"></i>
+            </div>
+            <div class="course-content">
+              <div class="course-title">
+                <a href="#"><h2>Scholastic Apti</h2></a>
+              </div>
+              <div class="course-content-text">
+                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
+              </div>
+              <div class="course-btn">
+                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!--start call action area-->
+<!--==================================================-->
+<div class="call-section style-three pt-60 pb-80">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9 col-md-9 pl-0">
+        <div class="call-do-action-content">
+          <div class="call-title">
+            <h3>All Kinds Of Immigration Services</h3>
+            <h2>That Vow Your Success</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="call-btn">
+          <a href="#">Apply Visa Now<i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!--start team member area-->
+<!--==================================================-->
+<div class="team-member-area style-two upper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="dreamit-section-title pb-30 text-center">
+          <div class="dreamit-section-sub-title">
+            <h5>Professional Team</h5>
+          </div>
+          <div class="dreamit-section-main-title">
+            <h2 class="text-black">Meet Our Dedicated Team</h2>
+          </div>
+          <div class="dreamit-section-bar center mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="dreamit-single-team">
+          <div class="team-member-thumb">
+            <%= image_tag("team3.jpg", alt: "about")%>
+            <div class="dreamit-team-social-icon">
+              <div class="dreamit-team-social-icon-inner">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="dreamit-team-content">
+            <div class="team-meta-icon">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="team-content-title">
+              <h2>Angel Zara</h2>
+              <h3>Migration Agent</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="dreamit-single-team">
+          <div class="team-member-thumb">
+            <%= image_tag("team2.jpg", alt: "about")%>
+            <div class="dreamit-team-social-icon">
+              <div class="dreamit-team-social-icon-inner">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="dreamit-team-content">
+            <div class="team-meta-icon">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="team-content-title">
+              <h2>Shene Watsan</h2>
+              <h3>Visa Director</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="dreamit-single-team">
+          <div class="team-member-thumb">
+            <%= image_tag("team1.jpg", alt: "about")%>
+            <div class="dreamit-team-social-icon">
+              <div class="dreamit-team-social-icon-inner">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="dreamit-team-content">
+            <div class="team-meta-icon">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="team-content-title">
+              <h2>Fahmida Haque</h2>
+              <h3>Co-Founder</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="dreamit-single-team">
+          <div class="team-member-thumb">
+            <%= image_tag("team6.jpg", alt: "about")%>
+            <div class="dreamit-team-social-icon">
+              <div class="dreamit-team-social-icon-inner">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="dreamit-team-content">
+            <div class="team-meta-icon">
+              <i class="fa fa-plus"></i>
+            </div>
+            <div class="team-content-title">
+              <h2>Jhone Abraham</h2>
+              <h3>SR. MANAGER</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-content text-center">
+          <p href="#">The Most Trusted Immigration and Visa Consultant. <a href="#">View All Country !</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!--start testimonial  area-->
+<!--==================================================-->
+<div class="testimonial-section pt-90 pb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="dreamit-section-title pb-30 text-center">
+          <div class="dreamit-section-sub-title">
+            <h5>CLIENTS REVIEWS</h5>
+          </div>
+          <div class="dreamit-section-main-title">
+            <h1 class="text-black">What Customers</h1>
+            <h2 class="text-black">Saying About VisaPro</h2>
+          </div>
+          <div class="dreamit-section-bar center mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-10">
+      <div class="testimonials_list4 owl-carousel ">
+        <div class="col-lg-12">
+          <div class="single-testimonial-box">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content-text">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage</p>
+              </div>
+            </div>
+            <div class="testimonial-content-inner d-flex align-items-center">
+              <div class="testi-thumb">
+                <%= image_tag("client8.jpg", alt: "about")%>
+              </div>
+              <div class="testi-title">
+                <h2>Shene Watsan </h2>
+                <span>Singapur PR Visa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-testimonial-box">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content-text">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage													</p>
+              </div>
+            </div>
+            <div class="testimonial-content-inner d-flex align-items-center">
+              <div class="testi-thumb">
+                <<%= image_tag("client9.jpg", alt: "about")%>
+              </div>
+              <div class="testi-title">
+                <h2>Ellen Erye </h2>
+                <span>France Working Visa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-testimonial-box">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content-text">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage</p>
+              </div>
+            </div>
+            <div class="testimonial-content-inner d-flex align-items-center">
+              <div class="testi-thumb">
+                <%= image_tag("client8.jpg", alt: "about")%>
+              </div>
+              <div class="testi-title">
+                <h2>John Dome </h2>
+                <span>USA Student Visa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single-testimonial-box">
+            <div class="testimonial-content">
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="testimonial-content-text">
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage													</p>
+              </div>
+            </div>
+            <div class="testimonial-content-inner d-flex align-items-center">
+              <div class="testi-thumb">
+                <%= image_tag("client9.jpg", alt: "about")%>
+              </div>
+              <div class="testi-title">
+                <h2>Ellen Erye </h2>
+                <span>France Working Visa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==================================================-->
+<!--start visapro BLOG Area-->
+<!--==================================================-->
+<div class="blog-area style-three upper2 pt-80 pb-90">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="dreamit-section-main-title">
+          <h1>Our Business Innovation!</h1>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="title-content">
+          <p>Cursus porta, feugiat primis in ultrice ligula risus auctor tempus dolor feugiat, felis lacinia risus interdum auctor id viverra dolor iaculis luctus placerat and massa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-30">
+      <div class="blog_list5 owl-carousel ">
+        <div class="col-lg-12">
+          <div class="dreamit-single-blog-box">
+            <div class="dreamit-blog-thumb">
+              <a href="#"><%= image_tag("blog1.jpg", alt: "about")%></a>
+              <div class="post-catgory">
+                <a href="#">Sep 24, 2021</a>
+              </div>
+            </div>
+            <div class="dreamit-blog-content">
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <a href="#"><h3>Student Visa</h3></a>
+              </div>
+              <div class="dreamit-blog-title">
+                <h2>
+                  <a href="blog-details.html">Top reasons for Australian working visa rejection</a>
+                </h2>
+              </div>
+              <div class="dreamit-blog-text">
+                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="dreamit-single-blog-box">
+            <div class="dreamit-blog-thumb">
+              <a href="#"><%= image_tag("blog5.jpg", alt: "about")%></a>
+              <div class="post-catgory">
+                <a href="#">Sep 10, 2021</a>
+              </div>
+            </div>
+            <div class="dreamit-blog-content">
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <a href="#"><h3>PR Visa, 2021</h3></a>
+                <a href="#"><h3>Working Visa</h3></a>
+              </div>
+              <div class="dreamit-blog-title">
+                <h2>
+                  <a href="blog-details.html">Canada Federal Skilled Worker Program</a>
+                </h2>
+              </div>
+              <div class="dreamit-blog-text">
+                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="dreamit-single-blog-box">
+            <div class="dreamit-blog-thumb">
+              <a href="#"><%= image_tag("bol2.jpg", alt: "about")%></a>
+              <div class="post-catgory">
+                <a href="#">Sep 20, 2021</a>
+              </div>
+            </div>
+            <div class="dreamit-blog-content">
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <a href="#"><h3>Immigration Visa</h3></a>
+              </div>
+              <div class="dreamit-blog-title">
+                <h2>
+                  <a href="blog-details.html">The United Kingdom Immigration</a>
+                </h2>
+              </div>
+              <div class="dreamit-blog-text">
+                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="dreamit-single-blog-box">
+            <div class="dreamit-blog-thumb">
+              <a href="#"><%= image_tag("blog5.jpg", alt: "about")%></a>
+              <div class="post-catgory">
+                <a href="#">Sep 17, 2021</a>
+              </div>
+            </div>
+            <div class="dreamit-blog-content">
+              <div class="dreamit-meta-box">
+                <a href="#">visapro</a>
+                <a href="#"><h3>Business Visa</h3></a>
+                <a href="#"><h3>PR Visa</h3></a>
+              </div>
+              <div class="dreamit-blog-title">
+                <h2>
+                  <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
+                </h2>
+              </div>
+              <div class="dreamit-blog-text">
+                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
