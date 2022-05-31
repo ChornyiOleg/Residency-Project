@@ -13,7 +13,7 @@ gem 'pagy', '~> 5.09'
 gem 'nokogiri'
 gem 'trestle'
 gem "validate_url"
-
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
