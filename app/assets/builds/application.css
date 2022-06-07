@@ -43102,7 +43102,7 @@ start search Popup Css
 
 .appointment-input:focus {
   border-color: #FF3C00;
-  box-shadow: 0 0 10px rgb(255, 60, 0, 0.5);
+  /*box-shadow: 0 0 10px rgb(255, 60, 0, 0.5);*/
   outline: 0;
 }
 
@@ -45714,7 +45714,7 @@ button.subscribe-button {
 
 .subscribe-button:focus {
   border-color: red;
-  box-shadow: 0 0 10px rgb(255, 60, 0, 0.5);
+  /*box-shadow: 0 0 10px rgb(255, 60, 0, 0.5);*/
   outline: 0;
 }
 
