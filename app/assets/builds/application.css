@@ -41039,7 +41039,7 @@ start search Popup Css
 
 .about-area.style-three .about-single-box:hover {
   transform: translateY(-10px);
-
+  /*box-shadow: 0 0 20px 0 rgb(0 0 0 0);*/
 }
 
 .about-area.style-three .about-content {
@@ -41519,13 +41519,13 @@ start search Popup Css
 }
 
 .call-do-section-content {
-  /*box-shadow: 0 4px 13px rgb(0 0 0/9%);*/
+  /*box-shadow: 0 4px 13px rgb(0 0 0 / 9%);*/
   border-radius: 5px;
   padding: 40px 0 40px;
 }
 
 .single-call-do-section-box:hover {
-  /*box-shadow: 0 10px 20px rgb(0 0 0/20%);*/
+  /*box-shadow: 0 10px 20px rgb(0 0 0 / 20%);*/
 }
 
 .call-do-section-thumb {
@@ -41897,7 +41897,6 @@ start search Popup Css
 /* start choose section */
 .choose-section .row.upper11 {
   background: #fff;
-
   border-radius: 7px;
   position: relative;
   margin-top: -213px;
@@ -41977,7 +41976,7 @@ start search Popup Css
 
 .testimonial-section .single-testimonial-box {
   transition: 0.5s;
-  box-shadow: 0 0 5px rgb(0 0 0/10%);
+  /*box-shadow: 0 0 5px rgb(0 0 0 / 10%);*/
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -41991,7 +41990,7 @@ start search Popup Css
 }
 
 .testimonial-section .testimonial-content {
-  box-shadow: 0 0 5px rgb(0 0 0/10%);
+  /*box-shadow: 0 0 5px rgb(0 0 0 / 10%);*/
   background: #fff;
   margin-bottom: 10px;
   position: relative;
@@ -42048,7 +42047,7 @@ start search Popup Css
 }
 
 .testimonial-section .testimonial-content-inner {
-  box-shadow: 0 0 5px rgb(0 0 0/10%);
+  /*box-shadow: 0 0 5px rgb(0 0 0 / 10%);*/
   background: #fff;
   padding: 15px;
   position: relative;
@@ -42168,7 +42167,7 @@ start search Popup Css
   color: #f12a02;
   display: inline-block;
   border-radius: 100%;
-  /*box-shadow: 0 0 3px rgb(241 42 2/40%);*/
+  box-shadow: 0 0 3px rgb(241 42 2/40%);
   font-size: 16px;
 }
 
@@ -42572,7 +42571,7 @@ start search Popup Css
   border-radius: 5px;
   margin-bottom: 30px;
   text-align: left;
-  box-shadow: 10px 0px 20px 0px rgb(0 0 0/4%);
+  /*box-shadow: 10px 0px 20px 0px rgb(0 0 0 / 4%);*/
   border: 1px solid #f0efef;
   margin-top: 10px;
   transition: all 500ms ease;
@@ -43017,7 +43016,7 @@ start search Popup Css
   width: 92%;
   top: -28px;
   border-bottom: none;
-  box-shadow: 0 0 16px 0 rgb(0 0 0/7%);
+  /*box-shadow: 0 0 16px 0 rgb(0 0 0 / 7%);*/
   padding: 21px 20px 21px;
 }
 
@@ -43787,7 +43786,7 @@ span {
 }
 
 .single-location {
-  box-shadow: 6px 5px 30px 0px rgb(0 0 0/12%);
+  /*box-shadow: 6px 5px 30px 0px rgb(0 0 0 / 12%);*/
   padding: 40px 10px 25px;
   text-align: center;
   margin-bottom: 30px;
@@ -43865,7 +43864,7 @@ span {
 
 .counter-section .single-counter-text:hover {
   transform: translateY(-10px);
-  /*box-shadow: 0 0 20px 0 rgb(0 0 0 0/20%);*/
+  /*box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);*/
 }
 
 /*--======================================
@@ -44205,7 +44204,7 @@ span {
 }
 
 .blog-details-content {
-  box-shadow: 0 3px 19px rgb(0 0 0/8%);
+  /*box-shadow: 0 3px 19px rgb(0 0 0 / 8%);*/
   padding: 20px 25px 45px 45px;
   margin-bottom: 20px;
 }

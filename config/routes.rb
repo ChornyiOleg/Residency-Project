@@ -17,9 +17,12 @@ Rails.application.routes.draw do
   get 'search', to: 'residences#search'
   resources :residences do
     resources :orders
+    resources :likes
   end
   resources :countries
   resources :programs
+  resources :likes
+  resources :views 
 
 
 end
