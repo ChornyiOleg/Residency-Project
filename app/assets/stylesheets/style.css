@@ -1776,7 +1776,7 @@ start search Popup Css
 }
 .about-area.style-three .about-single-box:hover{
     transform: translateY(-10px);
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+    /*box-shadow: 0 0 20px 0 rgb(0 0 0 0);*/
 }
 .about-area.style-three .about-content {
     overflow: hidden;
@@ -4194,7 +4194,7 @@ span.fill {
 }
 .counter-section .single-counter-text:hover{
     transform: translateY(-10px);
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+    /*box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);*/
 }
 /*--======================================
 	start blog area
