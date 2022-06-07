@@ -1874,7 +1874,7 @@ start search Popup Css
 /*about area style four*/
 .about-area.style-four {
     background-image: url('shape2.png') bottom right/auto no-repeat scroll;
-    bottom: right/auto no-repeat scroll: center center;
+    bottom: right/auto no-repeat scroll; center: center;
 }
 .about-area.style-four .dreamit-thumb::after {
    display: none;
