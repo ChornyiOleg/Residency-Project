@@ -41519,13 +41519,13 @@ start search Popup Css
 }
 
 .call-do-section-content {
-  box-shadow: 0 4px 13px rgb(0 0 0/9%);
+  /*box-shadow: 0 4px 13px rgb(0 0 0/9%);*/
   border-radius: 5px;
   padding: 40px 0 40px;
 }
 
 .single-call-do-section-box:hover {
-  box-shadow: 0 10px 20px rgb(0 0 0/20%);
+  /*box-shadow: 0 10px 20px rgb(0 0 0/20%);*/
 }
 
 .call-do-section-thumb {
@@ -43865,7 +43865,7 @@ span {
 
 .counter-section .single-counter-text:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px 0 rgb(0 0 0 0/20%);
+  /*box-shadow: 0 0 20px 0 rgb(0 0 0 0/20%);*/
 }
 
 /*--======================================
