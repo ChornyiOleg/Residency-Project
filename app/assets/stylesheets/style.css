@@ -2741,7 +2741,7 @@ start search Popup Css
     color: #f12a02;
     display: inline-block;
     border-radius: 100%;
-    box-shadow: 0 0 3px rgb(241 42 2 / 40%);
+    /*box-shadow: 0 0 3px rgb(241 42 2 / 40%);*/
     font-size: 16px;
 }
 .process-title h2 {
