@@ -17,12 +17,9 @@
             Countries
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/countries/1">Portugal</a></li>
-            <li><a class="dropdown-item" href="/countries/2">Panama</a></li>
-            <li><a class="dropdown-item" href="/countries/3">Montenegro</a></li>
-            <li><a class="dropdown-item" href="/countries">All countries</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <% @countries.each do |country| %>
+              <li><%= link_to country.name, country, class: 'dropdown-item' %></li>
+            <% end %>
           </ul>
         </li>
 
@@ -31,8 +28,9 @@
             Programs
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/programs/1">Citizenship</a></li>
-            <li><a class="dropdown-item" href="/programs/2">Residency</a></li>
+            <% @programs.each do |program| %>
+              <li><%= link_to program.name, program, class: 'dropdown-item' %></li>
+            <% end %>
           </ul>
         </li>
         <li class="nav-item">
