@@ -265,7 +265,7 @@ border-top: 1px dotted rgba(120, 125, 130, .8);
     border-color:#bd2d10;
 }
 .header-area.style-four span {
-    color: rgb(35, 35, 35, 0.5);
+    color: rgb(35, 35, 35);
 }
 .header-area.style-four.sticky-nav span{
     color: #fff;
