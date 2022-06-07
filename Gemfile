@@ -13,13 +13,13 @@ gem 'pagy', '~> 5.09'
 gem 'nokogiri'
 gem 'trestle'
 gem "validate_url"
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+# gem 'font-awesome-sass', '~> 6.1.1'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem 'jquery-rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-# gem "sprockets-rails"
+gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"

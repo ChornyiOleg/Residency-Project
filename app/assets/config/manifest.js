@@ -1,5 +1,6 @@
 //= link_tree ../images
 //= link_tree ../builds
+
 //= link all.min.css
 //= link animate.css
 //= link animated-text.css
@@ -17,13 +18,31 @@
 //= link style.css
 //= link widget.css
 //= link venobox.css
-//= link owl.carousel.min.js
-//= link slick.min.js
-//= link venobox.js
-//= link vendor/modernizr-3.5.0.min
+
 //= link ajax-mail.js
-//= link jquery.barfiller
-//= link jquery.counterup.min
-//= link jquery.meanmenu
+//= link animated-text.js
+//= link jquery.barfiller.js
+//= link jquery.counterup.min.js
+//= link jquery.meanmenu.js
 //= link jquery.nivo.slider.pack.js
-//= link jquery.scrollUp
+//= link jquery.scrollUp.js
+//= link jquery.themepunch.revolution.min.js
+//= link jquery.themepunch.tools.min.js
+//= link bootstrap.min.js
+//= link isotope.pkgd.min.js
+//= link imagesloaded.pkgd.min.js
+//= link main.js
+//= link owl.carousel.min.js
+//= link popper.min.js
+//= link slick.min.js
+//= link waypoints.min.js
+//= link wow.js
+//= link vendor/modernizr-3.5.0.min.js
+//= link vendor/modernizr-3.5.0.min.js
+//= link vendor/jquery-3.2.1.min.js
+
+//= link extensions/revolution.extension.carousel.min.js
+//= link extensions/revolution.extension.kenburn.min.js
+//= link extensions/revolution.extension.layeranimation.min.js
+//= link extensions/revolution.extension.navigation.min.js
+//= link extensions/revolution.extension.slideanims.min.js

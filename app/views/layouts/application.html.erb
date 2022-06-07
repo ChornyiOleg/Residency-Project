@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>Residency</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +13,6 @@
     <%= stylesheet_link_tag "animated-text", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "bootstrap.min", media: 'all', "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "flaticon", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "meanmenu.min", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "nivo-slider", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "owl.carousel.min", media: 'all', "data-turbo-track": "reload" %>
@@ -24,21 +25,31 @@
     <%= stylesheet_link_tag "theme-default", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "widget", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "venobox.css", media: 'all', "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
-    <%= javascript_include_tag "owl.carousel.min", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "slick.min", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "venobox.js", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "vendor/modernizr-3.5.0.min", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "ajax-mail", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "jquery.barfiller", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "jquery.counterup.min", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "jquery.meanmenu", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "jquery.nivo.slider.pack", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "ajax-mail.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "animated-text.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.barfiller.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.counterup.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.meanmenu.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.nivo.slider.pack.js", "data-turbo-track": "reload", defer: true %>
     <%= javascript_include_tag "jquery.scrollUp", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.themepunch.revolution.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "jquery.themepunch.tools.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "bootstrap.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "imagesloaded.pkgd.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "isotope.pkgd.min.js", "data-turbo-track": "reload", defer: true %>
 
-  </head>
-
+    <%= javascript_include_tag "main.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "owl.carousel.min", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "popper.min.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "slick.min", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "waypoints.min.js", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "wow.js", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "venobox.js", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "vendor/jquery-3.2.1.min", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "vendor/modernizr-3.5.0.min", "data-turbo-track": "reload", defer: true %>
+    <%#= javascript_include_tag "extensions/revolution.extension.carousel.min.js", "data-turbo-track": "reload", defer: true %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <body>
   <div class="content">
     <!--top-header-->

@@ -287,7 +287,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
-  font-awesome-rails (~> 4.7, >= 4.7.0.2)
+  font-awesome-rails
   image_processing (~> 1.2)
   jbuilder
   jquery-rails
@@ -304,6 +304,7 @@ DEPENDENCIES
   rails (~> 7.0.2, >= 7.0.2.3)
   sassc-rails
   simple_form
+  sprockets-rails
   stimulus-rails
   trestle
   turbo-rails (~> 1.0.0)
