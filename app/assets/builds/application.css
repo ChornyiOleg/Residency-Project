@@ -41897,7 +41897,7 @@ start search Popup Css
 /* start choose section */
 .choose-section .row.upper11 {
   background: #fff;
-  box-shadow: 0 0 6px 0 rgb(29 33 67/10%);
+  /*box-shadow: 0 0 6px 0 rgb(29 33 67/10%);*/
   border-radius: 7px;
   position: relative;
   margin-top: -213px;
