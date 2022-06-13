@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_07_100302) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_13_151240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -90,7 +90,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_100302) do
 
   create_table "posts", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -105,7 +104,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_100302) do
   create_table "residences", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.string "image"
     t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -113,6 +111,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_07_100302) do
     t.bigint "program_id"
     t.index ["country_id"], name: "index_residences_on_country_id"
     t.index ["program_id"], name: "index_residences_on_program_id"
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string "name_of_user"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
