@@ -4,6 +4,10 @@
 </p>
 
 <p>
+  <%= render 'likes/form' %>
+</p>
+
+<p>
   <% @residence.images.each do |image| %>
     <%= image_tag image, width: '250' %>
   <% end %>

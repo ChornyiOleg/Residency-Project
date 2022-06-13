@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Residences</h1>
+  <div class="row row-cols-3">
+    <% @likes.each do |like| %>
+      
+        <div class="col">
+          <dl>
+            <dt> <%= like.residence.name %> </dt>
+          </dl>
+          <% if like.residence.images.attached? %>
+            <%= image_tag like.residence.images.first, width: '250' %>
+          <% end %>
+          <dl>
+            <dt> 
+              <%= link_to 'Show', like.residence, class: 'btn btn-primary' %>
+            </dt>
+          </dl>
+        </div>
+      
+    <% end %>
+  </div>
+  <%== pagy_nav(@pagy) %>
+  <%== pagy_info(@pagy) %>
+</div>
