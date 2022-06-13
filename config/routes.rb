@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   resources :programs
   resources :likes
   resources :views 
-
+  resources :testimonials
 
 end

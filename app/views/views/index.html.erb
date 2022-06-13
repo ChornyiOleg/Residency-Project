@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Views</h1>
+  <div class="row row-cols-3">
+    <% @records.each do |views| %>
+      
+        <div class="col">
+          <dl>
+            <dt> <%= views.residence.name %> </dt>
+          </dl>
+          <% if views.residence.images.attached? %>
+            <%= image_tag views.residence.images.first, width: '250' %>
+          <% end %>
+          <dl>
+            <dt> 
+              <%= link_to 'Show', views.residence, class: 'btn btn-primary' %>
+            </dt>
+          </dl>
+        </div>
+      
+    <% end %>
+  </div>
+  <%== pagy_nav(@pagy) %>
+  <%== pagy_info(@pagy) %>
+</div>
