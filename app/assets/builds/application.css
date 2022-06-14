@@ -41553,7 +41553,7 @@ start search Popup Css
 
 /* flipx section*/
 .flipx-section {
-  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), #f4f7fc url("flipx2.jpg");
+  background: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)), #f4f7fc url("flipx2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -42025,7 +42025,7 @@ start search Popup Css
 
 /* start process area */
 .proceas-area {
-  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), transparent url("process.jpg");
+  background: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)), transparent url("process.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

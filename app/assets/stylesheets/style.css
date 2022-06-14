@@ -2060,7 +2060,7 @@ start search Popup Css
 }
 /* start call do action area*/
 .call-do-action {
-    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)),url('home-3.jpg');
+    background: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)),url('home-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
