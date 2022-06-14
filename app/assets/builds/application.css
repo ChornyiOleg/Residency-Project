@@ -41600,7 +41600,7 @@ start search Popup Css
 }
 
 .flipx-section .flip-box-back {
-  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;
+  /*background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;*/
   border: 0px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   color: white;
@@ -41624,25 +41624,25 @@ start search Popup Css
   transform: rotateX(180deg);
 }
 
-.flipx-section .flip-box-back.two {
-  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service3.jpg") center center/cover no-repeat scroll;
-}
+/*.flipx-section .flip-box-back.two {*/
+/*  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service3.jpg") center center/cover no-repeat scroll;*/
+/*}*/
 
-.flipx-section .flip-box-back.three {
-  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;
-}
+/*.flipx-section .flip-box-back.three {*/
+/*  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;*/
+/*}*/
 
-.flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service-3.jpg") center center/cover no-repeat scroll;
-}
+/*.flipx-section .flip-box-back {*/
+/*  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service-3.jpg") center center/cover no-repeat scroll;*/
+/*}*/
 
-.flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("new3.jpg") center center/cover no-repeat scroll;
-}
+/*.flipx-section .flip-box-back {*/
+/*  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("new3.jpg") center center/cover no-repeat scroll;*/
+/*}*/
 
-.flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service5.jpg") center center/cover no-repeat scroll;
-}
+/*.flipx-section .flip-box-back {*/
+/*  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service5.jpg") center center/cover no-repeat scroll;*/
+/*}*/
 
 .flipx-section .dreamit-section-sub-title h5, .flipx-section .dreamit-section-sub-title .h5 {
   color: #f12a02;
@@ -41730,7 +41730,7 @@ start search Popup Css
 }
 
 .flipx-section.style-two .flip-box-back {
-  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;
+  /*background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;*/
   border: 0px solid rgba(255, 255, 255, 0);
   padding-top: 53px;
 }

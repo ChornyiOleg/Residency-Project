@@ -1254,21 +1254,21 @@ start search Popup Css
     color: #616161;
 }
 .feature-section .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;
+    /*background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;*/
     border: 0px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     color: white;
     transform: rotateY(180deg);
     padding-top: 40px;
 }
-.feature-section .flip-box-back.two{
-    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('service3.jpg') center center/cover no-repeat scroll;
-}
-.feature-section .flip-box-back.three{
-    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('tofel2.jpg') center center/cover no-repeat scroll;
-}
+/*.feature-section .flip-box-back.two{*/
+/*    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('service3.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.feature-section .flip-box-back.three{*/
+/*    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('tofel2.jpg') center center/cover no-repeat scroll;*/
+/*}*/
 .feature-section .des a{
     display: inline-block;
     font-size: 15px;
