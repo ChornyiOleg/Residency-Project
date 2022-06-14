@@ -2621,7 +2621,7 @@ start search Popup Css
 }
 /* start process area */
 .proceas-area {
-    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), url('process.jpg');
+    background: linear-gradient(rgba(26, 31, 53, 0.62), rgba(26, 31, 53, 0.62)), transparent url('process.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

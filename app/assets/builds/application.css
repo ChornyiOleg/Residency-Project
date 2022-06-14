@@ -41367,7 +41367,7 @@ start search Popup Css
 
 /* start call do action area*/
 .call-do-action {
-  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), url("home-3.jpg");
+  background: linear-gradient(rgba(26, 31, 53, 0.62), rgba(26, 31, 53, 0.62)), transparent), url("home-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
