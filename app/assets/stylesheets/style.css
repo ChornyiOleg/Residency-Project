@@ -2497,7 +2497,7 @@ start search Popup Css
 }
 /* start testimonial section*/
 .testimonial-section{
-    background-image:#f4f7fc url('skill2.png');
+    background-image: url('skill2.png');
     background-position: center center; 
     background-size: cover;
     background-repeat: no-repeat; 
@@ -3091,7 +3091,7 @@ start search Popup Css
 }
 /*---home-two-service-area---*/
 .visa-area.pt-60.pb-40 {
-    background-image: #f4f7fc url('two.png');
+    background-image: url('two.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -3504,7 +3504,7 @@ h3.appointment-title {
     background-repeat: no-repeat;
 }
 .country-area {
-    background-image: #f4f7fc url('map-img.png');
+    background-image: url('map-img.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3768,7 +3768,7 @@ span.fill {
 		start------testimonials-----area----------
 	-=============================================*/
 .testimonials-area {
-    background: linear-gradient(rgb(17, 26,58), rgba(17, 26, 58)), transparent('testi-bg.jpg');
+    background: linear-gradient(rgb(17, 26, 58, 0.75), rgba(17, 26, 58, 0.75)), transparent url('testi-bg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
