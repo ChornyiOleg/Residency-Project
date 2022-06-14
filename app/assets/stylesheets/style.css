@@ -3768,7 +3768,7 @@ span.fill {
 		start------testimonials-----area----------
 	-=============================================*/
 .testimonials-area {
-    background: linear-gradient(rgb(17, 26, 58, 0.75), rgba(17, 26, 58, 0.75)), transparent url('testi-bg.jpg');
+    /*background: linear-gradient(rgb(17, 26, 58, 0.75), rgba(17, 26, 58, 0.75)), transparent url('testi-bg.jpg');*/
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
