@@ -40529,7 +40529,7 @@ start search Popup Css
 }
 
 .feature-section .flip-box-back {
-  background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("education.jpg") center center/cover no-repeat scroll;
+  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;
   border: 0px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   color: white;
@@ -40538,11 +40538,11 @@ start search Popup Css
 }
 
 .feature-section .flip-box-back.two {
-  background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("service3.jpg") center center/cover no-repeat scroll;
+  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service3.jpg") center center/cover no-repeat scroll;
 }
 
 .feature-section .flip-box-back.three {
-  background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;
+  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;
 }
 
 .feature-section .des a {
@@ -41456,7 +41456,7 @@ start search Popup Css
 
 /* start call do action area*/
 .call-do-action {
-  background-image: linear-gradient(rgba(17, 26, 58, 0.86), rgba(17, 26, 58, 0.86)), url("home-3.jpg");
+  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), url("home-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -41642,7 +41642,7 @@ start search Popup Css
 
 /* flipx section*/
 .flipx-section {
-  background-image: linear-gradient(rgba(17, 26, 58, 0.92), rgba(17, 26, 58, 0.92)), #f4f7fc url("flipx2.jpg");
+  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), #f4f7fc url("flipx2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -41689,7 +41689,7 @@ start search Popup Css
 }
 
 .flipx-section .flip-box-back {
-  background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("education.jpg") center center/cover no-repeat scroll;
+  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;
   border: 0px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   color: white;
@@ -41714,23 +41714,23 @@ start search Popup Css
 }
 
 .flipx-section .flip-box-back.two {
-  background-image: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("service3.jpg") center center/cover no-repeat scroll;
+  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service3.jpg") center center/cover no-repeat scroll;
 }
 
 .flipx-section .flip-box-back.three {
-  background-image: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;
+  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("tofel2.jpg") center center/cover no-repeat scroll;
 }
 
 .flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("service-3.jpg") center center/cover no-repeat scroll;
+  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service-3.jpg") center center/cover no-repeat scroll;
 }
 
 .flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("new3.jpg") center center/cover no-repeat scroll;
+  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("new3.jpg") center center/cover no-repeat scroll;
 }
 
 .flipx-section .flip-box-back {
-  background-image: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("service5.jpg") center center/cover no-repeat scroll;
+  background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("service5.jpg") center center/cover no-repeat scroll;
 }
 
 .flipx-section .dreamit-section-sub-title h5, .flipx-section .dreamit-section-sub-title .h5 {
@@ -41819,7 +41819,7 @@ start search Popup Css
 }
 
 .flipx-section.style-two .flip-box-back {
-  background: linear-gradient(rgba(241, 42, 2, 0.85), rgba(241, 42, 2, 0.85)), transparent url("education.jpg") center center/cover no-repeat scroll;
+  background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url("education.jpg") center center/cover no-repeat scroll;
   border: 0px solid rgba(255, 255, 255, 0);
   padding-top: 53px;
 }
@@ -42114,7 +42114,7 @@ start search Popup Css
 
 /* start process area */
 .proceas-area {
-  background-image: linear-gradient(rgba(17, 26, 58, 0.9), rgba(17, 26, 58, 0.9)), transparent url("process.jpg");
+  background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), transparent url("process.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -44528,7 +44528,7 @@ span {
         Start Breatcome area
     -========================================*/
 .breatcome-area {
-  background: linear-gradient(rgb(94 109 162/75%), rgba(17, 26, 58, -0.25)), transparent url("style-three.jpg");
+  background: linear-gradient(rgb(94 109 162), rgba(17, 26, 58)), transparent url("style-three.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -44680,7 +44680,7 @@ span {
 }
 /*-======= call-do-action-area-=================*/
 .call-do-action-area {
-  background: linear-gradient(rgba(26, 31, 53, 0.62), rgba(26, 31, 53, 0.62)), transparent url("home-3.jpg");
+  background: linear-gradient(rgba(26, 31, 53), rgba(26, 31, 53)), transparent url("home-3.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -44729,7 +44729,7 @@ span {
 }
 
 .style-three .row.experienced-box {
-  background: linear-gradient(rgba(26, 31, 53, 0.82), rgba(26, 31, 53, 0.82)), transparent url("book.jpg");
+  background: linear-gradient(rgba(26, 31, 53), rgba(26, 31, 53)), transparent url("book.jpg");
   padding: 1px 0;
   position: relative;
   margin-top: -191px;
@@ -44808,7 +44808,7 @@ span {
 /*testimonial style five*/
 /*testiomonial style five*/
 .testimonials-area.style-five {
-  background linear-gradient(rgb(17, 26, 58, 0.1), rgba(17, 26, 58, 0.1)), transparent url("map3.jpg");
+  background linear-gradient(rgb(17, 26, 58), rgba(17, 26, 58)), transparent url("map3.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
