@@ -13,6 +13,21 @@ Trestle.resource(:residences) do
 
   # Customize the form fields shown on the new/edit views.
   #
+  # form do |residence|
+  #
+  #   text_field :name
+  #   text_field :address
+  #   file_field :image
+  #   text_field :cost
+  #   text_area :description
+  #
+  # end
+  #
+  #   row do
+  #     col { datetime_field :updated_at }
+  #     col { datetime_field :created_at }
+  #   end
+  # end
   form do |residence|
   
     row do

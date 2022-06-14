@@ -12,23 +12,22 @@
       </div>
     <% end %>
 
-      <div class="field py-2">
+    <div class="form_box mb-15">
       <%= form.label :name, class: "pb-2" %>
-      <%= form.text_field :name, class: "form-control" %>
+      <%= form.text_field :name, class: "form-control", required: true, placeholder: "Name" %>
     </div>
 
-    <div class="field py-2">
+    <div class="form_box mb-15">
 
       <%= form.label :content, class: "pb-2" %>
-      <%= form.text_area :content, class: "form-control", row: 40 %>
+      <%= form.text_area :content, class: "form-control", required: true, row: 80, placeholder: "Content" %>
 
 
     </div>
 
-    <div class="field py-2">
+    <div class="form_box mb-15">
       <%= form.label :image, class: "img-fluid" %>
-      <%= form.text_field :image, class: "form-control" %>
-      <%#= form.file_field :image, class: "form-control" %>
+      <%= form.file_field :image, class: "form-control", required: true, placeholder: "Image file" %>
     </div>
 
     <div class="actions py-2 d-flex justify-content-center d-flex align-items-center">

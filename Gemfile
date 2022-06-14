@@ -13,7 +13,10 @@ gem 'pagy', '~> 5.09'
 gem 'nokogiri'
 gem 'trestle'
 gem "validate_url"
-# gem 'font-awesome-sass', '~> 6.1.1'
+
+gem 'trestle-tinymce'
+gem 'font-awesome-sass'
+gem 'owlcarousel-rails'
 gem 'aws-sdk-s3', require: false
 gem 'rubocop'
 

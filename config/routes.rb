@@ -11,18 +11,23 @@ Rails.application.routes.draw do
   get 'blog', to: 'home#blog'
   get 'about', to: 'home#about'
   get 'contact', to: 'home#contact'
+  # get 'residences', to: 'home#residences'
   get 'home/index'
   root to: 'home#index'
   post 'home/index', to: 'orders#create'
   get 'search', to: 'residences#search'
+  # resources :residences, path: 'residence'
   resources :residences do
     resources :orders
     resources :likes
   end
   resources :countries
-  resources :programs
+  resources :programs do
+
+  end
   resources :likes
   resources :views 
   resources :testimonials
+
 
 end

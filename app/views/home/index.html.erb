@@ -1,4 +1,7 @@
-<!-- inside app/views/home/index.html.erb -->
+<meta charset="UTF-8">
+
+
+<!-- inside app/views/home/_index.html.erb -->
 <!--banner-starts-->
 
 <!--<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">-->
@@ -173,6 +176,7 @@
 <!--==================================================-->
 <!-- start caursel slider-->
 <!--==================================================-->
+
 <div class="slider-section style-three d-flex align-items-center">
   <div class="container">
     <div class="row align-items-center">
@@ -191,47 +195,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 p-0 wow fadeInRight animated" data-wow-delay="800ms">
-        <div class="row">
-          <div class="contact_from_box">
-            <div class="contact_title pb-4">
-              <h3>Request a Appointment</h3>
-            </div>
-            <form id="contact_form" action="mail.php" method="POST" >
-              <div class="col-lg-12">
-                <div class="form_box mb-15">
-                  <input type="text" name="name"  placeholder="Name">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form_box mb-15">
-                  <input type="email" name="email" placeholder="Email Address">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form_box mb-15">
-                  <input type="text" name="phone" placeholder="Phone Number">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <select class="appointment-select-country">
-                  <option>Select Visa</option>
-                  <option>Business Visa</option>
-                  <option>Student Visa</option>
-                  <option>Family Visa</option>
-                  <option>Tour Visa</option>
-                </select>
-              </div>
-              <div class="col-lg-12">
-                <div class="quote_btn">
-                  <button class="btn" type="submit">Send Request</button>
-                </div>
-              </div>
-            </form>
-            <p class="form-message"></p>
-          </div>
-        </div>
-      </div>
+
+      <%= render 'orders/form_for_home' %>
+
     </div>
   </div>
 </div>
@@ -326,73 +292,127 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12">
-        <div class="section-content text-center">
-          <p href="#">The Most Trusted Immigration and Visa Consultant. <a href="#">View All Country !</a></p>
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("bangladesh.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("bangladesh-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>bangladesh</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("australia.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("australia-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>australia</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+              <%#= icon('fas', 'plus')%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="dreamit-country-box">
+          <div class="dreamit-country-thumb">
+            <%= image_tag("brazil.jpg", alt: "about")%>
+          </div>
+          <div class="country-flag-img">
+            <%= image_tag("brazil-flag.gif", alt: "about")%>
+          </div>
+          <div class="country-content">
+            <div class="country-title pt-3">
+              <h2>brazil</h2>
+            </div>
+            <div class="country-content-text">
+              <p>Lorem ipsum dolor sit amet, consec anglse sicing elite sombar, sed do incididunt ut labore</p>
+            </div>
+            <div class="country-button">
+              <a href="#">read more <i class="fas fa-plus"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<div></div>
 
 <!--==================================================-->
 <!----- start visapro about- Area ----->
 <!--==================================================-->
-<div class="about-area style-five pb-70 pt-60">
+<div class="about-area style-four pb-65 pt-100">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 col-md-6">
-        <div class="row">
-          <div class="about-thumb">
-            <%= image_tag("new6.png", alt: "about")%>
-          </div>
+      <div class="col-lg-6 wow slideInLeft animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+        <div class="dreamit-thumb">
+          <%= image_tag("new5.png", alt: "about")%>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-6 col-md-9 wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
         <div class="dreamit-section-title pb-15">
           <div class="dreamit-section-sub-title">
-            <h5>ABOUT VISAPRO</h5>
+            <h5>ABOUT US</h5>
           </div>
           <div class="dreamit-section-main-title">
-            <h1>Immigration Services From</h1>
-            <h2>Experienced Lawyers</h2>
+            <h1>Not Just Traditional Visa &</h1>
+            <h2>Immigration Firm</h2>
           </div>
-          <div class="dreamit-section-bar mb-45"></div>
-          <div class="dreamit-content-text">
-            <p>We have been counselling students for educational opportunities in Foreign countrie.</p>
+          <div class="dreamit-section-bar"></div>
+          <div class="dreamit-section-bold-text pt-35">
+            <p>Sedut perspiciatis unde omnis iste natus error sit voluptat em accusan doloremque laudantium, totam raperiaeaque ipsa quae ab illo and the inventore veritatis et quasi nec ullamcorper mattis.</p>
           </div>
-          <div class="dreamit-section-bold-text">
-            <p>There are may experienced engineer for your immigration service. We give the best immigration service for you.</p>
+        </div>
+        <div class="about-single-box d-flex">
+          <div class="about-icon">
+            <i class="flaticon-content"></i>
           </div>
-          <div class="barfiller-box pt-10">
-            <div class="barfillr-content">
-              <div class="barfiller-title">
-                <h3>Immigration Consultency</h3>
-              </div>
+          <div class="about-content">
+            <div class="about-title">
+              <h2>Accurate Guidance</h2>
             </div>
-            <div id="bar1" class="barfiller">
-              <div class="tipWrap">
-                <span class="tip"></span>
-              </div>
-              <span class="fill" data-percentage="80"></span>
-            </div>
-          </div>
-          <div class="barfiller-box pt-2">
-            <div class="barfillr-content">
-              <div class="barfiller-title">
-                <h3>Student Consultency</h3>
-              </div>
-            </div>
-            <div id="bar2" class="barfiller">
-              <div class="tipWrap">
-                <span class="tip"></span>
-              </div>
-              <span class="fill" data-percentage="95"></span>
+            <div class="about-content-text">
+              <p>Skilled professionals are always ready to provide reliable services to our clients!</p>
             </div>
           </div>
         </div>
-        <div class="about-btn pt-2">
+        <div class="about-single-box d-flex">
+          <div class="about-icon">
+            <i class="flaticon-content-writing"></i>
+          </div>
+          <div class="about-content">
+            <div class="about-title">
+              <h2>Our Presence</h2>
+            </div>
+            <div class="about-content-text">
+              <p>Skilled professionals are always ready to provide reliable services to our clients!</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-btn">
           <a href="#">read more <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
@@ -400,199 +420,56 @@
   </div>
 </div>
 
-<!--==================================================-->
-<!----- start visapro about- Area ----->
-<!--==================================================-->
-<div class="agency-section pt-90 pb-40">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-md-6">
-        <div class="dreamit-section-title pb-15">
-          <div class="dreamit-section-sub-title">
-            <h5>OUR AGENCY</h5>
-          </div>
-          <div class="dreamit-section-main-title">
-            <h1 class="text-white">Since 1850 We Have</h1>
-            <h2 class="text-white">Branches All Over World</h2>
-          </div>
-          <div class="dreamit-section-bar mb-45"></div>
-          <div class="dreamit-content-text">
-            <p>Duis nunc sodales conubia ad laoreet aliquet nostra. Eleifend lacinia and prasent hendrerit quisque penatibus erat. At pulvinar integer semper the ridiculus lectus condimentum obor tise verodar capmtaso morin prointer nibh posuere lorente focusing.</p>
-          </div>
-          <div class="dreamit-section-bold-text">
-            <p>Muis nunc sodales conubia ad laoreet aliquet nostra. Eleifend lacinia and prasent hendrerit quisque penatibus erat. At pulvinar integer semper the ridiculus lectus condimentum obor tise verodar.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="agency-thumb">
-          <%= image_tag("map2.png", alt: "about")%>
-        </div>
-      </div>
-    </div>
-    <div class="row upper10">
-      <div class="col-lg-3 col-md-6">
-        <div class="single-counter-text">
-          <div class="counter-icon">
-            <i class="flaticon-microchip"></i>
-          </div>
-          <div class="counter-content">
-            <h1 class="counter">3060</h1>
-            <h3>+</h3>
-          </div>
-          <div class="counter-title-style-2">
-            <h4>student</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="single-counter-text">
-          <div class="counter-icon">
-            <i class="flaticon-global"></i>
-          </div>
-          <div class="counter-content">
-            <h1 class="counter">200</h1>
-            <h3>+</h3>
-          </div>
-          <div class="counter-title-style-2">
-            <h4>Immigration</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="single-counter-text">
-          <div class="counter-icon">
-            <i class="flaticon-time"></i>
-          </div>
-          <div class="counter-content">
-            <h1 class="counter">10</h1>
-            <h3>k+</h3>
-          </div>
-          <div class="counter-title-style-2">
-            <h4>Universities</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="single-counter-text">
-          <div class="counter-icon">
-            <i class="flaticon-compass"></i>
-          </div>
-          <div class="counter-content">
-            <h1 class="counter">500</h1>
-            <h3>+</h3>
-          </div>
-          <div class="counter-title-style-2">
-            <h4>Country</h4>
-          </div>
-        </div>
-      </div>
+  <!--==================================================-->
+  <!--start country section area-->
+  <!--==================================================-->
 
-    </div>
-  </div>
-</div>
-<!--==================================================-->
-<!-- stsrt visapro exprernce Area-->
-<!--==================================================-->
-<div class="course-section style-two pt-90 pb-70">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="dreamit-section-title pb-30 text-center">
-          <div class="dreamit-section-sub-title">
-            <h5>VISA CATEGORY</h5>
-          </div>
-          <div class="dreamit-section-main-title">
-            <h1 class="text-black">Choose Your Immigration</h1>
-            <h2 class="text-black">Visa Services</h2>
-          </div>
-          <div class="dreamit-section-bar center mt-3"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="course_list owl-carousel ">
-        <div class="col-lg-12">
-          <div class="single-course-box">
-            <div class="course-thumb">
-              <%= image_tag("coach.jpg", alt: "about")%>
-            </div>
-            <div class="course-icon">
-              <i class="flaticon-intelligent"></i>
-            </div>
-            <div class="course-content">
-              <div class="course-title">
-                <a href="#"><h2>IELTS Coaching</h2></a>
-              </div>
-              <div class="course-content-text">
-                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
-              </div>
-              <div class="course-btn">
-                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="single-course-box">
-            <div class="course-thumb">
-              <%= image_tag("coac3.jpg", alt: "about")%>
-            </div>
-            <div class="course-icon">
-              <i class="flaticon-compass"></i>
-            </div>
-            <div class="course-content">
-              <div class="course-title">
-                <a href="#"><h2>TOEFL</h2></a>
-              </div>
-              <div class="course-content-text">
-                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
-              </div>
-              <div class="course-btn">
-                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="single-course-box">
-            <div class="course-thumb">
-              <%= image_tag("coach4.jpg", alt: "about")%>
-            </div>
-            <div class="course-icon">
-              <i class="flaticon-laptop"></i>
-            </div>
-            <div class="course-content">
-              <div class="course-title">
-                <a href="#"><h2>Graduate Re Exam</h2></a>
-              </div>
-              <div class="course-content-text">
-                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
-              </div>
-              <div class="course-btn">
-                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="single-course-box">
-            <div class="course-thumb">
-              <%= image_tag("coach5.jpg", alt: "about")%>
 
+  <div class="country-section pt-70 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="dreamit-section-title pb-30 text-center">
+            <div class="dreamit-section-sub-title">
+              <h5>VISA CATEGORY</h5>
             </div>
-            <div class="course-icon">
-              <i class="flaticon-content-writing"></i>
+            <div class="dreamit-section-main-title">
+              <h1>Choose Your Immigration</h1>
+              <h2 class="text-black">Visa Services</h2>
             </div>
-            <div class="course-content">
-              <div class="course-title">
-                <a href="#"><h2>Scholastic Apti</h2></a>
-              </div>
-              <div class="course-content-text">
-                <p>Nullam tincidunt augue eget dui volu tpat, vitae ultri ces lectus posuere. Duis urna lacus, efficitur non.</p>
-              </div>
-              <div class="course-btn">
-                <a href="#">Read More<i class="fa fa-angle-right"></i></a>
+            <div class="dreamit-section-bar center mt-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-3">
+          <div class="single-country-box">
+            <div class="single-country-thumb">
+              <%= image_tag("img1.jpg", alt: "about")%>
+              <div class="country-content">
+                <div class="country-title">
+                  <h2>CITIZENSHIP</h2>
+                </div>
+                  <div class="country-title">
+                    <p> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</p>
+                    <a href="#">Learn More</a>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-3">
+          <div class="single-country-box">
+            <div class="single-country-thumb">
+              <%= image_tag("img1.jpg", alt: "about")%>
+              <div class="country-content">
+                <div class="country-title">
+                  <h2>RESIDENCY</h2>
+                </div>
+                <div class="country-title">
+                  <p> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</p>
+                  <a href="#">Learn More</a>
+                </div>
               </div>
             </div>
           </div>
@@ -600,157 +477,46 @@
       </div>
     </div>
   </div>
-</div>
+
+<br>
 <!--==================================================-->
-<!--start call action area-->
+<!----- start visapro----contact---- Area ----->
 <!--==================================================-->
-<div class="call-section style-three pt-60 pb-80">
+<div class="online-visa-area style-two">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-9 col-md-9 pl-0">
-        <div class="call-do-action-content">
-          <div class="call-title">
-            <h3>All Kinds Of Immigration Services</h3>
-            <h2>That Vow Your Success</h2>
-          </div>
+    <div class="row online-visa-bx align-items-center">
+      <div class="col-lg-5 pl-0">
+        <div class="dreamit-online-visa-thumb">
+          <%= image_tag("ass.jpg", alt: "about")%>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3">
-        <div class="call-btn">
-          <a href="#">Apply Visa Now<i class="fa fa-angle-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--==================================================-->
-<!--start team member area-->
-<!--==================================================-->
-<div class="team-member-area style-two upper">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="dreamit-section-title pb-30 text-center">
-          <div class="dreamit-section-sub-title">
-            <h5>Professional Team</h5>
+      <div class="col-lg-7">
+        <div class="dreamit-online-visa-box pl-40">
+          <div class="dreamit-online-visa-title">
+            <h2>Free Online Visa Assessment</h2>
           </div>
-          <div class="dreamit-section-main-title">
-            <h2 class="text-black">Meet Our Dedicated Team</h2>
+          <div class="dreamit-online-visa-content">
+            <p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim minim veniam.</p>
           </div>
-          <div class="dreamit-section-bar center mt-3"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="dreamit-single-team">
-          <div class="team-member-thumb">
-            <%= image_tag("team3.jpg", alt: "about")%>
-            <div class="dreamit-team-social-icon">
-              <div class="dreamit-team-social-icon-inner">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </div>
-            </div>
+          <div class="online-visa-button">
+            <a href="#">Get Free Assessment <i class="fas fa-chevron-right"></i></a>
           </div>
-          <div class="dreamit-team-content">
-            <div class="team-meta-icon">
-              <i class="fa fa-plus"></i>
-            </div>
-            <div class="team-content-title">
-              <h2>Angel Zara</h2>
-              <h3>Migration Agent</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="dreamit-single-team">
-          <div class="team-member-thumb">
-            <%= image_tag("team2.jpg", alt: "about")%>
-            <div class="dreamit-team-social-icon">
-              <div class="dreamit-team-social-icon-inner">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="dreamit-team-content">
-            <div class="team-meta-icon">
-              <i class="fa fa-plus"></i>
-            </div>
-            <div class="team-content-title">
-              <h2>Shene Watsan</h2>
-              <h3>Visa Director</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="dreamit-single-team">
-          <div class="team-member-thumb">
-            <%= image_tag("team1.jpg", alt: "about")%>
-            <div class="dreamit-team-social-icon">
-              <div class="dreamit-team-social-icon-inner">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="dreamit-team-content">
-            <div class="team-meta-icon">
-              <i class="fa fa-plus"></i>
-            </div>
-            <div class="team-content-title">
-              <h2>Fahmida Haque</h2>
-              <h3>Co-Founder</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="dreamit-single-team">
-          <div class="team-member-thumb">
-            <%= image_tag("team6.jpg", alt: "about")%>
-            <div class="dreamit-team-social-icon">
-              <div class="dreamit-team-social-icon-inner">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="dreamit-team-content">
-            <div class="team-meta-icon">
-              <i class="fa fa-plus"></i>
-            </div>
-            <div class="team-content-title">
-              <h2>Jhone Abraham</h2>
-              <h3>SR. MANAGER</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-content text-center">
-          <p href="#">The Most Trusted Immigration and Visa Consultant. <a href="#">View All Country !</a></p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 <!--==================================================-->
 <!--start testimonial  area-->
 <!--==================================================-->
-<div class="testimonial-section pt-90 pb-80">
+
+
+<div class="testimonial-section pt-100 pb-100">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-12 wow slideInUp animated" data-wow-delay="ms" data-wow-duration="1500ms">
         <div class="dreamit-section-title pb-30 text-center">
           <div class="dreamit-section-sub-title">
             <h5>CLIENTS REVIEWS</h5>
@@ -765,7 +531,7 @@
     </div>
     <div class="row pt-10">
       <div class="testimonials_list4 owl-carousel ">
-        <div class="col-lg-12">
+        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div class="single-testimonial-box">
             <div class="testimonial-content">
               <div class="testimonial-icon">
@@ -787,7 +553,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
           <div class="single-testimonial-box">
             <div class="testimonial-content">
               <div class="testimonial-icon">
@@ -800,7 +566,7 @@
             </div>
             <div class="testimonial-content-inner d-flex align-items-center">
               <div class="testi-thumb">
-                <<%= image_tag("client9.jpg", alt: "about")%>
+                <%= image_tag("client9.jpg", alt: "about")%>
               </div>
               <div class="testi-title">
                 <h2>Ellen Erye </h2>
@@ -809,7 +575,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
           <div class="single-testimonial-box">
             <div class="testimonial-content">
               <div class="testimonial-icon">
@@ -831,7 +597,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="800ms" data-wow-duration="1500ms">
           <div class="single-testimonial-box">
             <div class="testimonial-content">
               <div class="testimonial-icon">
@@ -857,6 +623,7 @@
     </div>
   </div>
 </div>
+
 <!--==================================================-->
 <!--start visapro BLOG Area-->
 <!--==================================================-->
@@ -879,7 +646,7 @@
         <div class="col-lg-12">
           <div class="dreamit-single-blog-box">
             <div class="dreamit-blog-thumb">
-              <a href="#"><%= image_tag("blog1.jpg", alt: "about")%></a>
+              <a href="#"> <%= image_tag("blog1.jpg", alt: "about")%></a>
               <div class="post-catgory">
                 <a href="#">Sep 24, 2021</a>
               </div>
@@ -952,7 +719,7 @@
         <div class="col-lg-12">
           <div class="dreamit-single-blog-box">
             <div class="dreamit-blog-thumb">
-              <a href="#"><%= image_tag("blog5.jpg", alt: "about")%></a>
+              <a href="#"> <%= image_tag("blog5.jpg", alt: "about")%></a>
               <div class="post-catgory">
                 <a href="#">Sep 17, 2021</a>
               </div>
@@ -978,3 +745,37 @@
     </div>
   </div>
 </div>
+
+
+
+<script>
+    $(window).on('scroll', function () {
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 300) $('.go-top').addClass('active');
+        if (scrolled < 300) $('.go-top').removeClass('active');
+    });
+
+    $('.go-top').on('click', function () {
+        $("html, body").animate({
+            scrollTop: "0"
+        }, 1200);
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('.slider-img').slick({
+            dots:true,
+            arrows:false,
+            autoplay:true,
+            autoplayTimeout:3000,
+            smartSpeed:5000,
+            autoplayspeed:5000,
+            fade:true,
+            fadespeed:2500,
+            nav: true,
+            navText: ["<i class='fas fa-angle-left''></i>", "<i class='fas fa-angle-right''></i>"],
+        });
+    });
+</script>
+
+

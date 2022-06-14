@@ -1,0 +1,97 @@
+<div class="container">
+  <h1>Contact Form</h1>
+  <%= form_for @contact do |f| %>
+    <div class="col-md-6">
+      <%= f.label :name %></br>
+      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+
+      <%= f.label :email %></br>
+      <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+
+      <%= f.label :message %></br>
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                      placeholder: "Send me a message"%></br>
+
+      <div class= "d-none">
+        <%= f.label :nickname %>
+        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
+      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
+<div class="text-center">
+  <%= form_with model: [@residence, @residence.orders.build] do |f| %>
+
+    <p>
+      <%= f.label 'Name' %>
+      <br>
+      <%= f.text_field :name, required: true %>
+    </p>
+    <p>
+      <%= f.label 'Phone' %>
+      <br>
+      <%= f.text_field :phone, required: true %>
+    </p>
+    <p>
+      <%= f.label 'How can we help you?' %>
+      <br>
+      <%= f.text_area :info, required: true %>
+    </p>
+    <p>
+      <%= f.submit 'Place an Order', class: 'btn btn-dark mb-5' %>
+    </p>
+
+  <% end %>
+</div>
+
+
+<div class="col-lg-4 p-0 wow fadeInRight animated" data-wow-delay="800ms">
+  <div class="row">
+    <div class="contact_from_box">
+      <div class="contact_title pb-4">
+        <h3>Request an Appointment</h3>
+      </div>
+      <form>
+        <%= form_with model: [@residence, @residence.orders.build] do |f| %>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label :name, placeholder: "Name" %>
+            <%= f.text_field :name, required: true %>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label :email, placeholder: "Email Address" %>
+            <%= f.text_field :email, required: true %>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label 'Phone' %>
+            <%= f.text_field :phone, required: true %>
+            <input type="text" name="phone" placeholder="Phone Number">
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <select class="appointment-select-country">
+            <option>Select Visa</option>
+            <option>Business Visa</option>
+            <option>Student Visa</option>
+            <option>Family Visa</option>
+            <option>Tour Visa</option>
+          </select>
+        </div>
+        <div class="col-lg-12">
+          <div class="quote_btn">
+            <button class="btn" type="submit">Send Request</button>
+          </div>
+        </div>
+      </form>
+      <p class="form-message"></p>
+    </div>
+  </div>
+      <% end %>
+</div>

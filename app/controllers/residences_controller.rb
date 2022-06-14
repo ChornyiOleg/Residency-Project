@@ -1,6 +1,11 @@
 class ResidencesController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @residence = Residence.all
+    @pagy, @residence = pagy(Residence.order(created_at: :desc), items: 8)
+  end
+
   def show
     @residence = Residence.find(params[:id])
     @like = Like.find_by(user: current_user, residence_id: params[:id]) if Like.where(user: current_user, residence_id: params[:id]).exists?

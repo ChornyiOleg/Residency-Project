@@ -1,24 +1,43 @@
-<div class="text-center">
-    <%= form_with model: [@residence, @residence.orders.build] do |f| %>
-  
-        <p>
-            <%= f.label 'Name' %>
-            <br>
-            <%= f.text_field :name, required: true %>
-        </p>
-        <p>
-            <%= f.label 'Phone' %>
-            <br>
-            <%= f.text_field :phone, required: true %>
-        </p>
-        <p>
-            <%= f.label 'How can we help you?' %>
-            <br>
-            <%= f.text_area :info, required: true %>
-        </p>
-        <p>
-            <%= f.submit 'Place an Order', class: 'btn btn-dark mb-5' %>
-        </p>
+<div class="col-lg-4 p-0 wow fadeInRight animated" data-wow-delay="800ms">
+  <div class="row">
+    <div class="contact_from_box">
+      <div class="contact_title pb-4">
+        <h3>Request an Appointment</h3>
+      </div>
 
-    <% end %>
+        <%= form_with model: [@residence, @residence.orders.build] do |f| %>
+          <div class="col-lg-12">
+            <div class="form_box mb-15">
+              <%= f.label :name %>
+              <%= f.text_field :name, required: true, placeholder: "Name" %>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form_box mb-15">
+              <%= f.label :email%>
+              <%= f.text_field :email, required: true, placeholder: "Email Address"  %>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form_box mb-15">
+              <%= f.label :phone %>
+              <%= f.text_field :phone, required: true, placeholder: "Phone Number"  %>
+          </div>
+            <div class="col-lg-12">
+              <div class="form_box mb-15">
+                <%= f.label 'How can we help you?' %>
+                <%= f.text_area :info, required: true, placeholder: "Your question...", row: 2 %>
+              </div>
+          <div class="col-lg-12">
+            <div class="quote_btn">
+              <button class="btn" type="submit">Send Request</button>
+            </div>
+          </div>
+
+          <p class="form-message"></p>
+          </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
 </div>

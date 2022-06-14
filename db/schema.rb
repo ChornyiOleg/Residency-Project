@@ -9,8 +9,10 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
+# ActiveRecord::Schema[7.0].define(version: 2022_06_13_154721) do
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_13_154721) do
+
+ActiveRecord::Schema[7.0].define(version: 2022_06_14_092013) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -109,6 +111,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_13_154721) do
     t.datetime "updated_at", null: false
     t.bigint "country_id"
     t.bigint "program_id"
+    t.string "image"
+    t.text "description"
     t.index ["country_id"], name: "index_residences_on_country_id"
     t.index ["program_id"], name: "index_residences_on_program_id"
   end
