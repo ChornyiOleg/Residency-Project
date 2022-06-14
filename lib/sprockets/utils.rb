@@ -1,0 +1,1 @@
+source = source.encode(Encoding::UTF_32LE, "ISO-8859-1") unless source.ascii_only?
