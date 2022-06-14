@@ -2,8 +2,6 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-require("trix")
-require("@rails/actiontext")
 
 window.$ = window.jQuery = require("jquery");
 import "bootstrap/dist/js/bootstrap.bundle.js"
