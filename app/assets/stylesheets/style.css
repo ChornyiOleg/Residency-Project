@@ -1907,7 +1907,7 @@ start search Popup Css
      opacity: 1;
 }
 .about-area.style-four .about-content.two {
-    background-image: #f12a02 url('map4.png');
+    background-image: url('map4.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2289,176 +2289,176 @@ start search Popup Css
 .country-section .country-title h2 {
     color: #fff;
 }
-/* flipx section*/
-.flipx-section {
-    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), #f4f7fc url('flipx2.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.flipx-section .box-icon {
-    padding-top: 17px;
-}
-.flipx-section .flip-box-front {
-    background: transparent;
-    border: 1px dashed #f12a02;
-    box-shadow: none;
-    border-radius: 7px;
-}
-.flipx-section .flip-box {
-    background-color: transparent;
-    width: 100%;
-    height: 285px;
-    border: none;
-    perspective: 1000px;
-    margin-bottom: 30px;
-}
-.flipx-section .feature-single-box {
-    padding: 12px 7px 0;
-}
-.flipx-section .box-icon i {
-    color: #fff;
-    font-size: 50px;
-}
-.flipx-section .box-title h3 {
-    color: #fff;
-    font-size: 20px;
-    margin: 16px 0 14px;
-}
-.flipx-section .flipx-content-text p {
-    color: rgba(255, 255, 255, 0.83);
-}
-.flipx-section .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;
-    border: 0px solid rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    color: white;
-    transform: rotateY(180deg);
-    padding-top: 40px;
-}
-.flipx-section .flip-box-back.four{
-   transform: rotateX(-180deg);
-}
-.flipx-section .flip-box-back.five{
-   transform: rotateX(-180deg);
-}
-.flipx-section .flip-box-back.six{
-   transform: rotateX(-180deg);
-}
-.flipx-section .flip-box.two:hover .flip-box-inner {
-    transform: rotateX(180deg);
-}
-.flipx-section .flip-box-back.two{
-    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('service3.jpg') center center/cover no-repeat scroll;
-}
-.flipx-section .flip-box-back.three{
-    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('tofel2.jpg') center center/cover no-repeat scroll;
-}
-.flipx-section .flip-box-back{
-    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('service-3.jpg') center center/cover no-repeat scroll;
-}
-.flipx-section .flip-box-back{
-    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('new3.jpg') center center/cover no-repeat scroll;
-}
-.flipx-section .flip-box-back{
-    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),
-     transparent url('service5.jpg') center center/cover no-repeat scroll;
-}
-.flipx-section .dreamit-section-sub-title h5 {
-    color: #f12a02;
-}
-.flipx-section .dreamit-section-main-title h1 {
-    font-size: 38px;
-    line-height: 1.1;
-    margin-top: 7px;
-}
-.flipx-section .dreamit-section-main-title h2 {
-    font-size: 38px;
-}
-.flipx-section .des a{
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px dashed #fff;
-    border-radius: 30px;
-    padding: 8px 25px;
-}
-.flipx-section .des a:hover{
-    background:#fff;
-    color: #f12a02;
-}
-.flipx-section .des h3 {
-    font-size: 20px;
-    margin: 0 0 16px;
-    color: #fff;
-}
-.flipx-section .des p {
-    width: 86%;
-    padding-bottom: 24px;
-}
-/*flpix section style two*/
-.flipx-section.style-two{
-    background: #f4f7fc;
-}
-.flipx-section.style-two .flip-box-front {
-    background-image: linear-gradient(360deg, rgba(17, 26, 58, 0.88), 
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coac3.jpg');
-    border: none;
-    box-shadow: none;
-    border-radius: 7px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.flipx-section.style-two .box-title h3 {
-    margin: 0px 0 16px;
-}
-.flipx-section.style-two .flipx-box-content {
-    padding-top: 51px;
-}
-.flipx-section.style-two .flip-box-front.two{
-    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.flipx-section.style-two .flip-box-front.three {
-    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach5.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.flipx-section.style-two .flip-box-front.four {
-    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),
-    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach4.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.flipx-section.style-two .flip-box-back {
-    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;
-    border: 0px solid rgba(255, 255, 255, 0);
-    padding-top: 53px;
-}
-.flipx-section.style-two .flipx-button.text-center p {
-    display: inline-block;
-    font-size: 17px;
-}
-.flipx-section.style-two .flipx-button a {
-    color: #F12A02;
-    text-transform: capitalize;
-    font-size: 17px;
-    font-weight: 500;
-}
+/*!* flipx section*!*/
+/*.flipx-section {*/
+/*    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), url('flipx2.jpg');*/
+/*    background-position: center center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*}*/
+/*.flipx-section .box-icon {*/
+/*    padding-top: 17px;*/
+/*}*/
+/*.flipx-section .flip-box-front {*/
+/*    background: transparent;*/
+/*    border: 1px dashed #f12a02;*/
+/*    box-shadow: none;*/
+/*    border-radius: 7px;*/
+/*}*/
+/*.flipx-section .flip-box {*/
+/*    background-color: transparent;*/
+/*    width: 100%;*/
+/*    height: 285px;*/
+/*    border: none;*/
+/*    perspective: 1000px;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+/*.flipx-section .feature-single-box {*/
+/*    padding: 12px 7px 0;*/
+/*}*/
+/*.flipx-section .box-icon i {*/
+/*    color: #fff;*/
+/*    font-size: 50px;*/
+/*}*/
+/*.flipx-section .box-title h3 {*/
+/*    color: #fff;*/
+/*    font-size: 20px;*/
+/*    margin: 16px 0 14px;*/
+/*}*/
+/*.flipx-section .flipx-content-text p {*/
+/*    color: rgba(255, 255, 255, 0.83);*/
+/*}*/
+/*.flipx-section .flip-box-back {*/
+/*    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;*/
+/*    border: 0px solid rgba(255, 255, 255, 0);*/
+/*    border-radius: 10px;*/
+/*    color: white;*/
+/*    transform: rotateY(180deg);*/
+/*    padding-top: 40px;*/
+/*}*/
+/*.flipx-section .flip-box-back.four{*/
+/*   transform: rotateX(-180deg);*/
+/*}*/
+/*.flipx-section .flip-box-back.five{*/
+/*   transform: rotateX(-180deg);*/
+/*}*/
+/*.flipx-section .flip-box-back.six{*/
+/*   transform: rotateX(-180deg);*/
+/*}*/
+/*.flipx-section .flip-box.two:hover .flip-box-inner {*/
+/*    transform: rotateX(180deg);*/
+/*}*/
+/*.flipx-section .flip-box-back.two{*/
+/*    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('service3.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.flipx-section .flip-box-back.three{*/
+/*    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('tofel2.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.flipx-section .flip-box-back{*/
+/*    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('service-3.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.flipx-section .flip-box-back{*/
+/*    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('new3.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.flipx-section .flip-box-back{*/
+/*    background-image: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)),*/
+/*     transparent url('service5.jpg') center center/cover no-repeat scroll;*/
+/*}*/
+/*.flipx-section .dreamit-section-sub-title h5 {*/
+/*    color: #f12a02;*/
+/*}*/
+/*.flipx-section .dreamit-section-main-title h1 {*/
+/*    font-size: 38px;*/
+/*    line-height: 1.1;*/
+/*    margin-top: 7px;*/
+/*}*/
+/*.flipx-section .dreamit-section-main-title h2 {*/
+/*    font-size: 38px;*/
+/*}*/
+/*.flipx-section .des a{*/
+/*    display: inline-block;*/
+/*    font-size: 15px;*/
+/*    font-weight: 400;*/
+/*    color: #fff;*/
+/*    background-color: rgba(255, 255, 255, 0);*/
+/*    border: 1px dashed #fff;*/
+/*    border-radius: 30px;*/
+/*    padding: 8px 25px;*/
+/*}*/
+/*.flipx-section .des a:hover{*/
+/*    background:#fff;*/
+/*    color: #f12a02;*/
+/*}*/
+/*.flipx-section .des h3 {*/
+/*    font-size: 20px;*/
+/*    margin: 0 0 16px;*/
+/*    color: #fff;*/
+/*}*/
+/*.flipx-section .des p {*/
+/*    width: 86%;*/
+/*    padding-bottom: 24px;*/
+/*}*/
+/*!*flpix section style two*!*/
+/*.flipx-section.style-two{*/
+/*    background: #f4f7fc;*/
+/*}*/
+/*.flipx-section.style-two .flip-box-front {*/
+/*    background: linear-gradient(360deg, rgba(17, 26, 58),*/
+/*    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255) url('coac3.jpg');*/
+/*    border: none;*/
+/*    box-shadow: none;*/
+/*    border-radius: 7px;*/
+/*    background-position: center center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+/*.flipx-section.style-two .box-title h3 {*/
+/*    margin: 0px 0 16px;*/
+/*}*/
+/*.flipx-section.style-two .flipx-box-content {*/
+/*    padding-top: 51px;*/
+/*}*/
+/*.flipx-section.style-two .flip-box-front.two{*/
+/*    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),*/
+/*    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach.jpg');*/
+/*    background-position: center center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+/*.flipx-section.style-two .flip-box-front.three {*/
+/*    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),*/
+/*    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach5.jpg');*/
+/*    background-position: center center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+/*.flipx-section.style-two .flip-box-front.four {*/
+/*    background: linear-gradient(360deg, rgba(17, 26, 58, 0.88),*/
+/*    rgba(241, 42, 2, 0.31)), rgba(255, 255, 255, 0) url('coach4.jpg');*/
+/*    background-position: center center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+/*.flipx-section.style-two .flip-box-back {*/
+/*    background: linear-gradient(rgba(241, 42, 2), rgba(241, 42, 2)), transparent url('education.jpg') center center/cover no-repeat scroll;*/
+/*    border: 0px solid rgba(255, 255, 255, 0);*/
+/*    padding-top: 53px;*/
+/*}*/
+/*.flipx-section.style-two .flipx-button.text-center p {*/
+/*    display: inline-block;*/
+/*    font-size: 17px;*/
+/*}*/
+/*.flipx-section.style-two .flipx-button a {*/
+/*    color: #F12A02;*/
+/*    text-transform: capitalize;*/
+/*    font-size: 17px;*/
+/*    font-weight: 500;*/
+/*}*/
 /* start agescy section*/
 .agency-section {
     background: #111a3a;
@@ -2694,7 +2694,7 @@ start search Popup Css
 }
 /* start process area */
 .proceas-area {
-    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)),transparent url('process.jpg');
+    background-image: linear-gradient(rgba(17, 26, 58), rgba(17, 26, 58)), url('process.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2836,7 +2836,7 @@ start search Popup Css
 }
 /*call section upper*/
 .call-section .row.upper4 {
-    background-image: #f12a02 url('skiil3.png');
+    background-image: url('skiil3.png');
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -2885,7 +2885,7 @@ start search Popup Css
 }
 /*call section style three*/
 .call-section.style-three{
-    background-image: #f12a02 url('skiil3.png');
+    background-image: url('skiil3.png');
     position: relative;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3899,7 +3899,7 @@ span.fill {
 }
 .testimonials-title span {
     display: inherit;
-    font: 16px;
+    font-size: 16px;
     font-weight: 500;
     margin-top: 8px;
   }
@@ -4655,7 +4655,7 @@ span.fill {
     font-size: 38px;
 }
 .course-section {
-    background-image: #f4f7fc url('coach2.png');
+    background-image: url('coach2.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -5026,7 +5026,7 @@ span.fill {
     background: transparent;
     border: none;
     border-radius:0;
-    margin:0px;
+    margin: 0px;
 }
 .testimonials-area.style-five .dreamit-testmonoals-thumb {
     text-align: left;
@@ -5060,7 +5060,7 @@ span.fill {
 
 /*--------------service -area-----------------*/
 .country-area.style-three{
-    background-image: #f4f7fc url('map-img.png');
+    background-image: url('map-img.png');
 }
 /*-----------team member-----------------------*/
 .team-member-area.style-two {
@@ -5119,7 +5119,7 @@ span.fill {
     background-repeat: no-repeat;
 }
 .appointment-area.style-two {
-    background-image: transparent url('full.png');
+    background-image: url('full.png');
     padding: 100px 50px;
 }
 select.appointment-student-visa {
