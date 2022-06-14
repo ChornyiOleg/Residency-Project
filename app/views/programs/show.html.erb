@@ -11,7 +11,9 @@
           <dt> <%= records.cost %> </dt>
           <dt> <%= records.description %> </dt>
         </dl>
-        <%= image_tag("#{records.image}") %>
+        <% if records.images.attached? %>
+          <%= image_tag records.images.first, width: '250' %>
+        <% end %>
         <%= link_to 'Show', records, class: 'btn btn-primary' %>
       </div>
     <% end %>

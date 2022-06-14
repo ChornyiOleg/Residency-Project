@@ -1,0 +1,16 @@
+<%= form_with model: [@residence, @residence.likes.build] do |f| %>
+  <% if current_user %>
+    <% if @like.present? %>
+      <div class="actions">
+        <%= f.submit '❤️', class: 'btn btn-black' %>
+      </div>
+    <% else %>
+      <div class="actions">
+        <%= f.submit '🖤', class: 'btn btn-black' %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to "Sign Up", new_author_path %> or
+    <%= link_to "Log In", new_session_path %>
+  <% end %>
+<% end %>

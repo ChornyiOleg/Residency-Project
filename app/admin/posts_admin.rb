@@ -16,15 +16,9 @@ Trestle.resource(:posts) do
   #
   form do |post|
     text_field :name
-    text_area :content, row:80
+    text_area :content
     file_field :image
-   end
-  #
-  #   row do
-  #     col { datetime_field :updated_at }
-  #     col { datetime_field :created_at }
-  #   end
-  # end
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

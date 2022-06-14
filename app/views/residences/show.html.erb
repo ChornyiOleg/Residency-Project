@@ -4,7 +4,13 @@
 </p>
 
 <p>
-  <%= image_tag("#{@residence.image}", height: '250', width: '250') %>
+  <%= render 'likes/form' %>
+</p>
+
+<p>
+  <% @residence.images.each do |image| %>
+    <%= image_tag image, width: '250' %>
+  <% end %>
 </p>
 
 <p>

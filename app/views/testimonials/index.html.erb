@@ -1,19 +1,11 @@
-<div class="d-flex justify-content-center d-flex align-items-center">
-    <%= @country.name %>
-</div>
-
 <div class="container">
   <div class="row row-cols-2">
     <% @records.each do |records| %>
       <div class="col">
         <dl>
-          <dt> <%= records.name %> </dt>
-          <dt> <%= records.cost %> </dt>
+          <dt> <%= records.name_of_user %> </dt>
+          <dt> <%= records.content %> </dt>
         </dl>
-        <% if records.images.attached? %>
-          <%= image_tag records.images.first, width: '250' %>
-        <% end %>
-        <%= link_to 'Show', records, class: 'btn btn-primary' %>
       </div>
     <% end %>
   </div>
