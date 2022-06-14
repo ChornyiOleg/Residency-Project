@@ -1703,7 +1703,7 @@ start search Popup Css
 }
 .about-area.style-three .about-single-box:hover{
     transform: translateY(-10px);
-    /*box-shadow: 0 0 20px 0 rgb(0 0 0 0);*/
+    /*box-shadow: 0 0 20px 0 rgba(0 0 0 0);*/
 }
 .about-area.style-three .about-content {
     overflow: hidden;
@@ -5105,7 +5105,7 @@ textarea.appointment-input.appointment-textarea {
 }
 .appointtent-content .appointment-form-section {
     text-align: left;
-    box-shadow: 0 0 30px rgb(0,0,0,0.1);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
     margin-left: 0;
     padding: 40px 40px 119px 40px;
 }
