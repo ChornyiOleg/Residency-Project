@@ -13,7 +13,7 @@ gem 'pagy', '~> 5.09'
 gem 'nokogiri'
 gem 'trestle'
 gem "validate_url"
-
+gem 'sass'
 gem 'trestle-tinymce'
 gem 'font-awesome-sass'
 gem 'owlcarousel-rails'
