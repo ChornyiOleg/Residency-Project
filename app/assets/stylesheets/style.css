@@ -4927,7 +4927,7 @@ span.fill {
 /*testimonial style five*/
 /*testiomonial style five*/
 .testimonials-area.style-five {
-    background: linear-gradient(rgb(17, 26, 58), rgba(17, 26, 58)), transparent url('map3.jpg');
+    background: linear-gradient(rgb(17, 26, 58), rgba(17, 26, 58, 0.25)), transparent url('map3.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
