@@ -1,0 +1,71 @@
+<%= form_with(model: @order) do |f| %>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, required: true, placeholder: "Name" %>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, required: true, placeholder: "Phone Number"  %>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="form-group">
+        <%= f.label 'How can we help you?' %>
+        <%= f.text_area :info, required: true, placeholder: "Your question...", rows: 2 %>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <button class="btn common-btn" type="submit">
+        Submit
+      </button>
+    </div>
+  </div>
+<% end %>
+
+<div class="col-lg-4 p-0 wow fadeInRight animated" data-wow-delay="800ms">
+  <div class="row">
+    <div class="contact_from_box">
+      <div class="contact_title pb-4">
+        <h3>Request an Appointment</h3>
+      </div>
+
+      <%= form_with(model: @order) do |f| %>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label :name %>
+            <%= f.text_field :name, required: true, placeholder: "Name" %>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label :email%>
+            <%= f.text_field :email, required: true, placeholder: "Email Address"  %>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form_box mb-15">
+            <%= f.label :phone %>
+            <%= f.text_field :phone, required: true, placeholder: "Phone Number"  %>
+          </div>
+          <div class="col-lg-12">
+            <div class="form_box mb-15">
+              <%= f.label 'How can we help you?' %>
+              <%= f.text_area :info, required: true, placeholder: "Your question...", rows: 2 %>
+            </div>
+            <div class="col-lg-12">
+              <div class="quote_btn">
+                <button class="btn" type="submit">Send Request</button>
+              </div>
+            </div>
+            <p class="form-message"></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

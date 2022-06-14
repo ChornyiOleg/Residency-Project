@@ -24,7 +24,8 @@
     <%= stylesheet_link_tag "style", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "theme-default", media: 'all', "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "widget", media: 'all', "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "venobox.css", media: 'all', "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "boxicons.min", media: 'all', "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "venobox.css", media: 'all', "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "ajax-mail.js", "data-turbo-track": "reload", defer: true %>
     <%= javascript_include_tag "animated-text.js", "data-turbo-track": "reload", defer: true %>
@@ -46,10 +47,27 @@
     <%#= javascript_include_tag "waypoints.min.js", "data-turbo-track": "reload", defer: true %>
     <%#= javascript_include_tag "wow.js", "data-turbo-track": "reload", defer: true %>
     <%#= javascript_include_tag "venobox.js", "data-turbo-track": "reload", defer: true %>
-    <%#= javascript_include_tag "vendor/jquery-3.2.1.min", "data-turbo-track": "reload", defer: true %>
-    <%#= javascript_include_tag "vendor/modernizr-3.5.0.min", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "vendor/jquery-3.2.1.min", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "vendor/modernizr-3.5.0.min", "data-turbo-track": "reload", defer: true %>
     <%#= javascript_include_tag "extensions/revolution.extension.carousel.min.js", "data-turbo-track": "reload", defer: true %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%= javascript_include_tag "https://code.jquery.com/jquery-3.5.1.slim.min.js" %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" %>
+    <%= javascript_include_tag "https://unpkg.com/boxicons@2.1.2/dist/boxicons.js" %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" %>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" %>
+
+
+
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v5-font-face.min.css" %>
+    <%= stylesheet_link_tag "https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css", media: 'all', "data-turbo-track": "reload" %>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/fontawesome.min.js" integrity="sha512-5qbIAL4qJ/FSsWfIq5Pd0qbqoZpk5NcUVeAAREV2Li4EKzyJDEGlADHhHOSSCw0tHP7z3Q4hNHJXa81P92borQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/solid.min.js" integrity="sha512-C92U8X5fKxCN7C6A/AttDsqXQiB7gxwvg/9JCxcqR6KV+F0nvMBwL4wuQc+PwCfQGfazIe7Cm5g0VaHaoZ/BOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/regular.min.js" integrity="sha512-eH31QC2/CLTAQpugtCMQh/w68mbefCbaDTsSbmqOk86RICy523PnuNMaFfQ5cAkwwJ1dsnn7OUt8bfkF24zprg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/fontawesome.js" integrity="sha512-pP+lQuGoBA1PfEzTaPOBRGwCIX+SL244lX+5WN6aFOdMyoPFEDbc5j/fMhqMza81yVAiSSkQtqZg1N+TxCnt+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/svg-with-js.css" integrity="sha512-HMAu6GSZFh8irB3In/43pYOtWIKHXynzquTCMTGsqfQHYVfJajwvCaEw0GcXe8z6hJjw+zjLrgmRf8oiyePRMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v4-font-face.min.css" integrity="sha512-6G7jwBgoDnShmGCEha+LlzpMNWBHhGYZ6QCHfIXlaHoX9X5eunFwUZRYj8WSaooev6DIWqQXZ6syn2yup6kGZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
   <body>
   <div class="content">
     <!--top-header-->
@@ -64,8 +82,9 @@
     <%= render 'include/home/bottom_header' %>
     <!--bottom-header-->
 
+
     <div>
-      <%= yield %>
+     <%= yield %>
     </div>
 
     <!--footer-->

@@ -11,8 +11,308 @@
   <%= @residence.cost %>
 </p>
 
-<div>
-  <% if user_signed_in? %>
-    <%= render 'orders/form' %>
-  <% end %>
+<!--==================================================-->
+<!----- start visapro breatcome Area ----->
+<!--==================================================-->
+<div class="breatcome-area d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breatcome-content text-center">
+          <div class="breatcome-content-title">
+            <h1>Property Details</h1>
+          </div>
+          <div class="breatcome-content-text">
+            <ul>
+              <li><a href="index.html">Home </a> <i class="fas fa-chevron-right"></i> <span>Property Details</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="property-details-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="details-item">
+          <div class="common-img-details">
+            <span>Dubai</span>
+            <h2>Cascade Blocks Villa</h2>
+            <ul>
+              <li>
+                <i class='bx bx-calendar'></i>
+                October 19, 2021
+              </li>
+              <li>
+                <i class='bx bx-current-location'></i>
+                <a href="#">300 B 1st View Road, New York</a>
+              </li>
+            </ul>
+          </div>
+          <div class="property-details-slider owl-theme owl-carousel">
+            <div class="slider-item">
+              <%= image_tag("details1.jpg")%>
+            </div>
+            <div class="slider-item">
+              <%= image_tag("details2.jpg")%>
+            </div>
+            <div class="slider-item">
+              <%= image_tag("details3.jpg")%>
+            </div>
+          </div>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing</p>
+          <blockquote>
+            <i class='bx bxs-quote-left'></i>
+            “It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters”
+          </blockquote>
+
+          <div class="video-item">
+            <%= image_tag("details4.jpg")%>
+            <div class="video-wrap">
+              <button class="js-modal-btn" data-video-id="Ynr4o0eOjdg">
+                <i class='bx bx-play'></i>
+              </button>
+            </div>
+          </div>
+          <div class="information">
+            <h3>Essential Information</h3>
+            <ul>
+              <li>
+                <h4>Bed-Room</h4>
+                <i class="bx bx-bed"></i>
+                <span>5</span>
+              </li>
+              <li>
+                <h4>Bath-Room</h4>
+                <i class="bx bx-bath"></i>
+                <span>2</span>
+              </li>
+              <li>
+                <h4>Square-Feet</h4>
+                <i class='bx bx-square'></i>
+                <span>1800</span>
+              </li>
+              <li>
+                <h4>Total-Room</h4>
+                <i class="bx bx-building-house"></i>
+                <span>8</span>
+              </li>
+            </ul>
+          </div>
+          <div class="information-list">
+            <div class="left">
+              <ul>
+                <li>
+                  <i class='bx bx-check'></i>
+                  3 Toilets
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  3 Ensuite
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Spa
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Courtyard
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Open Fire Place
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Ducted Cooling
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Floor Boards
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Workshop
+                </li>
+              </ul>
+            </div>
+            <div class="right">
+              <ul>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Tennis Court
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Deck
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  2 Garage
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Outdoor Entertaining
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Shed
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Ducted Heating
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Split System Heating
+                </li>
+                <li>
+                  <i class='bx bx-check'></i>
+                  Balcony
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="common-details-contact">
+            <h3>Contact Us</h3>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <textarea id="your-message" rows="8" class="form-control" placeholder="Your Message"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <button type="submit" class="btn common-btn">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="widget-area">
+          <div class="search widget-item">
+            <form>
+              <input type="text" class="form-control" placeholder="Search Here...">
+              <button type="submit" class="btn">
+                <i class='bx bx-search'></i>
+              </button>
+            </form>
+          </div>
+          <div class="categories widget-item">
+            <h3>Categories</h3>
+            <ul>
+              <li>
+                <a href="#">Home For Sale</a>
+              </li>
+              <li>
+                <a href="#">Home On Lease</a>
+              </li>
+              <li>
+                <a href="#">Matching Buyer</a>
+              </li>
+              <li>
+                <a href="#">Home For Buy</a>
+              </li>
+              <li>
+                <a href="#">Home For Mortgage</a>
+              </li>
+              <li>
+                <a href="#">Home For Rent</a>
+              </li>
+            </ul>
+          </div>
+          <div class="popular widget-item">
+            <h3>Popular Properties</h3>
+            <div class="inner">
+              <ul class="align-items-center">
+                <li>
+                  <%= image_tag("details6.jpg")%>
+                </li>
+                <li>
+                  <h4>
+                    <a href="#">Extension Cottage Villa</a>
+                  </h4>
+                  <a class="location" href="#">
+                    <i class='bx bx-current-location'></i>
+                    View, New York
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="inner">
+              <ul class="align-items-center">
+                <li>
+                  <%= image_tag("details7.jpg")%>
+                </li>
+                <li>
+                  <h4>
+                    <a href="#">Sag Harbor Cottage And Resort</a>
+                  </h4>
+                  <a class="location" href="#">
+                    <i class='bx bx-current-location'></i>
+                    6B, New York
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="inner">
+              <ul class="align-items-center">
+                <li>
+                  <%= image_tag("details8.jpg")%>
+                </li>
+                <li>
+                  <h4>
+                    <a href="#">Construction Industry And Office</a>
+                  </h4>
+                  <a class="location" href="#">
+                    <i class='bx bx-current-location'></i>
+                    6B, 1st View
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tags widget-item">
+            <h3>Tags</h3>
+            <ul>
+              <li>
+                <a href="#">Apartment</a>
+              </li>
+              <li>
+                <a href="#">New Properties</a>
+              </li>
+              <li>
+                <a href="#">House</a>
+              </li>
+              <li>
+                <a href="#">Villa</a>
+              </li>
+              <li>
+                <a href="#">Office</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

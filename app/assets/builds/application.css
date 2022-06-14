@@ -35814,19 +35814,19 @@ img.tp-slider-alternative-image {
 }
 
 .tp-dottedoverlay.twoxtwo {
-  background: url(../assets/gridtile.html);
+  background: url('gridtile.html');
 }
 
 .tp-dottedoverlay.twoxtwowhite {
-  background: url(../assets/gridtile_white.html);
+  background: url('gridtile_white.html);
 }
 
 .tp-dottedoverlay.threexthree {
-  background: url(../assets/gridtile_3x3.html);
+  background: url('gridtile_3x3.html');
 }
 
 .tp-dottedoverlay.threexthreewhite {
-  background: url(../assets/gridtile_3x3_white.html);
+  background: url('gridtile_3x3_white.html');
 }
 
 .tp-shadowcover {
@@ -36288,11 +36288,11 @@ img.tp-slider-alternative-image {
 .tp-caption.slidelink a div {
   width: 3000px;
   height: 1500px;
-  background: url(../assets/coloredbg.html);
+  background: url('coloredbg.html');
 }
 
 .tp-caption.slidelink a span {
-  background: url(../assets/coloredbg.html);
+  background: url('coloredbg.html');
 }
 
 .tp-shape {
@@ -44810,7 +44810,7 @@ span {
 /*testimonial style five*/
 /*testiomonial style five*/
 .testimonials-area.style-five {
-  background-image: linear-gradient(rgb(17, 26, 58, 0.1), rgba(17, 26, 58, 0.1)), transparent url("map3.jpg");
+  background linear-gradient(rgb(17, 26, 58, 0.1), rgba(17, 26, 58, 0.1)), transparent url("map3.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

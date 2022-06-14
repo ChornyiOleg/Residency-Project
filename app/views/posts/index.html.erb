@@ -31,21 +31,6 @@
     <hr>
 <% else %>
 
-
-  <%# @posts.each do |post| %>
-  <!--          <tr class="container text-center">-->
-  <!--            <td><%#= post.name %></td>-->
-  <!--            <td class="text-start"><%#= post.content %></td>-->
-  <!--            <td><%#= image_tag(post.image, width: '200', class: "mx-auto d-block") %></td>-->
-
-  <!--            <td>-->
-  <!--              <div class="d-flex p-2 bd-highlight mb-3 align-items-center">-->
-  <!--                <%#= link_to 'Show', post, class: "btn btn-success" %> |-->
-
-  <!--                  <%#= link_to 'Edit', edit_post_path(post), class: "btn btn-secondary" %> |-->
-  <%#= button_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to delete the post?' }, class: "btn btn-danger" %>
-  <%# end %>
-
 <div class="blog-area style-four pt-65 pb-60">
   <div class="container">
     <div class="row pt-20">
@@ -73,8 +58,7 @@
                   </h2>
                 </div>
                 <div class="dreamit-blog-text">
-                  <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-                </div>
+                   <p><%= truncate(strip_tags(post.content.to_s), length: 120) %></div></p>
               </div>
             </div>
           </div>
