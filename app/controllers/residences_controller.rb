@@ -1,9 +1,10 @@
 class ResidencesController < ApplicationController
   before_action :authenticate_user!
+  before_action :private_location, only: [:show]
 
   def index
     @residence = Residence.all
-    @pagy, @residence = pagy(Residence.order(created_at: :desc), items: 8)
+    @pagy, @residence = pagy(Residence.order(created_at: :desc), items: 6)
   end
 
   def show
@@ -19,6 +20,14 @@ class ResidencesController < ApplicationController
   def search
     @residences = Residence.where('name LIKE?', "%" + params[:q] + "%").order('name')
     @pagy, @records = pagy(@residences, items: 10)
+  end
+
+  private
+
+  def private_location
+    @residence = Residence.find(params[:id])
+    @latitude = @residence.latitude + rand(-0.003..0.003)
+    @longitude = @residence.longitude + rand(-0.003..0.003)
   end
 
 end

@@ -21,6 +21,22 @@
   <%= @residence.description %>
 </p>
 
+<div id="map"></div>
+
+<script>
+  var map = L.map('map').setView([ <%= @latitude %>, <%= @longitude %>], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+</script>
+
 <!--==================================================-->
 <!----- start visapro breatcome Area ----->
 <!--==================================================-->

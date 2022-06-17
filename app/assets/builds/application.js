@@ -10732,6 +10732,30 @@
   var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
     return new Popover(popoverTriggerEl);
   });
+  var swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+    autoHeight: false,
+    centeredSlides: true,
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    },
+    pagination: {
+      el: ".swiper-pagination"
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
 })();
 /*!
   * Bootstrap v5.1.3 (https://getbootstrap.com/)
