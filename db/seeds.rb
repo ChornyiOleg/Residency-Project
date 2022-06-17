@@ -24,3 +24,10 @@ Program.create(
 Program.create(
   name: 'Residency'
 )
+
+Administrator.create(
+  email: 'test@email.com',
+  password: '12345678',
+  first_name: 'QWE',
+  last_name: 'RTY'
+)
