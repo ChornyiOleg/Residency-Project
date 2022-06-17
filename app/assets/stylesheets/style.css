@@ -1703,7 +1703,7 @@ start search Popup Css
 }
 .about-area.style-three .about-single-box:hover{
     transform: translateY(-10px);
-    /*box-shadow: 0 0 20px 0 rgb(0 0 0 0);*/
+    /*box-shadow: 0 0 20px 0 rgba(0 0 0 0);*/
 }
 .about-area.style-three .about-content {
     overflow: hidden;
@@ -2497,7 +2497,7 @@ start search Popup Css
 }
 /* start testimonial section*/
 .testimonial-section{
-    background-image:#f4f7fc url('skill2.png');
+    background-image: url('skill2.png');
     background-position: center center; 
     background-size: cover;
     background-repeat: no-repeat; 
@@ -3091,7 +3091,7 @@ start search Popup Css
 }
 /*---home-two-service-area---*/
 .visa-area.pt-60.pb-40 {
-    background-image: #f4f7fc url('two.png');
+    background-image: url('two.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -3504,7 +3504,7 @@ h3.appointment-title {
     background-repeat: no-repeat;
 }
 .country-area {
-    background-image: #f4f7fc url('map-img.png');
+    background-image: url('map-img.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3768,7 +3768,7 @@ span.fill {
 		start------testimonials-----area----------
 	-=============================================*/
 .testimonials-area {
-    background: linear-gradient(rgb(17, 26,58), rgba(17, 26, 58)), transparent('testi-bg.jpg');
+    /*background: linear-gradient(rgb(17, 26, 58, 0.75), rgba(17, 26, 58, 0.75)), transparent url('testi-bg.jpg');*/
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3832,7 +3832,7 @@ span.fill {
   }
   span {
     font-size: 14px;
-    color: rgb(255, 255, 255,0.7);
+    color: rgb(255, 255, 255);
 }
 .style-fore span {
     font-size: 14px;
@@ -4682,7 +4682,7 @@ span.fill {
     -========================================*/
 .breatcome-area {
 
-    background: linear-gradient(rgb(94 109 162 / 75%), rgba(17, 26, 58, -0.25)), transparent url('style-three.jpg');
+    background: linear-gradient(rgb(94, 109, 162), rgba(17, 26, 58, -0.25)), transparent url('style-three.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -4927,7 +4927,7 @@ span.fill {
 /*testimonial style five*/
 /*testiomonial style five*/
 .testimonials-area.style-five {
-    background: linear-gradient(rgb(17, 26, 58), rgba(17, 26, 58)), transparent url('map3.jpg');
+    background: linear-gradient(rgb(17, 26, 58), rgba(17, 26, 58, 0.25)), transparent url('map3.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5105,7 +5105,7 @@ textarea.appointment-input.appointment-textarea {
 }
 .appointtent-content .appointment-form-section {
     text-align: left;
-    box-shadow: 0 0 30px rgb(0,0,0,0.1);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
     margin-left: 0;
     padding: 40px 40px 119px 40px;
 }
