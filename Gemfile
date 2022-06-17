@@ -18,6 +18,9 @@ gem 'font-awesome-sass'
 gem 'owlcarousel-rails'
 gem 'aws-sdk-s3', require: false
 gem 'rubocop'
+gem 'trestle-auth'
+gem 'rails-i18n'
+gem 'leaflet-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"

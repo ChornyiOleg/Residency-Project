@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  residences:
+    sub-title: Recent Properties
+    sub-title2: We Provide Full Service At Every Step. What You Need?

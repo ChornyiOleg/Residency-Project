@@ -30,14 +30,15 @@ Trestle.resource(:residences) do
   # end
   form do |residence|
   
-    row do
-      text_field :name
-      text_field :address
-      text_field :cost
-      file_field :images, multiple: true
-      collection_select :country_id, Country.order(:name), :id, :name
-      collection_select :program_id, Program.order(:name), :id, :name
-    end
+    text_field :name
+    text_field :address
+    text_field :cost
+    text_area :description
+    file_field :images, multiple: true
+    collection_select :country_id, Country.order(:name), :id, :name
+    collection_select :program_id, Program.order(:name), :id, :name
+    text_field :latitude
+    text_field :longitude
   end
 
   # By default, all parameters passed to the update and create actions will be
