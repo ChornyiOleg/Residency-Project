@@ -1,5 +1,5 @@
 class Program < ApplicationRecord
-  belongs_to :country
+  belongs_to :country, optional: true
   has_many :residences
   has_one_attached :image
   has_rich_text :content
