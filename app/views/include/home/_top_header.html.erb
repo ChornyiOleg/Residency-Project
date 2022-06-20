@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Citizenship & Residency</a>
+    <a class="navbar-brand" href="#">360NPAC Immigration</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,12 +14,7 @@
         <li class="nav-item">
           <%= link_to 'Residences', residences_path, class: 'nav-link' %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Likes', likes_path, class: "nav-link active"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Views', views_path, class: "nav-link active"%>
-        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Countries
@@ -29,9 +24,8 @@
               <li><%= link_to country.name, country, class: 'dropdown-item' %></li>
             <% end %>
           </ul>
-        </li>
 
-        <ul class="nav">
+          <ul class="nav">
             <li class="dropdown">
               <%= link_to '#', class: 'nav-link px-2 dropdown-toggle text-black p-0 ms-lg-1 me-lg-1 mt-1 mb-1 mb-lg-0',
                           data: { "bs-toggle": 'dropdown' } do %>
@@ -51,7 +45,8 @@
                   </li>
                 <% end %>
               </ul>
-
+            </li>
+          </ul>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Programs
@@ -80,33 +75,38 @@
 
             <% if user_signed_in? %>
               <% if current_user.try(:admin?) %>
-                <li>
+                <li class="nav-item">
                   <%= link_to 'administrator', '#', style: "color: red" %>
                 </li>
-                <li>
+                <li class="nav-item">
                   <%= link_to 'API', '/oauth/applications', style: "color: blue" %>
                 </li>
+
               <% end %>
-              <li>
+              <li class="nav-item">
                 <a href="#">
                   Welcome, <%= current_user.email %>
                 </a>
               </li>
-              <li>
+              <li class="nav-item">
                 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
               </li>
-              <li>
+              <li class="nav-item">
                 <%= link_to 'Edit', edit_user_registration_path %>
               </li>
+              <li class="nav-item">
+                <%= link_to 'Likes', likes_path, class: "nav-link active"%>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Views', views_path, class: "nav-link active"%>
+              </li>
             <% else %>
-              <li>
+              <li class="nav-item">
                 <%= link_to 'Sing In', new_user_session_path %>
               </li>
-              <li>
+              <li class="nav-item">
                 <%= link_to "Sign up", new_user_registration_path %>
-
               </li>
-
             <% end %>
 
           </ul>
