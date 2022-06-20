@@ -17,7 +17,7 @@ Trestle.resource(:programs) do
     text_field :name
     text_area :content
     file_field :image
-    collection_select :country_id, Country.order(:name), :id, :name
+    # collection_select :country_id, Country.order(:name), :id, :name
   end
 
   # By default, all parameters passed to the update and create actions will be
