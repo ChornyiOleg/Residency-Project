@@ -3,6 +3,16 @@ Trestle.resource(:orders) do
     item :orders, icon: "fa fa-star"
   end
 
+  form do |residence|
+  
+    text_field :name
+    text_field :phone
+    text_area :info
+    collection_select :residence_id, Residence.order(:name), :id, :name
+    select :status, [['New Request', :new_request], ['Completed', :completed]]
+    select :messenger, [['Telegram', :telegram], ['Viber', :viber], ['Messenger', :messenger]]
+  end
+
   # Customize the table columns shown on the index view.
   #
   # table do

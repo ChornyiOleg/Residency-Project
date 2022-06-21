@@ -5,7 +5,7 @@
             <h3>Request an Appointment</h3>
           </div>
 
-          <%= form_with(model: @order) do |f| %>
+          <%= form_for Order.new do |f| %>
             <div class="col-lg-12">
               <div class="form_box mb-15">
                 <%= f.label :name %>
@@ -14,18 +14,19 @@
             </div>
             <div class="col-lg-12">
               <div class="form_box mb-15">
-                <%= f.label :email%>
-                <%= f.text_field :email, required: true, placeholder: "Email Address"  %>
+                <%= f.label :phone %>
+                <%= f.text_field :phone, required: true, placeholder: "Phone Number"  %>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form_box mb-15">
-                <%= f.label :phone %>
-                <%= f.text_field :phone, required: true, placeholder: "Phone Number"  %>
+                <p>What Messenger Can We Contact You</p>
+                <%= f.select :messenger, [['Telegram', :telegram], ['Viber', :viber], ['Messenger', :messenger]], {}, {class:"form-select"} %>
               </div>
+            </div>
               <div class="col-lg-12">
                 <div class="form_box mb-15">
-                  <%= f.label 'How can we help you?' %>
+                  <%= f.label :info %>
                   <%= f.text_area :info, required: true, placeholder: "Your question...", rows: 2 %>
                 </div>
                 <div class="col-lg-12">

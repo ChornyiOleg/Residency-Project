@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     resources :likes
     resources :views 
     resources :testimonials
+    resources :orders
   end
 
 end

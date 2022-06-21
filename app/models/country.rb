@@ -1,4 +1,6 @@
 class Country < ApplicationRecord
-  has_many :residences
+  has_many :residences, dependent: :destroy
+
+  
   
 end
