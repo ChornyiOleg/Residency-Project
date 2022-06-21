@@ -76,6 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_100615) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "content"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -112,6 +113,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_100615) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "content"
+    t.bigint "country_id", null: false
+    t.index ["country_id"], name: "index_programs_on_country_id"
   end
 
   create_table "residences", force: :cascade do |t|
@@ -168,4 +172,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_100615) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "authorizations", "users", on_delete: :cascade
+  add_foreign_key "programs", "countries"
 end
