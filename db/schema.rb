@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_19_165232) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_100615) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +96,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_19_165232) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.bigint "residence_id"
+    t.integer "status", default: 0
+    t.integer "messenger", default: 0
     t.index ["residence_id"], name: "index_orders_on_residence_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -119,7 +121,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_19_165232) do
   create_table "residences", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "country_id"
@@ -127,6 +128,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_19_165232) do
     t.text "description"
     t.float "latitude"
     t.float "longitude"
+    t.text "pros"
+    t.integer "bedroom"
+    t.integer "bathroom"
+    t.float "squarefeet"
+    t.integer "rooms"
+    t.string "cost"
     t.index ["country_id"], name: "index_residences_on_country_id"
     t.index ["program_id"], name: "index_residences_on_program_id"
   end

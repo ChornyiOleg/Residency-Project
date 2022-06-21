@@ -2,11 +2,15 @@
   <% if current_user %>
     <% if @like.present? %>
       <div class="actions">
-        <%= f.submit '❤️', class: 'btn btn-black' %>
+        <div class="quote_btn">
+          <button class="btn" type="submit">Remove from Liked ❤️</button>
+        </div>
       </div>
     <% else %>
       <div class="actions">
-        <%= f.submit '🖤', class: 'btn btn-black' %>
+        <div class="quote_btn">
+          <button class="btn" type="submit">Add to Liked 🖤</button>
+        </div>
       </div>
     <% end %>
   <% else %>

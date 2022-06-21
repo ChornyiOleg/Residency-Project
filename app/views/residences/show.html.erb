@@ -1,42 +1,3 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <%= @residence.name %>
-</p>
-
-<p>
-  <%= render 'likes/form' %>
-</p>
-
-<p>
-  <% @residence.images.each do |image| %>
-    <%= image_tag image, width: '250' %>
-  <% end %>
-</p>
-
-<p>
-  <%= @residence.cost %>
-</p>
-
-<p>
-  <%= @residence.description %>
-</p>
-
-<div id="map"></div>
-
-<script>
-  var map = L.map('map').setView([ <%= @latitude %>, <%= @longitude %>], 15);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
-</script>
-
 <!--==================================================-->
 <!----- start visapro breatcome Area ----->
 <!--==================================================-->
@@ -65,32 +26,51 @@ var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
       <div class="col-lg-8">
         <div class="details-item">
           <div class="common-img-details">
-            <span>Dubai</span>
-            <h2>Cascade Blocks Villa</h2>
+            <span><%= @residence.country.name %></span>
+            <h2><%= @residence.name %></h2>
             <ul>
               <li>
                 <i class='bx bx-calendar'></i>
-                October 19, 2021
+                <%= @residence.created_at %>
               </li>
               <li>
                 <i class='bx bx-current-location'></i>
-                <a href="#">300 B 1st View Road, New York</a>
+                <%= @residence.address %>
+              </li>
+              <li>
+                <i class='bx bx-coin'></i>
+                <%= @residence.cost %>
               </li>
             </ul>
           </div>
-          <div class="property-details-slider owl-theme owl-carousel">
-            <div class="slider-item">
-              <%= image_tag("details1.jpg")%>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% @residence.images.each_with_index do |image, index| %>
+                <% active_class = 'active' if index == 0 %>
+                <div class="<%= active_class %> carousel-item">
+                  <div class="text-center">
+                    <img class="d-block w-100" <%= image_tag image %>
+                  </div>
+                </div>
+              <% end %>
             </div>
-            <div class="slider-item">
-              <%= image_tag("details2.jpg")%>
-            </div>
-            <div class="slider-item">
-              <%= image_tag("details3.jpg")%>
+            <div class="d-flex justify-content-center">
+              <button class="position-static rounded-circle btn btn-light mx-3 px-3" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators">&#8249</button>
+              <button class="position-static rounded-circle btn btn-light mx-3 px-3" data-bs-slide="next" data-bs-target="#carouselExampleIndicators">&#8250</button>
             </div>
           </div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing</p>
+          <%= render 'likes/form' %>
+          <div class="property-details-slider owl-theme owl-carousel">
+            <% @residence.images.each do |image| %>
+              <div class="slider-item">
+                <%= image_tag image %>
+              </div>
+            <% end %>
+          </div>
+          
+          <% @descriptions.each do|description| %>
+            <p><%= description %></p>
+          <% end %>
           <blockquote>
             <i class='bx bxs-quote-left'></i>
             “It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters”
@@ -110,126 +90,39 @@ var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
               <li>
                 <h4>Bed-Room</h4>
                 <i class="bx bx-bed"></i>
-                <span>5</span>
+                <%= @residence.bedroom %>
               </li>
               <li>
                 <h4>Bath-Room</h4>
                 <i class="bx bx-bath"></i>
-                <span>2</span>
+                <%= @residence.bathroom %>
               </li>
               <li>
                 <h4>Square-Feet</h4>
                 <i class='bx bx-square'></i>
-                <span>1800</span>
+                <%= @residence.squarefeet %>
               </li>
               <li>
                 <h4>Total-Room</h4>
                 <i class="bx bx-building-house"></i>
-                <span>8</span>
+                <%= @residence.rooms %>
               </li>
             </ul>
           </div>
           <div class="information-list">
             <div class="left">
               <ul>
-                <li>
-                  <i class='bx bx-check'></i>
-                  3 Toilets
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  3 Ensuite
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Spa
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Courtyard
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Open Fire Place
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Ducted Cooling
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Floor Boards
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Workshop
-                </li>
-              </ul>
-            </div>
-            <div class="right">
-              <ul>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Tennis Court
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Deck
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  2 Garage
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Outdoor Entertaining
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Shed
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Ducted Heating
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Split System Heating
-                </li>
-                <li>
-                  <i class='bx bx-check'></i>
-                  Balcony
-                </li>
+                <% @pros.each do |pros| %>
+                  <li>
+                    <i class='bx bx-check'></i>
+                    <%= pros %>
+                  </li>
+                <% end %>
               </ul>
             </div>
           </div>
-          <div class="common-details-contact">
-            <h3>Contact Us</h3>
-            <form>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Name">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email">
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <textarea id="your-message" rows="8" class="form-control" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <button type="submit" class="btn common-btn">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+
+          <div id="map"></div>
         </div>
       </div>
       <div class="col-lg-4">
@@ -266,56 +159,25 @@ var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
             </ul>
           </div>
           <div class="popular widget-item">
-            <h3>Popular Properties</h3>
-            <div class="inner">
-              <ul class="align-items-center">
-                <li>
-                  <%= image_tag("details6.jpg")%>
-                </li>
-                <li>
-                  <h4>
-                    <a href="#">Extension Cottage Villa</a>
-                  </h4>
-                  <a class="location" href="#">
-                    <i class='bx bx-current-location'></i>
-                    View, New York
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="inner">
-              <ul class="align-items-center">
-                <li>
-                  <%= image_tag("details7.jpg")%>
-                </li>
-                <li>
-                  <h4>
-                    <a href="#">Sag Harbor Cottage And Resort</a>
-                  </h4>
-                  <a class="location" href="#">
-                    <i class='bx bx-current-location'></i>
-                    6B, New York
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="inner">
-              <ul class="align-items-center">
-                <li>
-                  <%= image_tag("details8.jpg")%>
-                </li>
-                <li>
-                  <h4>
-                    <a href="#">Construction Industry And Office</a>
-                  </h4>
-                  <a class="location" href="#">
-                    <i class='bx bx-current-location'></i>
-                    6B, 1st View
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <h3>Last Viewed Properties</h3>
+            <% @views.each do |view| %>
+              <div class="inner">
+                <ul class="align-items-center">
+                  <li>
+                    <%= image_tag view.residence.images.first %>
+                  </li>
+                  <li>
+                    <h4>
+                      <%= link_to view.residence.name, view.residence%>
+                    </h4>
+                    <a class="location">
+                      <i class='bx bx-current-location'></i>
+                      <%= view.residence.address %>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            <% end %>
           <div class="tags widget-item">
             <h3>Tags</h3>
             <ul>
@@ -336,9 +198,26 @@ var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
               </li>
             </ul>
           </div>
+          <%= render 'orders/form' %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  var map = L.map('map').setView([ <%= @latitude %>, <%= @longitude %>], 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
+    color: 'blue',
+    
+    fillOpacity: 0.5,
+    radius: 500
+  }).addTo(map);
+
+</script>
 

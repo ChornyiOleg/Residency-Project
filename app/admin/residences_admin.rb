@@ -35,6 +35,11 @@ Trestle.resource(:residences) do
     text_field :cost
     text_area :description
     file_field :images, multiple: true
+    text_field :pros
+    text_field :bedroom
+    text_field :bathroom
+    text_field :squarefeet
+    text_field :rooms
     collection_select :country_id, Country.order(:name), :id, :name
     collection_select :program_id, Program.order(:name), :id, :name
     text_field :latitude
