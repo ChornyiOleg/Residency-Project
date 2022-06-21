@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
 
   }
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do 
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
     resources :posts, path: 'blog'
@@ -26,10 +26,10 @@ Rails.application.routes.draw do
     post 'posts[:index, :show]', to: 'orders#create'
     get 'search', to: 'residences#search'
 
-   resources :residences do
+    resources :residences do
       resources :orders
       resources :likes
-   end
+    end
 
     resources :countries do
       resources :orders
@@ -44,9 +44,8 @@ Rails.application.routes.draw do
     end
 
     resources :likes
-    resources :views 
+    resources :views
     resources :testimonials
     resources :orders
   end
-
 end

@@ -3,7 +3,7 @@ Trestle.configure do |config|
   #
   # Set the page title shown in the main header within the admin.
   #
-  config.site_title = "Citizenship Project"
+  config.site_title = 'Citizenship Project'
 
   # Specify a custom image to be used in place of the site title for mobile and
   # expanded/desktop navigation. These images should be placed within your
@@ -144,7 +144,7 @@ Trestle.configure do |config|
 
   # Specify the Trestle admin for managing the current user (My Account).
   #
-  config.auth.user_admin = -> { :"auth/account" }
+  config.auth.user_admin = -> { :'auth/account' }
 
   # Specify the parameter (along with a password) to be used to
   # authenticate an administrator. Defaults to :email.

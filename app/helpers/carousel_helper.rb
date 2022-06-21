@@ -5,7 +5,8 @@ module CarouselHelper
 
   class Carousel
     def initialize(view, images)
-      @view, @images = view, images
+      @view = view
+      @images = images
       @uid = SecureRandom.hex(6)
     end
 
@@ -17,6 +18,7 @@ module CarouselHelper
     private
 
     attr_accessor :view, :images, :uid
+
     delegate :link_to, :content_tag, :image_tag, :safe_join, to: :view
 
     def indicators
@@ -27,8 +29,8 @@ module CarouselHelper
     def indicator_tag(index)
       options = {
         class: (index.zero? ? 'active' : ''),
-        data: { 
-          target: uid, 
+        data: {
+          target: uid,
           slide_to: index
         }
       }
@@ -43,7 +45,7 @@ module CarouselHelper
 
     def slide_tag(image, is_active)
       options = {
-        class: (is_active ? 'item active' : 'item'),
+        class: (is_active ? 'item active' : 'item')
       }
 
       content_tag(:div, image_tag(image), options)

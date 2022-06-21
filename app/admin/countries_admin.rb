@@ -1,6 +1,6 @@
 Trestle.resource(:countries) do
   menu do
-    item :countries, icon: "fa fa-star"
+    item :countries, icon: 'fa fa-star'
   end
 
   # Customize the table columns shown on the index view.
@@ -11,11 +11,10 @@ Trestle.resource(:countries) do
     column :created_at, align: :center
   end
 
-
   # Customize the form fields shown on the new/edit views.
   #
 
-  form do |country|
+  form do |_country|
     text_field :name
     text_area :content
     file_field :image

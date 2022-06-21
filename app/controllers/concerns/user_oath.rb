@@ -8,8 +8,8 @@ module UserOath
   class_methods do
     def find_for_oauth(auth)
       authorization = Authorization
-                        .where(provider: auth.provider, uid: auth.uid)
-                        .first
+                      .where(provider: auth.provider, uid: auth.uid)
+                      .first
 
       return  authorization.user if authorization
 

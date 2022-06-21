@@ -1,6 +1,6 @@
 Trestle.resource(:programs) do
   menu do
-    item :programs, icon: "fa fa-star"
+    item :programs, icon: 'fa fa-star'
   end
 
   # Customize the table columns shown on the index view.
@@ -13,7 +13,7 @@ Trestle.resource(:programs) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |program|
+  form do |_program|
     text_field :name
     text_area :content
     file_field :image

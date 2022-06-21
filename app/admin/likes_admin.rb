@@ -1,6 +1,6 @@
 Trestle.resource(:likes) do
   menu do
-    item :likes, icon: "fa fa-star"
+    item :likes, icon: 'fa fa-star'
   end
 
   # Customize the table columns shown on the index view.

@@ -32,6 +32,5 @@ class CreateDb < ActiveRecord::Migration[7.0]
 
     add_reference :residences, :country
     add_reference :residences, :program
-
   end
 end

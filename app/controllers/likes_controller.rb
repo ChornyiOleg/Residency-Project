@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   def index
     @likes = Like.where(user: current_user)
     @pagy, @records = pagy(@likes, items: 10)
@@ -11,14 +10,9 @@ class LikesController < ApplicationController
       @like.destroy
       redirect_to @like.residence
     else
-        @like = Like.new(user: current_user, residence_id: params[:residence_id])
-        if @like.save
-          flash[:success] = 'Comment created!'
-          redirect_to @like.residence
-        else
-          @likes = Like.order created_at: :desc
-          redirect_to root_path
-        end 
+      @like = Like.new(user: current_user, residence_id: params[:residence_id])
+      @like.save
+      redirect_to @like.residence
     end
   end
 
@@ -27,5 +21,4 @@ class LikesController < ApplicationController
   def liked?
     Like.where(user: current_user, residence_id: params[:residence_id]).exists?
   end
-  
 end

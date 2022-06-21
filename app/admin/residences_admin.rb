@@ -1,6 +1,6 @@
 Trestle.resource(:residences) do
   menu do
-    item :residences, icon: "fa fa-star"
+    item :residences, icon: 'fa fa-star'
   end
 
   # Customize the table columns shown on the index view.
@@ -28,8 +28,7 @@ Trestle.resource(:residences) do
   #     col { datetime_field :created_at }
   #   end
   # end
-  form do |residence|
-  
+  form do |_residence|
     text_field :name
     text_field :address
     text_field :cost

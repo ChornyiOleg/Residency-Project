@@ -1,10 +1,9 @@
 Trestle.resource(:orders) do
   menu do
-    item :orders, icon: "fa fa-star"
+    item :orders, icon: 'fa fa-star'
   end
 
-  form do |residence|
-  
+  form do |_residence|
     text_field :name
     text_field :phone
     text_area :info

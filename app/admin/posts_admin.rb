@@ -1,19 +1,19 @@
 Trestle.resource(:posts) do
   menu do
-    item :posts, icon: "fa fa-star"
+    item :posts, icon: 'fa fa-star'
   end
 
   # Customize the table columns shown on the index view.
 
- table do
+  table do
     column :name
     column :content
     column :created_at, align: :center
- end
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
-  form do |post|
+  form do |_post|
     text_field :name
     text_area :content
     file_field :image
