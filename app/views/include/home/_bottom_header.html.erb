@@ -1,0 +1,114 @@
+<!--==================================================-->
+<!----- start visapro Header  Area ----->
+<!--==================================================-->
+<div class="header-area transparent" id="sticky-header">
+  <div class="container">
+    <div class="m-logo">
+      <a href="#"><span class="logo-txt"></span></a>
+    </div>
+    <div class="menu-toggle">
+      <span class="open_bar"><i class="fas fa-bars"></i></span>
+      <span class="close_bar"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="menu-wrapper">
+      <div class="row align-items-center d-flex">
+        <div class="col-lg-3">
+          <div class="header-logo">
+            <%= link_to "#{image_tag("360-logo2.png")}".html_safe, root_path, class: 'main-logo' %>
+            <%= link_to "#{image_tag("360-logo2.png")}".html_safe, root_path, class: 'stiky-logo' %>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="header-menu">
+            <ul>
+              <li>
+                <%= link_to 'Home', root_path%>
+              </li>
+              <li><%= link_to 'Countries', countries_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+                <div class="sub-menu">
+                    <ul>
+                    <% @countries.each do |country| %>
+                      <li><%= link_to country.name, country %></li>
+                    <% end %>
+                    </ul>
+                </div>
+              <li><%= link_to 'Programs', programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+                <div class="sub-menu">
+                  <ul>
+                    <% @programs.each do |program| %>
+                      <li><%= link_to program.name, program %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <%= link_to 'Residences', residences_path %>
+              </li>
+              <li>
+                <%= link_to 'Blog', blog_path %>
+              </li>
+              <li>
+                <%= link_to 'About', about_path %>
+              </li>
+              <li>
+                <%= link_to 'Contact', contact_path %>
+              </li>
+              <li><%= link_to 'Account', programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+                <div class="sub-menu">
+                  <ul>
+                    <% if user_signed_in? %>
+                      <% if current_user.try(:admin?) %>
+                        <li>
+                          <%= link_to 'administrator', '#', style: "color: red" %>
+                        </li>
+                        <li>
+                          <%= link_to 'API', '/oauth/applications', style: "color: blue" %>
+                        </li>
+
+                      <% end %>
+                      <li>
+                        <a href="#">
+                          Welcome, <%= current_user.email %>
+                        </a>
+                      </li>
+                      <li>
+                        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                      </li>
+                      <li>
+                        <%= link_to 'Edit', edit_user_registration_path %>
+                      </li>
+                      <li>
+                        <%= link_to 'Likes', likes_path, class: "nav-link active"%>
+                      </li>
+                      <li>
+                        <%= link_to 'Views', views_path, class: "nav-link active"%>
+                      </li>
+                    <% else %>
+                      <li>
+                        <%= link_to 'Sing In', new_user_session_path %>
+                      </li>
+                      <li>
+                        <%= link_to "Sign up", new_user_registration_path %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="header-button">
+              <a href="#">apply now</a>
+            </div>
+            <div class="header-src-btn">
+              <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
+            </div>
+            <div class="mobile-menu-social-icon d-lg-none mt-40">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
