@@ -37,70 +37,69 @@
       <div class="col-lg-8">
         <div class="row">
           <% @posts.each do |post| %>
-          <div class="col-lg-6 col-md-6">
-
-            <div class="dreamit-single-blog-box">
-              <div class="dreamit-blog-thumb">
-                <a href="#"><%= image_tag(post.image, width: '200', class: "mx-auto d-block") %></a>
-                <div class="post-catgory">
-                  <a href="#"><%= post.name %></a>
-                  <a href="#">Working Visa</a>
+            <div class="col-lg-6 col-md-6">
+              <div class="dreamit-single-blog-box">
+                <div class="dreamit-blog-thumb">
+                  <%= link_to image_tag(post.image, width: '200', class: "mx-auto d-block"), post %>
+                  <div class="post-catgory">
+                    <%= link_to post.name, post %>
+                  </div>
                 </div>
-              </div>
-              <div class="dreamit-meta-box">
-                <a href="#">360NPAC</a>
-                <h3>Posted on <%= post.created_at.strftime("%b %d, %Y") %></h3>
-              </div>
-              <div class="dreamit-blog-content">
-                <div class="dreamit-blog-title">
-                  <h2>
-                   <%= link_to post.name, post %>
-                  </h2>
+                <div class="dreamit-meta-box">
+                  <p>360NPAC</p>
+                  <h3>Posted on <%= post.created_at.strftime("%b %d, %Y") %></h3>
                 </div>
-                <div class="dreamit-blog-text">
-                   <p><%= truncate(strip_tags(post.content.to_s), length: 120) %></div></p>
+                <div class="dreamit-blog-content">
+                  <div class="dreamit-blog-title">
+                    <h2>
+                     <%= link_to post.name, post %>
+                    </h2>
+                  </div>
+                  <div class="dreamit-blog-text">
+                     <p><%= truncate(strip_tags(post.content.to_s), length: 120) %></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           <% end %>
-         <% end %>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="pagiation">
-              <div class="page-number pt-30">
-                <ul>
-                  <li><a class="active" href="blog-grid.html">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                </ul>
-              </div>
+<% end %>
+</div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="pagiation">
+            <div class="page-number pt-30">
+              <ul>
+                <li><a class="active" href="blog-grid.html">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="sidebar-box">
-          <div class="sidebar-search">
-            <input type="text" name="search" placeholder="Search">
-            <button type="text" name="submit"><i class="fas fa-search"></i></button>
-          </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="sidebar-box">
+        <div class="sidebar-search">
+          <input type="text" name="search" placeholder="Search">
+          <button type="text" name="submit"><i class="fas fa-search"></i></button>
         </div>
-        <div class="sidebar-box">
-          <div class="sidebar-title">
-            <h2>Categories</h2>
-          </div>
-          <div class="dreamit-section-bar mb-20"></div>
-          <div class="sidebar-category">
-            <ul>
-              <li><a href="business-visa.html">Business Visa</a></li>
-              <li><a href="immigration-visa.html">Immigration Visa</a></li>
-              <li><a href="pr-visa.html">PR Visa</a></li>
-              <li><a href="student-visa.html">Student Visa</a></li>
-              <li><a href="working-visa">Working Visa</a></li>
-            </ul>
-          </div>
+      </div>
+      <div class="sidebar-box">
+        <div class="sidebar-title">
+          <h2>Categories</h2>
         </div>
+        <div class="dreamit-section-bar mb-20"></div>
+        <div class="sidebar-category">
+          <ul>
+            <li><a href="business-visa.html">Business Visa</a></li>
+            <li><a href="immigration-visa.html">Immigration Visa</a></li>
+            <li><a href="pr-visa.html">PR Visa</a></li>
+            <li><a href="student-visa.html">Student Visa</a></li>
+            <li><a href="working-visa">Working Visa</a></li>
+          </ul>
+        </div>
+      </div>
         <div class="sidebar-category">
           <%= render 'orders/form_for_sidebar' %>
         </div>

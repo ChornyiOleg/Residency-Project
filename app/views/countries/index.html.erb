@@ -22,7 +22,7 @@
 
 <% if @countries.empty? %>
   <div class="text-center">
-    <h2>The posts list is empty at the moment...</h2>
+    <h2>The countries list is empty at the moment...</h2>
   </div>
   <hr>
 <% else %>
@@ -34,13 +34,11 @@
           <div class="row">
             <% @countries.each do |country| %>
               <div class="col-lg-6 col-md-6">
-
                 <div class="dreamit-single-blog-box">
                   <div class="dreamit-blog-thumb">
-                    <a href="#"><%= image_tag(country.image, width: '200', class: "mx-auto d-block") %></a>
+                     <%= link_to image_tag(country.image, width: '200', class: "mx-auto d-block"), country  %>
                     <div class="post-catgory">
-                      <a href="#"><%= country.name %></a>
-                      <a href="#">Working Visa</a>
+                      <%= link_to country.name, country %>
                     </div>
                   </div>
                   <div class="country-flag-img">
@@ -72,9 +70,19 @@
     <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
     <li><a href="#"><i class="fab fa-reddit"></i></a></li>
   </ul>
-  <div class="about-button pt-4">
-    <%= link_to 'Back to the posts', posts_path, class: "btn" %>
+
+  <div class="btn-group-fluid align-items-center">
+    <div class="btn about-button pt-4">
+      <%= link_to 'Posts', posts_path %>
+    </div>
+    <div class="btn about-button pt-4">
+      <%= link_to 'Countries', countries_path %>
+    </div>
+    <div class="btn about-button pt-4">
+      <%= link_to 'Programs', programs_path %>
+    </div>
   </div>
+
 </div>
 
 </div>

@@ -5,4 +5,5 @@ class Program < ApplicationRecord
   has_rich_text :content
   validates :name, presence: true, length: { minimum: 2, maximum: 100 }
   validates :content, presence: true, length: { minimum: 10 }
+  validates :kind, presence: true, length: { maximum: 11 }
 end

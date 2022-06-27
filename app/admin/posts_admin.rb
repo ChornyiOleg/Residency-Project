@@ -1,6 +1,6 @@
 Trestle.resource(:posts) do
   menu do
-    item :posts, icon: 'fa fa-star'
+    item :posts, icon: 'fa fa-book'
   end
 
   # Customize the table columns shown on the index view.
@@ -15,7 +15,7 @@ Trestle.resource(:posts) do
   #
   form do |_post|
     text_field :name
-    text_area :content
+    rich_text_area :content
     file_field :image
   end
 
