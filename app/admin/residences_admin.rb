@@ -1,6 +1,6 @@
 Trestle.resource(:residences) do
   menu do
-    item :residences, icon: 'fa fa-star'
+    item :residences, icon: 'fa fa-home'
   end
 
   # Customize the table columns shown on the index view.

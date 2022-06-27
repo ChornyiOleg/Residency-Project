@@ -1,6 +1,6 @@
 Trestle.resource(:orders) do
   menu do
-    item :orders, icon: 'fa fa-star'
+    item :orders, icon: 'fa fa-envelope-open'
   end
 
   form do |_residence|

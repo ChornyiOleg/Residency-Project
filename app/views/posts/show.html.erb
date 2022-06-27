@@ -39,8 +39,7 @@
                   <h1><%= @post.name %></h1>
                 </div>
                 <div class="blog-details-meta-box">
-                  <p>360NPAC</p>
-                  <h3><%= post.created_at.strftime("%b %d, %Y") %></h3>
+                  <h3> <%= @post.created_at.strftime("%b %d, %Y") %> </h3> by 360NPAC
                 </div>
                 <div class="blog-details-content-text">
                   <p><%= @post.content %></p>
@@ -54,10 +53,10 @@
                     <%= link_to 'Posts', posts_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Countries', posts_path %>
+                    <%= link_to 'Countries', countries_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Programs', posts_path %>
+                    <%= link_to 'Programs', programs_path %>
                   </div>
                 </div>
 
