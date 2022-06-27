@@ -39,9 +39,8 @@
                   <h1><%= @post.name %></h1>
                 </div>
                 <div class="blog-details-meta-box">
-                  <a href="#">visapro</a>
-                  <h3>March 24, 2021</h3>
-                  <span>0 - comment </span>
+                  <p>360NPAC</p>
+                  <h3><%= post.created_at.strftime("%b %d, %Y") %></h3>
                 </div>
                 <div class="blog-details-content-text">
                   <p><%= @post.content %></p>

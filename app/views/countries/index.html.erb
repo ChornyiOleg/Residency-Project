@@ -22,7 +22,7 @@
 
 <% if @countries.empty? %>
   <div class="text-center">
-    <h2>The posts list is empty at the moment...</h2>
+    <h2>The countries list is empty at the moment...</h2>
   </div>
   <hr>
 <% else %>
@@ -34,12 +34,11 @@
           <div class="row">
             <% @countries.each do |country| %>
               <div class="col-lg-6 col-md-6">
-
                 <div class="dreamit-single-blog-box">
                   <div class="dreamit-blog-thumb">
-                    <a href="#"><%= image_tag(country.image, width: '200', class: "mx-auto d-block") %></a>
+                     <%= link_to image_tag(country.image, width: '200', class: "mx-auto d-block"), country  %>
                     <div class="post-catgory">
-                      <a href="#"><%= country.name %></a>
+                      <%= link_to country.name, country %>
                       <a href="#">Working Visa</a>
                     </div>
                   </div>

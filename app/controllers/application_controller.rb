@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   before_action :set_countries
   before_action :set_programs
+  before_action :set_posts
+
   def index; end
 
   def set_countries
@@ -12,7 +14,11 @@ class ApplicationController < ActionController::Base
     @programs = Program.all
   end
 
-  around_action :switch_locale
+  def set_posts
+    @programs = Post.all
+  end
+
+  # around_action :switch_locale
 
   private
 

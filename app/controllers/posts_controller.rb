@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[edit update show destroy]
+  before_action :set_post, only: %i[index edit update show destroy]
 
   def index
+    @posts = Post.all
     @pagy, @posts = pagy(Post.order(created_at: :desc), items: 5)
   end
 
