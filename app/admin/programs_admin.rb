@@ -17,7 +17,7 @@ Trestle.resource(:programs) do
     text_field :name
     text_area :content
     file_field :image
-    text_field :kind, placeholder: 'Citizenship or Residensy'
+    text_field :kind, placeholder: 'Citizenship or Residency'
     collection_select :country_id, Country.order(:name), :id, :name
   end
 
