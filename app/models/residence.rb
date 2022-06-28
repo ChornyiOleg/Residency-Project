@@ -8,6 +8,7 @@ class Residence < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 2, maximum: 100 }
   validates :address, presence: true, length: { minimum: 2, maximum: 100 }
+  validates :main_info, presence: true
   validates :description, presence: true, length: { minimum: 2, maximum: 5000 }
   validates :latitude, presence: true
   validates :longitude, presence: true
@@ -17,4 +18,5 @@ class Residence < ApplicationRecord
   validates :squarefeet, presence: true
   validates :rooms, presence: true
   validates :cost, presence: true
+
 end

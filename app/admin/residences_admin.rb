@@ -32,6 +32,7 @@ Trestle.resource(:residences) do
     text_field :name
     text_field :address
     text_field :cost
+    text_area :main_info
     text_area :description
     file_field :images, multiple: true
     text_field :pros
