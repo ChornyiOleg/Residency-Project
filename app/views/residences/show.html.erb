@@ -161,7 +161,9 @@
               <div class="inner">
                 <ul class="align-items-center">
                   <li>
-                    <%= image_tag view.residence.images.first %>
+                    <% if view.residence.images.attached? %>
+                      <%= image_tag view.residence.images.first %>
+                    <% end %>
                   </li>
                   <li>
                     <h4>
