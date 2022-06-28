@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   before_action :set_countries
   before_action :set_programs
+  before_action :set_posts
+  before_action :set_testimonials
   def index; end
 
   def set_countries
@@ -10,6 +12,16 @@ class ApplicationController < ActionController::Base
 
   def set_programs
     @programs = Program.all
+    @citizenship = @programs.where(kind: 'Citizenship')
+    @residency = @programs.where(kind: 'Residency')
+  end
+
+  def set_posts
+    @posts = Post.last(7)
+  end
+
+  def set_testimonials
+    @testimonials = Testimonial.all
   end
 
   around_action :switch_locale

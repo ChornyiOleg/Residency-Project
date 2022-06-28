@@ -1,25 +1,177 @@
-<meta charset="UTF-8">
-<div class="container">
-  <h1>Residences</h1>
-  <div class="row row-cols-3">
-    <% @likes.each do |like| %>
-      
-        <div class="col">
-          <dl>
-            <dt> <%= like.residence.name %> </dt>
-          </dl>
-          <% if like.residence.images.attached? %>
-            <%= image_tag like.residence.images.first, width: '250' %>
-          <% end %>
-          <dl>
-            <dt> 
-              <%= link_to 'Show', like.residence, class: 'btn btn-primary' %>
-            </dt>
-          </dl>
+<!--==================================================-->
+<!----- start visapro breatcome Area ----->
+<!--==================================================-->
+
+<div class="breatcome-area d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breatcome-content text-center">
+          <div class="breatcome-content-title">
+            <h1>Residences</h1>
+          </div>
+          <div class="breatcome-content-text">
+            <ul>
+              <li><%= link_to 'Home', root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Residences List', residences_path %></span></li>
+            </ul>
+          </div>
         </div>
-      
-    <% end %>
+      </div>
+    </div>
   </div>
-  <%== pagy_nav(@pagy) %>
-  <%== pagy_info(@pagy) %>
 </div>
+
+<section class="properties-area two ptb-100">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="sub-title"> Properties Which You Liked </h2>
+      <h2><%= t('residences.sub-title2')%></h2>
+    </div>
+    <div class="row">
+      <% @records.each do |record| %>
+      <div class="col-sm-6 col-lg-4">
+        <div class="property-item">
+          <div class="top">
+            <span> <%= record.residence.country.name %></span>
+            <span>For Sell</span>
+            <% if record.residence.images.attached? %>
+              <%= image_tag record.residence.images.first %>
+            <% end %>
+          </div>
+          <div class="bottom">
+            <span>From $ <%= record.residence.cost %></span>
+            <h3>
+              <%= link_to record.residence.name, record.residence %>
+            </h3>
+            <a class="location" href="#">
+              <i class='bx bx-current-location'></i>
+              <%= record.residence.address %>
+            </a>
+            <ul>
+              <li><%= record.residence.bedroom %> BD</li>
+              <li><%= record.residence.bathroom %> BA</li>
+              <li><%= record.residence.squarefeet %> SF</li>
+              <li><%= record.residence.rooms %> RM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="pagination-area">
+      <ul>
+        <li>
+          <a href="#">Prev</a>
+        </li>
+        <li>
+          <a class="active" href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">Next</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="offer-area pt-100 pb-70">
+  <div class="container">
+    <div class="section-title">
+      <span class="sub-title">Our Features</span>
+      <h2>We Offer Perfect Real Estate Services And More</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-world-grid"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Worldwide Company</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-real-estate-agent"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Experience Agent</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-commission"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Lowest Commission</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-life-insurance"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Property Insurance</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-fast-delivery"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Fastest Service</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="offer-item">
+          <ul class="align-items-center">
+            <li>
+              <i class="flaticon-sales"></i>
+            </li>
+            <li>
+              <h3>
+                <a>Largest Real Estate</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

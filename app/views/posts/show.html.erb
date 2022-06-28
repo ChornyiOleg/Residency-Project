@@ -24,9 +24,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="blog-details pt-65 pb-60">
+<div class="property-details-area ptb-100">
   <div class="container">
-    <div class="row pt-20">
+    <div class="row">
       <div class="col-lg-8 col-md-12">
         <div class="row">
           <div class="col-lg-12 col-md-12">
@@ -78,31 +78,63 @@
       </div>
 
       <div class="col-lg-4">
-        <div class="sidebar-box">
-          <div class="sidebar-search">
-            <input type="text" name="search" placeholder="Search">
-            <button type="text" name="submit"><i class="fas fa-search"></i></button>
+        <div class="widget-area">
+          <div class="search widget-item">
+            <form>
+              <input type="text" class="form-control" placeholder="Search Here...">
+              <button type="submit" class="btn">
+                <i class='bx bx-search'></i>
+              </button>
+            </form>
           </div>
-        </div>
-        <div class="sidebar-box">
-          <div class="sidebar-title">
-            <h2>Categories</h2>
-          </div>
-          <div class="dreamit-section-bar mb-20"></div>
-          <div class="sidebar-category">
+          <div class="categories widget-item">
+            <h3>Categories</h3>
             <ul>
-              <li><a href="business-visa.html">Business Visa</a></li>
-              <li><a href="immigration-visa.html">Immigration Visa</a></li>
-              <li><a href="pr-visa.html">PR Visa</a></li>
-              <li><a href="student-visa.html">Student Visa</a></li>
-              <li><a href="working-visa">Working Visa</a></li>
+              <li>
+                <a href="#">Home For Sale</a>
+              </li>
+              <li>
+                <a href="#">Home On Lease</a>
+              </li>
+              <li>
+                <a href="#">Matching Buyer</a>
+              </li>
+              <li>
+                <a href="#">Home For Buy</a>
+              </li>
+              <li>
+                <a href="#">Home For Mortgage</a>
+              </li>
+              <li>
+                <a href="#">Home For Rent</a>
+              </li>
             </ul>
           </div>
+          <div class="tags widget-item">
+            <h3>Tags</h3>
+            <ul>
+              <li>
+                <a href="#">Apartment</a>
+              </li>
+              <li>
+                <a href="#">New Properties</a>
+              </li>
+              <li>
+                <a href="#">House</a>
+              </li>
+              <li>
+                <a href="#">Villa</a>
+              </li>
+              <li>
+                <a href="#">Office</a>
+              </li>
+            </ul>
+          </div>
+          <div id="turbo2">
+            <%= render partial: 'orders/form_for_home' %>
+          </div>
         </div>
-        <div class="sidebar-box">
-          <%= render 'orders/form_for_sidebar' %>
-        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>

@@ -5,7 +5,7 @@
         <h3>Appointment</h3>
       </div>
 
-        <%= form_with model: [@residence, @residence.orders.build] do |f| %>
+        <%= form_with model: [@residence, Order.new] do |f| %>
           <div class="col-lg-12">
             <div class="form_box mb-15">
               <%= f.label :name %>

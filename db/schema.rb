@@ -10,168 +10,170 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_27_192412) do
+ActiveRecord::Schema[7.0].define(version: 20_220_628_104_126) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "action_text_rich_texts", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "body"
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  create_table 'action_text_rich_texts', force: :cascade do |t|
+    t.string 'name', null: false
+    t.text 'body'
+    t.string 'record_type', null: false
+    t.bigint 'record_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index %w[record_type record_id name], name: 'index_action_text_rich_texts_uniqueness', unique: true
   end
 
-  create_table "active_storage_attachments", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  create_table 'active_storage_attachments', force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'record_type', null: false
+    t.bigint 'record_id', null: false
+    t.bigint 'blob_id', null: false
+    t.datetime 'created_at', null: false
+    t.index ['blob_id'], name: 'index_active_storage_attachments_on_blob_id'
+    t.index %w[record_type record_id name blob_id], name: 'index_active_storage_attachments_uniqueness', unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.string "service_name", null: false
-    t.bigint "byte_size", null: false
-    t.string "checksum"
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  create_table 'active_storage_blobs', force: :cascade do |t|
+    t.string 'key', null: false
+    t.string 'filename', null: false
+    t.string 'content_type'
+    t.text 'metadata'
+    t.string 'service_name', null: false
+    t.bigint 'byte_size', null: false
+    t.string 'checksum'
+    t.datetime 'created_at', null: false
+    t.index ['key'], name: 'index_active_storage_blobs_on_key', unique: true
   end
 
-  create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
-    t.string "variation_digest", null: false
-    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  create_table 'active_storage_variant_records', force: :cascade do |t|
+    t.bigint 'blob_id', null: false
+    t.string 'variation_digest', null: false
+    t.index %w[blob_id variation_digest], name: 'index_active_storage_variant_records_uniqueness', unique: true
   end
 
-  create_table "administrators", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "remember_token"
-    t.datetime "remember_token_expires_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'administrators', force: :cascade do |t|
+    t.string 'email'
+    t.string 'password_digest'
+    t.string 'first_name'
+    t.string 'last_name'
+    t.string 'remember_token'
+    t.datetime 'remember_token_expires_at'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.integer 'super_admin', default: 0
   end
 
-  create_table "authorizations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "provider"
-    t.string "uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_authorizations_on_user_id"
+  create_table 'authorizations', force: :cascade do |t|
+    t.bigint 'user_id'
+    t.string 'provider'
+    t.string 'uid'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_authorizations_on_user_id'
   end
 
-  create_table "countries", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "content"
+  create_table 'countries', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.text 'content'
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "residence_id"
-    t.bigint "user_id"
-    t.index ["residence_id"], name: "index_likes_on_residence_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
+  create_table 'likes', force: :cascade do |t|
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'residence_id'
+    t.bigint 'user_id'
+    t.index ['residence_id'], name: 'index_likes_on_residence_id'
+    t.index ['user_id'], name: 'index_likes_on_user_id'
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.string "name"
-    t.string "phone"
-    t.text "info"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.bigint "residence_id"
-    t.integer "status", default: 0
-    t.integer "messenger", default: 0
-    t.index ["residence_id"], name: "index_orders_on_residence_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
+  create_table 'orders', force: :cascade do |t|
+    t.string 'name'
+    t.string 'phone'
+    t.text 'info'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'user_id'
+    t.bigint 'residence_id'
+    t.integer 'status', default: 0
+    t.integer 'messenger', default: 0
+    t.index ['residence_id'], name: 'index_orders_on_residence_id'
+    t.index ['user_id'], name: 'index_orders_on_user_id'
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "name"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'posts', force: :cascade do |t|
+    t.string 'name'
+    t.text 'content'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "programs", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "content"
-    t.bigint "country_id", null: false
-    t.string "kind"
-    t.index ["country_id"], name: "index_programs_on_country_id"
+  create_table 'programs', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.text 'content'
+    t.bigint 'country_id', null: false
+    t.string 'kind'
+    t.index ['country_id'], name: 'index_programs_on_country_id'
   end
 
-  create_table "residences", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "country_id"
-    t.bigint "program_id"
-    t.text "description"
-    t.float "latitude"
-    t.float "longitude"
-    t.text "pros"
-    t.integer "bedroom"
-    t.integer "bathroom"
-    t.float "squarefeet"
-    t.integer "rooms"
-    t.string "cost"
-    t.index ["country_id"], name: "index_residences_on_country_id"
-    t.index ["program_id"], name: "index_residences_on_program_id"
+  create_table 'residences', force: :cascade do |t|
+    t.string 'name'
+    t.string 'address'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'country_id'
+    t.bigint 'program_id'
+    t.text 'description'
+    t.float 'latitude'
+    t.float 'longitude'
+    t.text 'pros'
+    t.integer 'bedroom'
+    t.integer 'bathroom'
+    t.float 'squarefeet'
+    t.integer 'rooms'
+    t.string 'cost'
+    t.text 'main_info'
+    t.index ['country_id'], name: 'index_residences_on_country_id'
+    t.index ['program_id'], name: 'index_residences_on_program_id'
   end
 
-  create_table "testimonials", force: :cascade do |t|
-    t.string "name_of_user"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'testimonials', force: :cascade do |t|
+    t.string 'name_of_user'
+    t.text 'content'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.boolean "admin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "provider", limit: 50, default: "", null: false
-    t.string "uid", limit: 50, default: "", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.boolean 'admin'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'email', default: '', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.string 'provider', limit: 50, default: '', null: false
+    t.string 'uid', limit: 50, default: '', null: false
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
 
-  create_table "views", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "residence_id"
-    t.bigint "user_id"
-    t.index ["residence_id"], name: "index_views_on_residence_id"
-    t.index ["user_id"], name: "index_views_on_user_id"
+  create_table 'views', force: :cascade do |t|
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'residence_id'
+    t.bigint 'user_id'
+    t.index ['residence_id'], name: 'index_views_on_residence_id'
+    t.index ['user_id'], name: 'index_views_on_user_id'
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "authorizations", "users", on_delete: :cascade
-  add_foreign_key "programs", "countries"
+  add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
+  add_foreign_key 'active_storage_variant_records', 'active_storage_blobs', column: 'blob_id'
+  add_foreign_key 'authorizations', 'users', on_delete: :cascade
+  add_foreign_key 'programs', 'countries'
 end
