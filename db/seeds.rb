@@ -5,29 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Country.create(
-  name: 'Portugal'
-)
-
-Country.create(
-  name: 'Panama'
-)
-
-Country.create(
-  name: 'Montenegro'
-)
-
-Program.create(
-  name: 'Citizenship'
-)
-
-Program.create(
-  name: 'Residency'
-)
 
 Administrator.create(
-  email: 'test@email.com',
+  email: 'super_admin@email.com',
   password: '12345678',
-  first_name: 'QWE',
-  last_name: 'RTY'
+  first_name: 'Super',
+  last_name: 'Admin',
+  super_admin: 1
 )

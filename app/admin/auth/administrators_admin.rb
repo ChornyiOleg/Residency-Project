@@ -1,4 +1,11 @@
 Trestle.resource(:administrators, model: Administrator, scope: Auth) do
+  before_action do
+    unless current_user.super_admin == 1
+      flash[:error] = 'Access denied.'
+      redirect_to Trestle.config.path
+    end
+  end
+
   menu do
     group :configuration, priority: :last do
       item :administrators, icon: 'fas fa-users'

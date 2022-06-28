@@ -15,7 +15,7 @@ Trestle.resource(:posts) do
   #
   form do |_post|
     text_field :name
-    rich_text_area :content
+    text_field :content
     file_field :image
   end
 

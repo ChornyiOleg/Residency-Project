@@ -14,7 +14,6 @@ class ResidencesController < ApplicationController
       @view = View.new(user: current_user, residence_id: params[:id])
       @view.save
     end
-    @descriptions = @residence.description.split('-/-')
     @pros = @residence.pros.split('-/-')
     @views = View.where(user: current_user).last(3)
   end

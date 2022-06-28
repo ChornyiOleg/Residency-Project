@@ -11,7 +11,7 @@
         <h2 class="text-white">From 15 Years In Expert </h2>
         <h1 class="text-white">Visa & Immigration</h1>
         <div class="slider-button pt-30">
-          <a class="slider-active" href="#">Make An Appointment</a>
+          <a class="slider-active" href="contact">Make An Appointment</a>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
         <h2 class="text-white">From 15 Years In Expert </h2>
         <h1 class="text-white">Visa & Immigration</h1>
         <div class="slider-button">
-          <a class="slider-active" href="#">Make An Appointment</a>
+          <a class="slider-active" href="contact">Make An Appointment</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <h2 class="text-white">From 15 Years In Expert </h2>
         <h1 class="text-white">Visa & Immigration</h1>
         <div class="slider-button">
-          <a class="slider-active" href="#">Make An Appointment</a>
+          <a class="slider-active" href="contact">Make An Appointment</a>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
         <h2 class="text-white">From 15 Years In Expert </h2>
         <h1 class="text-white">Visa & Immigration</h1>
         <div class="slider-button">
-          <a class="slider-active" href="#">Make An Appointment</a>
+          <a class="slider-active" href="contact">Make An Appointment</a>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
         <h2 class="text-white">From 15 Years In Expert </h2>
         <h1 class="text-white">Visa & Immigration</h1>
         <div class="slider-button">
-          <a class="slider-active" href="#">Make An Appointment</a>
+          <a class="slider-active" href="contact">Make An Appointment</a>
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <div class="row">
+        <div class="row" id="turbo2">
           <%= render 'orders/form_for_home' %>
         </div>
       </div>
@@ -287,6 +287,7 @@
     </div>
     <div class="row pt-10">
       <div class="testimonials_list4 owl-carousel">
+        <% @testimonials.each do |testimonial| %>
         <div class="col-lg-12 wow slideInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div class="single-testimonial-box">
             <div class="testimonial-content">
@@ -295,7 +296,8 @@
               </div>
               <div class="testimonial-content-text">
                 <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage</p>
+                  <%= testimonial.content %>
+                </p>
               </div>
             </div>
             <div class="testimonial-content-inner d-flex align-items-center">
@@ -303,78 +305,12 @@
                 <%= image_tag("client8.jpg", alt: "about")%>
               </div>
               <div class="testi-title">
-                <h2>Shene Watsan </h2>
-                <span>Singapur PR Visa</span>
+                <h2> <%= testimonial.name_of_user %> </h2>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
-          <div class="single-testimonial-box">
-            <div class="testimonial-content">
-              <div class="testimonial-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <div class="testimonial-content-text">
-                <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage													</p>
-              </div>
-            </div>
-            <div class="testimonial-content-inner d-flex align-items-center">
-              <div class="testi-thumb">
-                <%= image_tag("client9.jpg", alt: "about")%>
-              </div>
-              <div class="testi-title">
-                <h2>Ellen Erye </h2>
-                <span>France Working Visa</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-          <div class="single-testimonial-box">
-            <div class="testimonial-content">
-              <div class="testimonial-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <div class="testimonial-content-text">
-                <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage</p>
-              </div>
-            </div>
-            <div class="testimonial-content-inner d-flex align-items-center">
-              <div class="testi-thumb">
-                <%= image_tag("client8.jpg", alt: "about")%>
-              </div>
-              <div class="testi-title">
-                <h2>John Dome </h2>
-                <span>USA Student Visa</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 wow slideInUp animated" data-wow-delay="800ms" data-wow-duration="1500ms">
-          <div class="single-testimonial-box">
-            <div class="testimonial-content">
-              <div class="testimonial-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <div class="testimonial-content-text">
-                <p>
-                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage													</p>
-              </div>
-            </div>
-            <div class="testimonial-content-inner d-flex align-items-center">
-              <div class="testi-thumb">
-                <%= image_tag("client9.jpg", alt: "about")%>
-              </div>
-              <div class="testi-title">
-                <h2>Ellen Erye </h2>
-                <span>France Working Visa</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -400,108 +336,29 @@
       </div>
     </div>
     <div class="row pt-30">
-
-
       <div class="blog_list5 owl-carousel">
+        <% @posts.each do |post| %>
         <div class="col-lg-12">
-
           <div class="dreamit-single-blog-box">
             <div class="dreamit-blog-thumb">
-              <a href="#"> <%= image_tag("blog1.jpg", alt: "about")%></a>
+              <%= link_to image_tag(post.image, width: '200', class: "mx-auto d-block"), post  %>
               <div class="post-catgory">
-                <a href="#">Sep 24, 2021</a>
+                <a><%= post.created_at %></a>
               </div>
             </div>
             <div class="dreamit-blog-content">
-              <div class="dreamit-meta-box">
-                <a href="#">visapro</a>
-                <a href="#"><h3>Student Visa</h3></a>
-              </div>
               <div class="dreamit-blog-title">
                 <h2>
-                  <a href="blog-details.html">Top reasons for Australian working visa rejection</a>
+                  <a href="blog-details.html"><%= post.name %></a>
                 </h2>
               </div>
               <div class="dreamit-blog-text">
-                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
+                <p><%= truncate(strip_tags(post.content.to_s), length: 120) %></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="dreamit-single-blog-box">
-            <div class="dreamit-blog-thumb">
-              <a href="#"><%= image_tag("blog5.jpg", alt: "about")%></a>
-              <div class="post-catgory">
-                <a href="#">Sep 10, 2021</a>
-              </div>
-            </div>
-            <div class="dreamit-blog-content">
-              <div class="dreamit-meta-box">
-                <a href="#">visapro</a>
-                <a href="#"><h3>PR Visa, 2021</h3></a>
-                <a href="#"><h3>Working Visa</h3></a>
-              </div>
-              <div class="dreamit-blog-title">
-                <h2>
-                  <a href="blog-details.html">Canada Federal Skilled Worker Program</a>
-                </h2>
-              </div>
-              <div class="dreamit-blog-text">
-                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="dreamit-single-blog-box">
-            <div class="dreamit-blog-thumb">
-              <a href="#"><%= image_tag("bol2.jpg", alt: "about")%></a>
-              <div class="post-catgory">
-                <a href="#">Sep 20, 2021</a>
-              </div>
-            </div>
-            <div class="dreamit-blog-content">
-              <div class="dreamit-meta-box">
-                <a href="#">visapro</a>
-                <a href="#"><h3>Immigration Visa</h3></a>
-              </div>
-              <div class="dreamit-blog-title">
-                <h2>
-                  <a href="blog-details.html">The United Kingdom Immigration</a>
-                </h2>
-              </div>
-              <div class="dreamit-blog-text">
-                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="dreamit-single-blog-box">
-            <div class="dreamit-blog-thumb">
-              <a href="#"> <%= image_tag("blog5.jpg", alt: "about")%></a>
-              <div class="post-catgory">
-                <a href="#">Sep 17, 2021</a>
-              </div>
-            </div>
-            <div class="dreamit-blog-content">
-              <div class="dreamit-meta-box">
-                <a href="#">visapro</a>
-                <a href="#"><h3>Business Visa</h3></a>
-                <a href="#"><h3>PR Visa</h3></a>
-              </div>
-              <div class="dreamit-blog-title">
-                <h2>
-                  <a href="blog-details.html">What visa do you need to work legally in Singapore?</a>
-                </h2>
-              </div>
-              <div class="dreamit-blog-text">
-                <p>Meh synth Schlitz,tempor duis single-origin coffee ea next level ethnic fingerstache.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>

@@ -28,30 +28,30 @@
       <h2><%= t('residences.sub-title2')%></h2>
     </div>
     <div class="row">
-      <% @residence.each do |records| %>
+      <% @residence.each do |record| %>
       <div class="col-sm-6 col-lg-4">
         <div class="property-item">
           <div class="top">
-            <span> <%= records.country.name %></span>
+            <span> <%= record.country.name %></span>
             <span>For Sell</span>
-            <% if records.images.attached? %>
-              <%= image_tag records.images.first %>
+            <% if record.images.attached? %>
+              <%= image_tag record.images.first %>
             <% end %>
           </div>
           <div class="bottom">
-            <span>From $ <%= records.cost %></span>
+            <span>From $ <%= record.cost %></span>
             <h3>
-              <%= link_to records.name, records%>
+              <%= link_to record.name, record%>
             </h3>
             <a class="location" href="#">
               <i class='bx bx-current-location'></i>
-              <%= records.address %>
+              <%= record.address %>
             </a>
             <ul>
-              <li>5 BD</li>
-              <li>2 BA</li>
-              <li>1800 SF</li>
-              <li>6 RM</li>
+              <li><%= record.bedroom %> BD</li>
+              <li><%= record.bathroom %> BA</li>
+              <li><%= record.squarefeet %> SF</li>
+              <li><%= record.rooms %> RM</li>
             </ul>
           </div>
         </div>
@@ -81,183 +81,6 @@
 </section>
 
 
-<section class="feature-area ptb-100">
-  <div class="feature-shape">
-    <%= image_tag("feature-shape.png")%>
-  </div>
-  <div class="container">
-    <div class="section-title">
-      <span class="sub-title">Featured Properties</span>
-      <h2>Recommended Apartment For You</h2>
-    </div>
-    <div class="feature-slider owl-theme owl-carousel">
-      <div class="feature-item">
-        <div class="row">
-          <div class="col-sm-7 col-lg-5 p-0">
-            <div class="feature-content">
-              <div class="top">
-                <h3>
-                  <a href="property-details.html">Sag Harbor Cottage</a>
-                  <span>1/25</span>
-                </h3>
-                <a class="location" href="#">
-                  <i class='bx bx-current-location'></i>
-                  300 B 1st View Road, New York
-                </a>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-              </div>
-              <div class="bottom">
-                <ul>
-                  <li>
-                    <h4>Bed-Room</h4>
-                    <i class="bx bx-bed"></i>
-                    <span>5</span>
-                  </li>
-                  <li>
-                    <h4>Bath-Room</h4>
-                    <i class="bx bx-bath"></i>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4>Square-Feet</h4>
-                    <i class='bx bx-square'></i>
-                    <span>1800</span>
-                  </li>
-                  <li>
-                    <h4>Total-Room</h4>
-                    <i class="bx bx-building-house"></i>
-                    <span>8</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="sell">
-                <h4>
-                  From $12,000.00
-                  <a href="#">For Sell</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-5 col-lg-7 p-0">
-            <div class="feature-img one">
-              <img src="assets/images/feature1.jpg" alt="Feature">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="row">
-          <div class="col-sm-7 col-lg-5 p-0">
-            <div class="feature-content">
-              <div class="top">
-                <h3>
-                  <a href="property-details.html">Royal Apartment</a>
-                  <span>1/25</span>
-                </h3>
-                <a class="location" href="#">
-                  <i class='bx bx-current-location'></i>
-                  300 B 1st View Road, New York
-                </a>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-              </div>
-              <div class="bottom">
-                <ul>
-                  <li>
-                    <h4>Bed-Room</h4>
-                    <i class="bx bx-bed"></i>
-                    <span>5</span>
-                  </li>
-                  <li>
-                    <h4>Bath-Room</h4>
-                    <i class="bx bx-bath"></i>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4>Square-Feet</h4>
-                    <i class='bx bx-square'></i>
-                    <span>1800</span>
-                  </li>
-                  <li>
-                    <h4>Total-Room</h4>
-                    <i class="bx bx-building-house"></i>
-                    <span>8</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="sell">
-                <h4>
-                  From $12,000.00
-                  <a href="#">For Sell</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-5 col-lg-7 p-0">
-            <div class="feature-img two">
-              <img src="assets/images/feature2.jpg" alt="Feature">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="feature-item">
-        <div class="row">
-          <div class="col-sm-7 col-lg-5 p-0">
-            <div class="feature-content">
-              <div class="top">
-                <h3>
-                  <a href="property-details.html">Sag Harbor Cottage</a>
-                  <span>1/25</span>
-                </h3>
-                <a class="location" href="#">
-                  <i class='bx bx-current-location'></i>
-                  300 B 1st View Road, New York
-                </a>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
-              </div>
-              <div class="bottom">
-                <ul>
-                  <li>
-                    <h4>Bed-Room</h4>
-                    <i class="bx bx-bed"></i>
-                    <span>5</span>
-                  </li>
-                  <li>
-                    <h4>Bath-Room</h4>
-                    <i class="bx bx-bath"></i>
-                    <span>2</span>
-                  </li>
-                  <li>
-                    <h4>Square-Feet</h4>
-                    <i class='bx bx-square'></i>
-                    <span>1800</span>
-                  </li>
-                  <li>
-                    <h4>Total-Room</h4>
-                    <i class="bx bx-building-house"></i>
-                    <span>8</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="sell">
-                <h4>
-                  From $12,000.00
-                  <a href="#">For Sell</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-5 col-lg-7 p-0">
-            <div class="feature-img three">
-              <img src="assets/images/feature3.jpg" alt="Feature">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="offer-area pt-100 pb-70">
   <div class="container">
     <div class="section-title">
@@ -273,7 +96,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Worldwide Company</a>
+                <a>Worldwide Company</a>
               </h3>
             </li>
           </ul>
@@ -287,7 +110,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Experience Agent</a>
+                <a>Experience Agent</a>
               </h3>
             </li>
           </ul>
@@ -301,7 +124,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Lowest Commission</a>
+                <a>Lowest Commission</a>
               </h3>
             </li>
           </ul>
@@ -315,7 +138,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Property Insurance</a>
+                <a>Property Insurance</a>
               </h3>
             </li>
           </ul>
@@ -329,7 +152,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Fastest Service</a>
+                <a>Fastest Service</a>
               </h3>
             </li>
           </ul>
@@ -343,7 +166,7 @@
             </li>
             <li>
               <h3>
-                <a href="service-details.html">Largest Real Estate</a>
+                <a>Largest Real Estate</a>
               </h3>
             </li>
           </ul>
@@ -352,24 +175,3 @@
     </div>
   </div>
 </section>
-
-
-<div class="subscribe-area ptb-100">
-  <div class="container">
-    <div class="section-title">
-      <span class="sub-title">Subscribe To Our Newsletter</span>
-      <h2>Sign Up For Newsletter And Get The Latest News And Updates</h2>
-    </div>
-    <div class="subscribe-content">
-      <form class="newsletter-form" data-toggle="validator">
-        <input type="email" class="form-control" placeholder="Enter Your Email" name="EMAIL" required autocomplete="off">
-        <button class="btn common-btn" type="submit">
-          Subscribe
-          <i class='bx bxs-paper-plane'></i>
-        </button>
-        <div id="validator-newsletter" class="form-result"></div>
-      </form>
-      <img src="assets/images/subscribe-main1.png" alt="Subscribe">
-    </div>
-  </div>
-</div>
