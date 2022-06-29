@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
     get 'blog', to: 'home#blog'
     get 'about', to: 'home#about'
-    get 'contact', to: 'home#contact'
+    get 'contact', to: 'home#contacts'
     get 'residences', to: 'home#residences'
     get 'residences', to: 'home#programs'
     get 'home/index'
