@@ -176,7 +176,7 @@
   <!--==================================================-->
 
 
-  <div class="country-section pt-70 pb-70">
+  <div class="country-section pt-110 pb-110">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -202,9 +202,9 @@
                   <h2>CITIZENSHIP</h2>
                 </div>
                   <div class="country-title">
-                    <h2> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</h2>
+                    <p class="text-white"> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</p>
                     <div class="country-button">
-                      <%= link_to 'learn more >', class: 'btn' %>
+                      <%= link_to 'Learn more', programs_path %>
                     </div>
                  </div>
                </div>
@@ -220,9 +220,9 @@
                   <h2>RESIDENCY</h2>
                 </div>
                 <div class="country-title">
-                  <h2> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</h2>
+                  <p class="text-white"> Residency Programs allow high networth and qualified individuals to obtain residency visas and live in a desired host country without requiring the country’s citizenship.</p>
                   <div class="country-button">
-                    <%= link_to 'learn more >', class: 'btn' %>
+                    <%= link_to 'Learn more', programs_path %>
                   </div>
                 </div>
               </div>
@@ -301,9 +301,6 @@
               </div>
             </div>
             <div class="testimonial-content-inner d-flex align-items-center">
-              <div class="testi-thumb">
-                <%= image_tag("client8.jpg", alt: "about")%>
-              </div>
               <div class="testi-title">
                 <h2> <%= testimonial.name_of_user %> </h2>
               </div>
@@ -343,14 +340,14 @@
             <div class="dreamit-blog-thumb">
               <%= link_to image_tag(post.image, width: '200', class: "mx-auto d-block"), post  %>
               <div class="post-catgory">
-                <a><%= post.created_at %></a>
+                <a><h5><%= post.created_at.strftime("%b %d, %Y") %> </h5></a>
               </div>
             </div>
             <div class="dreamit-blog-content">
               <div class="dreamit-blog-title">
-                <h2>
-                  <a href="blog-details.html"><%= post.name %></a>
-                </h2>
+                <h6>
+                  <%= link_to post.name, post %>
+                </h6>
               </div>
               <div class="dreamit-blog-text">
                 <p><%= truncate(strip_tags(post.content.to_s), length: 120) %></p>
