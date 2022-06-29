@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :countries, path: 'countries'
     resources :programs, path: 'programs'
     resources :residences, path: 'residences'
+    resources :contacts, path: 'contacts'
 
     get 'blog', to: 'home#blog'
     get 'about', to: 'home#about'
@@ -40,6 +41,10 @@ Rails.application.routes.draw do
     end
 
     resources :programs do
+      resources :orders
+    end
+
+    resources :contacts do
       resources :orders
     end
 

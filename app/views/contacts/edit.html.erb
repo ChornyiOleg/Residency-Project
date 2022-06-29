@@ -1,15 +1,11 @@
 <div class="container">
+  <h1 class="mt-3 text-center">Editing Contact</h1>
 
-  <h1 class="mt-3 text-center">New Contact</h1>
-
-  <div class="container">
-    <%= render 'form', contact: @contact %>
-  </div>
+  <%= render 'form', contact: @contact %>
 
   <div class="d-flex justify-content-center d-flex align-items-center">
+    <%= link_to 'Show', @contact, class: "btn btn-secondary my-3 btn-lg" %> &nbsp;|&nbsp;
     <%= link_to 'Back', contacts_path, class: "btn btn-secondary my-3 btn-lg" %>
   </div>
-
-  <hr>
 
 </div>
