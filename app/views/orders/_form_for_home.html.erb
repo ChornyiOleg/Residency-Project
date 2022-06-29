@@ -1,6 +1,6 @@
 <div class="contact_from_box">
   <div class="contact_title pb-4">
-    <h3>Request Free Consultation</h3>
+    <h3>Want a Free Consultation</h3>
   </div>
   <%= form_for Order.new do |f| %>
     <div class="row">
@@ -26,7 +26,7 @@
       <div class="col-lg-12">
         <div class="form_box mb-15">
           <%= f.label :info %>
-          <%= f.text_area :info, required: true, placeholder: "Your question...", class: "resize:none" %>
+          <%= f.text_area :info, required: true, placeholder: "Your question...", style: "resize: none" %>
         </div>
         <div class="quote_btn">
           <button class="btn" type="submit">Send Request</button>

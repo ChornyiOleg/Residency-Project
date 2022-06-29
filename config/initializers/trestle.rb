@@ -108,7 +108,7 @@ Trestle.configure do |config|
   #
   # config.display_methods.unshift(:admin_label)
 
-  # Customize the default adapter class used by all admin resources.
+  # Customize the default adapter class used by all admin contacts.
   # See the documentation on Trestle::Adapters::Adapter for details on
   # the adapter methods that can be customized.
   #

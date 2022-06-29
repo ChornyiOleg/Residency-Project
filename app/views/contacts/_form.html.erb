@@ -1,0 +1,36 @@
+<div class="container">
+
+  <%= form_with(model: @contact) do |form| %>
+    <% if @contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+        <ul class="list-unstyled">
+          <% @contact.errors.each do |error| %>
+            <li class="alert alert-danger"><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form_box mb-15">
+      <%= form.label :location, class: "pb-2" %>
+      <%= form.text_field :location, class: "form-control", required: true, placeholder: "Location" %>
+    </div>
+
+    <div class="form_box mb-15">
+      <%= form.label :email, class: "pb-2" %>
+      <%= form.text_field :content, class: "form-control", required: true, row: 80, placeholder: "Email" %>
+    </div>
+
+    <div class="form_box mb-15">
+      <%= form.label :phone, class: "pb-2" %>
+      <%= form.file_field :phone, class: "form-control", required: true, placeholder: "Phone" %>
+    </div>
+
+    <div class="actions py-2 d-flex justify-content-center d-flex align-items-center">
+      <%= form.submit(class: "btn btn-success btn-lg") %>
+    </div>
+  <% end %>
+</div>
+
+

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_programs
   before_action :set_posts
   before_action :set_testimonials
+  before_action :set_contacts
   def index; end
 
   def set_countries
@@ -22,6 +23,10 @@ class ApplicationController < ActionController::Base
 
   def set_testimonials
     @testimonials = Testimonial.all
+  end
+
+  def set_contacts
+    @contacts = Contact.all
   end
 
   around_action :switch_locale
