@@ -7,61 +7,61 @@
     <div class="carousel-item active">
       <%= image_tag("slider-property1.png", class: "d-block w-100")%>
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="text-white">World without borders </h3>
-        <h1 class="text-white">Visa & Immigration</h1>
+        <h3 class="text-white"><%= t('home.index.caption1')%> </h3>
+        <h1 class="text-white"><%= t('home.index.caption2')%></h1>
         <div class="slider-button pt-30">
-          <%=link_to 'Want a free consultation', contacts_path%>
+          <%=link_to t('home.index.consultation_qw'), contacts_path%>
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("slider-property2.png", class: "d-block w-100")%>
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="text-white">World without borders </h3>
-        <h1 class="text-white">Visa & Immigration</h1>
-        <div class="slider-button">
-          <%=link_to 'Want a free consultation', contacts_path%>
+        <h3 class="text-white"><%= t('home.index.caption1')%> </h3>
+        <h1 class="text-white"><%= t('home.index.caption2')%></h1>
+        <div class="slider-button pt-30">
+          <%=link_to t('home.index.consultation_qw'), contacts_path%>
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("slider-property3.png", class: "d-block w-100")%>
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="text-white">World without borders </h3>
-        <h1 class="text-white">Visa & Immigration</h1>
-        <div class="slider-button">
-          <%=link_to 'Want a free consultation', contacts_path%>
+        <h3 class="text-white"><%= t('home.index.caption1')%> </h3>
+        <h1 class="text-white"><%= t('home.index.caption2')%></h1>
+        <div class="slider-button pt-30">
+          <%=link_to t('home.index.consultation_qw'), contacts_path%>
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("slider-property4.png", class: "d-block w-100")%>
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="text-white">World without borders </h3>
-        <h1 class="text-white">Visa & Immigration</h1>
-        <div class="slider-button">
-          <%=link_to 'Want a free consultation', contacts_path%>
+        <h3 class="text-white"><%= t('home.index.caption1')%> </h3>
+        <h1 class="text-white"><%= t('home.index.caption2')%></h1>
+        <div class="slider-button pt-30">
+          <%=link_to t('home.index.consultation_qw'), contacts_path%>
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("slider-property5.png", class: "d-block w-100")%>
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="text-white">World without borders </h3>
-        <h1 class="text-white">Visa & Immigration</h1>
-        <div class="slider-button">
-          <%=link_to 'Want a free consultation', contacts_path%>
+        <h3 class="text-white"><%= t('home.index.caption1')%> </h3>
+        <h1 class="text-white"><%= t('home.index.caption2')%></h1>
+        <div class="slider-button pt-30">
+          <%=link_to t('home.index.consultation_qw'), contacts_path%>
         </div>
       </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden"><%= t('home.index.previous')%></span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden"><%= t('home.index.next')%></span>
   </button>
 </div>
 
@@ -74,38 +74,38 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <div class="row" id="turbo2">
+        <div class="row">
           <%= render 'orders/form_for_home' %>
         </div>
       </div>
       <div class="col-lg-6 col-md-9">
         <div class="dreamit-section-title pb-15">
           <div class="dreamit-section-sub-title">
-            <h5>ABOUT US</h5>
+            <h5><%= t('home.index.about')%></h5>
           </div>
           <div class="dreamit-section-main-title">
-            <h1>360NPAC</h1>
-            <h2>Immigration Firm</h2>
+            <h1><%= t('home.index.360NPAC')%></h1>
+            <h2><%= t('home.index.firm')%></h2>
           </div>
           <div class="dreamit-section-bar"></div>
           <div class="dreamit-content-text">
-            <p>We advise on the best program for you and your family</p>
+            <p><%= t('home.index.advise')%></p>
           </div>
           <div class="dreamit-section-bold-text pt-15">
-            <p>We onboard you as a 360NPAC Immigration</p>
+            <p><%= t('home.index.onboard')%></p>
           </div>
           <div class="dreamit-section-bold-text pt-15">
-            <p>We assist you with the entire application process</p>
+            <p><%= t('home.index.assist')%></p>
           </div>
           <div class="dreamit-section-bold-text pt-15">
-            <p>You are granted your new residence or citizenship rights</p>
+            <p><%= t('home.index.granted')%></p>
           </div>
           <div class="dreamit-content-text-inner">
-            <p>We will continue to support you</p>
+            <p><%= t('home.index.continue')%></p>
           </div>
         </div>
         <div class="about-btn pt-30">
-          <%= link_to 'read more >', abouts_path %>
+          <%= link_to t('home.index.read_more'), abouts_path %>
         </div>
       </div>
     </div>
@@ -122,11 +122,11 @@
       <div class="col-lg-12">
         <div class="dreamit-section-title pb-30 text-center">
           <div class="dreamit-section-sub-title">
-            <h5>CHOOSE COUNTRY</h5>
+            <h5><%= t('home.index.country_choose')%></h5>
           </div>
           <div class="dreamit-section-main-title">
-            <h1 class="text-white">Immigration - Choose</h1>
-            <h2 class="text-white">Your Country!</h2>
+            <h1 class="text-white"><%= t('home.index.immigration_choose')%></h1>
+            <h2 class="text-white"><%= t('home.index.your_country')%></h2>
           </div>
           <div class="dreamit-section-bar center mt-3"></div>
         </div>
@@ -164,7 +164,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-content text-center">
-            <p>The Most Trusted Immigration and Visa Consultant. <%= link_to 'View All Countries !', countries_path%></p>
+            <p><%= t('home.index.most_trusted')%> <%= link_to t('home.index.view_all'), countries_path%></p>
           </div>
         </div>
       </div>
@@ -183,11 +183,11 @@
         <div class="col-lg-12">
           <div class="dreamit-section-title pb-30 text-center">
             <div class="dreamit-section-sub-title">
-              <h5>VISA CATEGORY</h5>
+              <h5><%= t('home.index.vise_category')%></h5>
             </div>
             <div class="dreamit-section-main-title">
-              <h1>Choose Your Immigration</h1>
-              <h2 class="text-black">Visa Services</h2>
+              <h1><%= t('home.index.im_choose')%></h1>
+              <h2 class="text-black"><%= t('home.index.vise_serv')%></h2>
             </div>
             <div class="dreamit-section-bar center mt-3"></div>
           </div>
@@ -200,12 +200,12 @@
               <%= image_tag("passports3.jpg.png", alt: "about")%>
               <div class="country-content">
                 <div class="country-title">
-                  <h2>CITIZENSHIP</h2>
+                  <h2><%= t('home.index.citizenship')%></h2>
                 </div>
                   <div class="country-title">
-                    <p class="text-white"> citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.</p>
+                    <p class="text-white"> <%= t('home.index.citizenship_info')%> </p>
                     <div class="country-button">
-                      <%= link_to 'Learn more', programs_path %>
+                      <%= link_to t('home.index.learn_more'), programs_path %>
                     </div>
                  </div>
                </div>
@@ -218,12 +218,12 @@
               <%= image_tag("1637775273_3-krot-info-p-krasivaya-semya-na-more-peizazh-krasivoe-f-3.jpg", alt: "about")%>
               <div class="country-content">
                 <div class="country-title">
-                  <h2>RESIDENCY</h2>
+                  <h2><%= t('home.index.RESIDENCY')%></h2>
                 </div>
                 <div class="country-title">
-                  <p class="text-white"> Residency Programs allow high networth and qualified individuals to obtain residency visas and live in a desired host country without requiring the country’s citizenship.</p>
+                  <p class="text-white"><%= t('home.index.RESIDENCY_info')%></p>
                   <div class="country-button">
-                    <%= link_to 'Learn more', programs_path %>
+                    <%= link_to t('home.index.learn_more'), programs_path %>
                   </div>
                 </div>
               </div>
@@ -249,13 +249,13 @@
       <div class="col-lg-7">
         <div class="dreamit-online-visa-box pl-40">
           <div class="dreamit-online-visa-title">
-            <h2>Free Online Visa Assessment</h2>
+            <h2><%= t('home.index.free_viza')%></h2>
           </div>
           <div class="dreamit-online-visa-content">
-            <p>Want a free consultation?</p>
+            <p><%= t('home.index.free_consul')%></p>
           </div>
           <div class="online-visa-button">
-            <%=link_to 'Get Free Assessment >', contacts_path%>
+            <%=link_to t('home.index.get_free'), contacts_path%>
           </div>
         </div>
       </div>
@@ -276,11 +276,11 @@
       <div class="col-lg-12 wow slideInUp animated" data-wow-delay="ms" data-wow-duration="1500ms">
         <div class="dreamit-section-title pb-30 text-center">
           <div class="dreamit-section-sub-title">
-            <h5>CLIENTS REVIEWS</h5>
+            <h5><%= t('home.index.clients_rev')%></h5>
           </div>
           <div class="dreamit-section-main-title">
-            <h1 class="text-black">What Customers</h1>
-            <h2 class="text-black">saying about 360NPAC Immigration</h2>
+            <h1 class="text-black"><%= t('home.index.clients')%></h1>
+            <h2 class="text-black"><%= t('home.index.saying_about')%></h2>
           </div>
           <div class="dreamit-section-bar center mt-3"></div>
         </div>
@@ -324,12 +324,12 @@
     <div class="row">
       <div class="col-lg-6 col-md-6">
         <div class="dreamit-section-main-title">
-          <h1>Our Business Innovation!</h1>
+          <h1><%= t('home.index.business_innovation')%></h1>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="title-content">
-          <p>Enjoy the freedom to move to Europe or other countries, away from political and economic instability.</p>
+          <p><%= t('home.index.enjoy')%></p>
         </div>
       </div>
     </div>

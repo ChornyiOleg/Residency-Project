@@ -1,35 +1,125 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   residences:
     sub-title: Recent Properties
     sub-title2: We Provide Full Service At Every Step. What You Need?
+  home:
+    index:
+      caption1: World without borders
+      caption2: Visa & Immigration
+      consultation_qw: Want a free consultation
+      previous: Previous
+      next: Next
+      about: ABOUT US
+      360NPAC: 360NPAC
+      firm: Immigration Firm
+      advise: We advise on the best program for you and your family
+      onboard: We onboard you as a 360NPAC Immigration
+      assist: We assist you with the entire application process
+      granted: You are granted your new residence or citizenship rights
+      continue: We will continue to support you
+      read_more: read more >
+      country_choose: CHOOSE COUNTRY
+      immigration_choose: Immigration - Choose
+      your_country: Your Country!
+      most_trusted: The Most Trusted Immigration and Visa Consultant.
+      view_all: View All Countries!
+      vise_category: VISA CATEGORY
+      im_choose: Choose Your Immigration
+      vise_serv: Visa Services
+      citizenship: CITIZENSHIP
+      citizenship_info: citizenship-by-investment programs enable families to obtain an alternative second citizenship that provides them with many exciting benefits and opportunities in different desirable countries around the world.
+      learn_more: Learn more
+      RESIDENCY: RESIDENCY
+      RESIDENCY_info: Residency Programs allow high networth and qualified individuals to obtain residency visas and live in a desired host country without requiring the country’s citizenship.
+      free_viza: Free Online Visa Assessment
+      free_consul: Want a free consultation?
+      get_free: Get Free Assessment >
+      clients_rev: CLIENTS REVIEWS
+      clients: What Customers
+      saying_about: saying about 360NPAC Immigration
+      business_innovation: Our Business Innovation!
+      enjoy: Enjoy the freedom to move to Europe or other countries, away from political and economic instability.
+  about:
+    index:
+      about: About Us
+      home: Home
+      main: 360NPAC Immigration
+      happy: happy families
+      benefits: Benefits of Citizenship by Investment and Golden Visa
+      discover: discover more
+  contacts:
+    index:
+     contacts: Contact Us
+     location: Company Location
+     telephone: Telephone Number
+     email: Our Email Address
+  countries:
+    index:
+      countries: Countries
+      countries_empty: The countries list is empty at the moment...
+      read_more: Read more >
+      Posts: Posts
+      Programs: Programs
+      Categories: Categories
+      business_visa: Business Visa
+      immigration_visa: Immigration Visa
+      pr_visa: PR Visa
+      student_visa: Student Visa
+      working_visa: Working Visa
+    show: 
+      updated: This country has been updated
+      ago: ago.
+  bottom_header:
+    Welcome: Welcome,
+    Language: Language
+    Residences: Residences
+    Blog: Blog
+    About: About Us
+    Contact: Contact Us
+    Account: Account
+    Out: Sign Out
+    Edit: Edit
+    Likes: Likes
+    Views: Views
+    In: Sing In
+    up: Sign up
+  footer:
+    find: Find us in the social networks!
+    links: Immportant Links
+    countries: Countries
+    programs: Programs
+    residences: Residences
+    blog: Blog
+    abouts: About Us
+    address: Company Address
+    360NPAC: 360NPAC Immigration
+    portugal: Portugal, Avenue 25 de Abril 805, 1A Cascais, Lisbon
+    newsletter: Newsletter
+    cursus_porta: Cursus porta, feugiat primis in ultrice ligula risus auctor tempus dolor feugiat, felis lacinia
+    copyright: Copyright © GeekHub 2022 Best Team.
+    privacy: Privacy Policy
+    services: Services
+  top_header:
+    portugal: Portugal, Lisbon
+  posts:
+    index:
+      blog: Blog
+      posts_empty: The posts list is empty at the moment...
+      posted: Posted on
+      categories: Categories
+      
+      
+    
+
+
+
+
+    
+
+
+
+
+      
+
+
+

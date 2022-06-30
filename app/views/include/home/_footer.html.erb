@@ -12,7 +12,7 @@
             <%= link_to "#{image_tag("360-logo2.png")}".html_safe, root_path, class: 'main-logo' %>
           </div>
           <div class="dreamit-footer-content">
-            <p>Find us in the social networks!</p>
+            <p><%= t('footer.find') %></p>
           </div>
           <div class="dreamit-footer-social-address">
             <ul>
@@ -26,15 +26,15 @@
       <div class="col-lg-3 col-md-6">
         <div class="footer-content mb-30">
           <div class="footer-title">
-            <h2>Immportant Links</h2>
+            <h2><%= t('footer.links') %></h2>
           </div>
           <div class="footer-menu">
             <ul>
-              <li><%= link_to 'Countries', countries_path%></li>
-              <li><%= link_to 'Programs', programs_path%></li>
-              <li><%= link_to 'Residences', residences_path %></li>
-              <li><%= link_to 'Blog', blog_path %></li>
-              <li><%= link_to 'About Us', abouts_path %></li>
+              <li><%= link_to t('footer.countries'), countries_path%></li>
+              <li><%= link_to t('footer.programs'), programs_path%></li>
+              <li><%= link_to t('footer.residences'), residences_path %></li>
+              <li><%= link_to t('footer.blog'), blog_path %></li>
+              <li><%= link_to t('footer.abouts'), abouts_path %></li>
             </ul>
           </div>
         </div>
@@ -42,11 +42,11 @@
       <div class="col-lg-3 col-md-6">
         <div class="footer-content mb-30">
           <div class="footer-title">
-            <h2>Company Address</h2>
-            <p>360NPAC Immigration</p>
+            <h2><%= t('footer.address') %></h2>
+            <p><%= t('footer.360NPAC') %></p>
           </div>
           <div class="footer-adderss">
-            <p><b>address:</b> <span>Portugal, Avenue 25 de Abril 805, 1A Cascais, Lisbon</span></p>
+            <p><b>address:</b> <span><%= t('footer.portugal') %></span></p>
             <p><b>Telephone:</b><a href="tel:+351 912 943 942"> <span>+351 912 943 942</span></a></p>
             <p><b>Email:</b> <a href="mailto:info@360npac.com"><span>info@360npac.com</span></a></p>
 
@@ -56,32 +56,24 @@
       <div class="col-lg-3 col-md-6">
         <div class="footer-content mb-30">
           <div class="footer-title">
-            <h2>Newsletter</h2>
-            <p>Cursus porta, feugiat primis in ultrice ligula risus auctor tempus dolor feugiat, felis lacinia</p>
+            <h2><%= t('footer.newsletter') %></h2>
+            <p><%= t('footer.cursus_porta') %></p>
           </div>
-          <form>
-            <div class="subscribe-area">
-              <input class="subscribe-mail-box" type="email"  placeholder="Enter Your Email...." required="">
-              <button class="subscribe-button" type="submit">
-                <i class="fab fa-telegram-plane"></i>
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
     <div class="row  align-items-center bd-top-footer pt-15">
       <div class="col-lg-6 col-md-6">
         <div class="copy-right-text">
-          <p>Copyright © GeekHub 2022 Best Team.</p>
+          <p><%= t('footer.copyright') %></p>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="footer-text-menu">
           <ul>
             <li><%= link_to 'About Us', abouts_path %></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#"><%= t('footer.privacy') %></a></li>
+            <li><a href="#"><%= t('footer.services') %></a></li>
           </ul>
         </div>
       </div>

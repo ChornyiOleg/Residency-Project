@@ -22,9 +22,9 @@
           <div class="header-menu">
             <ul>
               <li>
-                <%= link_to 'Home', root_path%>
+                <%= link_to t('about.index.home'), root_path%>
               </li>
-              <li><%= link_to 'Countries', countries_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+              <li><%= link_to t('countries.index.countries'), countries_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
                 <div class="sub-menu">
                     <ul>
                     <% @countries.each do |country| %>
@@ -33,14 +33,14 @@
                     </ul>
                 </div>
               </li>
-              <li><%= link_to 'Programs', programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+              <li><%= link_to t('countries.index.Programs'), programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
                 <div class="sub-menu">
                   <ul>
-                    <li><%= link_to 'Citizenship', programs_path %></li>
+                    <li><%= link_to t('home.index.citizenship'), programs_path %></li>
                     <% @citizenship.each do |citizenship| %>
                       <li><%= link_to citizenship.name, citizenship %></li>
                     <% end %> 
-                    <li><%= link_to 'Residency', programs_path %></li>
+                    <li><%= link_to t('home.index.RESIDENCY'), programs_path %></li>
                     <% @residency.each do |residency| %>
                       <li><%= link_to residency.name, residency %></li>
                     <% end %>     
@@ -48,18 +48,18 @@
                 </div>
               </li>
               <li>
-                <%= link_to 'Residences', residences_path %>
+                <%= link_to t('bottom_header.Residences'), residences_path %>
               </li>
               <li>
-                <%= link_to 'Blog', blog_path %>
+                <%= link_to t('bottom_header.Blog'), blog_path %>
               </li>
               <li>
-                <%= link_to 'About Us', abouts_path %>
+                <%= link_to t('bottom_header.About'), abouts_path %>
               </li>
               <li>
-                <%= link_to 'Contact Us', contacts_path %>
+                <%= link_to t('bottom_header.Contact'), contacts_path %>
               </li>
-              <li><%= link_to 'Account', programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+              <li><%= link_to t('bottom_header.Account'), programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
                 <div class="sub-menu">
                   <ul>
                     <% if user_signed_in? %>
@@ -74,33 +74,33 @@
                       <% end %>
                       <li>
                         <a href="#">
-                          Welcome, <%= current_user.email %>
+                          <%= t('bottom_header.Welcome')%> <%= current_user.email %>
                         </a>
                       </li>
                       <li>
-                        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                        <%= link_to t('bottom_header.Out'), destroy_user_session_path, method: :delete %>
                       </li>
                       <li>
-                        <%= link_to 'Edit', edit_user_registration_path %>
+                        <%= link_to t('bottom_header.Edit'), edit_user_registration_path %>
                       </li>
                       <li>
-                        <%= link_to 'Likes', likes_path %>
+                        <%= link_to t('bottom_header.Likes'), likes_path %>
                       </li>
                       <li>
-                        <%= link_to 'Views', views_path %>
+                        <%= link_to t('bottom_header.Views'), views_path %>
                       </li>
                     <% else %>
                       <li>
-                        <%= link_to 'Sing In', new_user_session_path %>
+                        <%= link_to t('bottom_header.In'), new_user_session_path %>
                       </li>
                       <li>
-                        <%= link_to "Sign up", new_user_registration_path %>
+                        <%= link_to t('bottom_header.up'), new_user_registration_path %>
                       </li>
                     <% end %>
                   </ul>
                 </div>
               </li>
-              <li><a href="#">Language</a><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+              <li><a href="#"><%= t('bottom_header.Language')%></a><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
                 <div class="sub-menu">
                   <ul>
                     <% I18n.available_locales.each do |locale| %>
