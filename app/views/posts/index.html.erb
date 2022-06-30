@@ -8,11 +8,11 @@
       <div class="col-lg-12">
         <div class="breatcome-content text-center">
           <div class="breatcome-content-title">
-            <h1>Blog</h1>
+            <h1><%= t('posts.index.blog')%></h1>
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Blog List', posts_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Blog List', posts_path %></span></li>
             </ul>
           </div>
         </div>
@@ -26,7 +26,7 @@
 
 <% if @posts.empty? %>
     <div class="text-center">
-      <h2>The posts list is empty at the moment...</h2>
+      <h2><%= t('posts.index.posts_empty')%></h2>
     </div>
     <hr>
 <% else %>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="dreamit-meta-box">
                   <p>360NPAC</p>
-                  <h3>Posted on <%= post.created_at.strftime("%b %d, %Y") %></h3>
+                  <h3><%= t('posts.index.posted')%> <%= post.created_at.strftime("%b %d, %Y") %></h3>
                 </div>
                 <div class="dreamit-blog-content">
                   <div class="dreamit-blog-title">
@@ -66,13 +66,13 @@
 </div>
 <div class="btn-group-fluid align-items-center">
   <div class="btn about-button pt-4">
-    <%= link_to 'Posts', posts_path %>
+    <%= link_to t('countries.index.Posts'), posts_path %>
   </div>
   <div class="btn about-button pt-4">
-    <%= link_to 'Countries', countries_path %>
+    <%= link_to t('countries.index.countries'), countries_path %>
   </div>
   <div class="btn about-button pt-4">
-    <%= link_to 'Programs', programs_path %>
+    <%= link_to t('countries.index.Programs'), programs_path %>
   </div>
 </div>
       <div class="row">
@@ -98,7 +98,7 @@
       </div>
       <div class="sidebar-box">
         <div class="sidebar-title">
-          <h2>Categories</h2>
+          <h2><%= t('posts.index.categories')%></h2>
         </div>
         <div class="dreamit-section-bar mb-20"></div>
         <div class="sidebar-category">

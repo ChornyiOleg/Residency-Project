@@ -186,7 +186,15 @@
 </div>
 
 <script>
-  var map = L.map('map').setView([ <%= @latitude %>, <%= @longitude %>], 15);
+  var map = L.map('map', {
+    center: [<%= @latitude %>, <%= @longitude %>],
+    keyboard: false,
+    zoomControl: false,
+    boxZoom: false,
+    tap: false,
+    touchZoom: false,
+    zoom: 13
+});
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,

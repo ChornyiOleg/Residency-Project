@@ -9,7 +9,7 @@
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'All branches', contacts_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'All branches', contacts_path %></span></li>
             </ul>
           </div>
         </div>
@@ -46,7 +46,7 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="cda-content-inner">
-                <h4>Company Location</h4>
+                <h4><%= t('contacts.index.location')%></h4>
                 <p><%= link_to @contact.location, @contact %></p>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 <i class="fas fa-tty"></i>
               </div>
               <div class="cda-content-inner">
-                <h4>Telephone Number</h4>
+                <h4><%= t('contacts.index.telephone')%></h4>
                 <p><%= link_to @contact.phone, "tel:#{@contact.phone}" %></p>
               </div>
             </div>
@@ -68,7 +68,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="cda-content-inner">
-                <h4>Our Email Address</h4>
+                <h4><%= t('contacts.index.email')%></h4>
                 <p><%= mail_to(@contact.email) %></p>
               </div>
             </div>

@@ -7,11 +7,11 @@
       <div class="col-lg-12">
         <div class="breatcome-content text-center">
           <div class="breatcome-content-title">
-            <h1>Countries</h1>
+            <h1><%= t('countries.index.countries')%></h1>
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Countries List', countries_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Countries List', countries_path %></span></li>
             </ul>
           </div>
         </div>
@@ -22,7 +22,7 @@
 
 <% if @countries.empty? %>
   <div class="text-center">
-    <h2>The countries list is empty at the moment...</h2>
+    <h2><%= t('countries.index.countries_empty')%></h2>
   </div>
   <hr>
 <% else %>
@@ -54,7 +54,7 @@
                       <p><%= truncate(strip_tags(country.content.to_s), length: 120) %></p>
                     </div>
                     <div class="country-button">
-                      <%= link_to 'Read more >', country, class: 'btn'  %>
+                      <%= link_to t('countries.index.read_more'), country, class: 'btn'  %>
                     </div>
                   </div>
                 </div>
@@ -70,13 +70,13 @@
 
   <div class="btn-group-fluid align-items-center">
     <div class="btn about-button pt-4">
-      <%= link_to 'Posts', posts_path %>
+      <%= link_to t('countries.index.Posts'), posts_path %>
     </div>
     <div class="btn about-button pt-4">
-      <%= link_to 'Countries', countries_path %>
+      <%= link_to t('countries.index.countries'), countries_path %>
     </div>
     <div class="btn about-button pt-4">
-      <%= link_to 'Programs', programs_path %>
+      <%= link_to t('countries.index.Programs'), programs_path %>
     </div>
   </div>
 
@@ -106,7 +106,7 @@
   </div>
   <div class="sidebar-box">
     <div class="sidebar-title">
-      <h2>Categories</h2>
+      <h2><%= t('countries.index.Categories')%></h2>
     </div>
     <div class="dreamit-section-bar mb-20"></div>
     <div class="sidebar-category">

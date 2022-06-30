@@ -10,7 +10,7 @@
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'Countries', countries_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'Countries', countries_path %></span></li>
             </ul>
           </div>
         </div>
@@ -49,19 +49,19 @@
                   <p><%= @country.content %></p>
                 </div>
                 <div class="d-flex justify-content-center d-flex align-items-center">
-                  <h5>This country has been updated <%= distance_of_time_in_words(Time.now, @country.updated_at) %> ago.</h5>
+                  <h5><%= t('countries.show.updated')%> <%= distance_of_time_in_words(Time.now, @country.updated_at) %> <%= t('countries.show.ago')%></h5>
                 </div>
               </div>
 
                 <div class="btn-group-fluid align-items-center">
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Posts', posts_path %>
+                    <%= link_to <%= t('countries.index.Posts')%>, posts_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Countries', countries_path %>
+                    <%= link_to <%= t('countries.index.countries')%>, countries_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Programs', programs_path %>
+                    <%= link_to <%= t('countries.index.Programs')%>, programs_path %>
                   </div>
                 </div>
                 <div class="visapro-blog-social">
@@ -86,7 +86,7 @@
         </div>
         <div class="sidebar-box">
           <div class="sidebar-title">
-            <h2>Categories</h2>
+            <h2><%= t('countries.index.Categories')%></h2>
           </div>
           <div class="dreamit-section-bar mb-20"></div>
           <div class="sidebar-category">
