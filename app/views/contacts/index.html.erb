@@ -24,11 +24,13 @@
 <!----- start visapro appointment Area ----->
 <!--==================================================-->
 
+
+
 <div class="appointment-area style-two">
   <div class="container">
-    <% @contacts.each do |contact| %>
-    <div class="row">
 
+    <div class="row">
+      <% @contacts.each do |contact| %>
         <div class="col-lg-6 pl-0 pr-0 d-flex align-items-stretch mb-3">
             <div id="turbo2">
               <%= render 'orders/form_for_home' %>
@@ -71,10 +73,15 @@
             </div>
           </div>
         </div>
-
       </div>
-
+      <% end %>
     </div>
-    <% end %>
+    <div class="visapro-blog-social">
+      <ul>
+        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
   </div>
 </div>

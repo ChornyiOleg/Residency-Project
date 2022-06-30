@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   before_action :set_posts
   before_action :set_testimonials
   before_action :set_contacts
+  before_action :set_abouts
+
   def index; end
 
   def set_countries
@@ -27,6 +29,10 @@ class ApplicationController < ActionController::Base
 
   def set_contacts
     @contacts = Contact.all
+  end
+
+  def set_abouts
+    @abouts = About.all
   end
 
   around_action :switch_locale

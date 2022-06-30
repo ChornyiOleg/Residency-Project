@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :programs, path: 'programs'
     resources :residences, path: 'residences'
     resources :contacts, path: 'contacts'
+    resources :abouts, path: 'abouts'
 
     get 'blog', to: 'home#blog'
     get 'about', to: 'home#about'
@@ -52,5 +53,9 @@ Rails.application.routes.draw do
     resources :views
     resources :testimonials
     resources :orders
+    resources :abouts do
+      resources :testimonials
+    end
+
   end
 end
