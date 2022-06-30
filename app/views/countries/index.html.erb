@@ -63,7 +63,7 @@
 <% end %>
 <div class="visapro-blog-social">
   <ul>
-    <<li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
     <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
     <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
   </ul>
@@ -99,10 +99,15 @@
 </div>
 <div class="col-lg-4">
   <div class="sidebar-box">
-    <div class="sidebar-search">
-      <input type="text" name="search" placeholder="Search">
-      <button type="text" name="submit"><i class="fas fa-search"></i></button>
-    </div>
+            <div class="widget-area">
+          <div class="search widget-item">
+          <form action="/search">
+            <input name="q" type="text" class="form-control" placeholder="Search Here...">
+            <button type="submit" class="btn">
+              <i class='bx bx-search'></i>
+            </button>
+          </form>
+        </div>
   </div>
   <div class="sidebar-box">
     <div class="sidebar-title">
