@@ -14,8 +14,10 @@ Trestle.resource(:posts) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |_post|
-    text_field :name
-    text_area :content
+    text_field :name_en
+    text_field :name_ru
+    text_area :content_en
+    text_area :content_ru
     file_field :image
   end
 

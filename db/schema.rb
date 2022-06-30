@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_29_174845) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_30_173249) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "about_translations", force: :cascade do |t|
+    t.bigint "about_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "subtitle"
+    t.text "advantages"
+    t.text "benefits"
+    t.index ["about_id"], name: "index_about_translations_on_about_id"
+    t.index ["locale"], name: "index_about_translations_on_locale"
+  end
 
   create_table "abouts", force: :cascade do |t|
     t.string "title"
@@ -97,6 +110,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_174845) do
     t.text "content"
   end
 
+  create_table "country_translations", force: :cascade do |t|
+    t.bigint "country_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "content"
+    t.index ["country_id"], name: "index_country_translations_on_country_id"
+    t.index ["locale"], name: "index_country_translations_on_locale"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -120,11 +144,33 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_174845) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "post_translations", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "content"
+    t.index ["locale"], name: "index_post_translations_on_locale"
+    t.index ["post_id"], name: "index_post_translations_on_post_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "program_translations", force: :cascade do |t|
+    t.bigint "program_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "content"
+    t.index ["locale"], name: "index_program_translations_on_locale"
+    t.index ["program_id"], name: "index_program_translations_on_program_id"
   end
 
   create_table "programs", force: :cascade do |t|
@@ -135,6 +181,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_174845) do
     t.bigint "country_id", null: false
     t.string "kind"
     t.index ["country_id"], name: "index_programs_on_country_id"
+  end
+
+  create_table "residence_translations", force: :cascade do |t|
+    t.bigint "residence_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.text "pros"
+    t.text "main_info"
+    t.index ["locale"], name: "index_residence_translations_on_locale"
+    t.index ["residence_id"], name: "index_residence_translations_on_residence_id"
   end
 
   create_table "residences", force: :cascade do |t|
@@ -156,6 +215,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_174845) do
     t.text "main_info"
     t.index ["country_id"], name: "index_residences_on_country_id"
     t.index ["program_id"], name: "index_residences_on_program_id"
+  end
+
+  create_table "testimonial_translations", force: :cascade do |t|
+    t.bigint "testimonial_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name_of_user"
+    t.text "content"
+    t.index ["locale"], name: "index_testimonial_translations_on_locale"
+    t.index ["testimonial_id"], name: "index_testimonial_translations_on_testimonial_id"
   end
 
   create_table "testimonials", force: :cascade do |t|

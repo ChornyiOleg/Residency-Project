@@ -29,13 +29,17 @@ Trestle.resource(:residences) do
   #   end
   # end
   form do |_residence|
-    text_field :name
+    text_field :name_en
+    text_field :name_ru
     text_field :address
     text_field :cost
-    text_area :main_info
-    text_area :description
+    text_area :main_info_en
+    text_area :main_info_ru
+    text_area :description_en
+    text_area :description_ru
     file_field :images, multiple: true
-    text_field :pros
+    text_field :pros_en
+    text_field :pros_ru
     text_field :bedroom
     text_field :bathroom
     text_field :squarefeet

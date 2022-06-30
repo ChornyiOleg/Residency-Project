@@ -1,4 +1,7 @@
 class Residence < ApplicationRecord
+  translates :name, :main_info, :description, :pros
+  globalize_accessors locales: I18n.available_locales, attributes: %i[name main_info description pros]
+
   belongs_to :country
   belongs_to :program
   has_many :orders, dependent: :destroy

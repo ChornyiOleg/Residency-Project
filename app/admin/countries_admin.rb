@@ -15,8 +15,10 @@ Trestle.resource(:countries) do
   #
 
   form do |_country|
-    text_field :name
-    text_area :content
+    text_field :name_en
+    text_field :name_ru
+    text_area :content_en
+    text_area :content_ru
     file_field :image
     file_field :flag
   end

@@ -112,6 +112,12 @@ GEM
       sassc (~> 2.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    globalize (6.2.1)
+      activemodel (>= 4.2, < 7.1)
+      activerecord (>= 4.2, < 7.1)
+      request_store (~> 1.0)
+    globalize-accessors (0.3.0)
+      globalize (>= 5.0.0)
     hashie (5.0.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
@@ -253,6 +259,8 @@ GEM
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
+    request_store (1.5.1)
+      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -340,6 +348,8 @@ DEPENDENCIES
   debug
   devise
   font-awesome-sass
+  globalize
+  globalize-accessors
   image_processing (~> 1.2)
   jbuilder
   jquery-rails

@@ -14,11 +14,15 @@ Trestle.resource(:abouts) do
   # Customize the form fields shown on the new/edit views.
 
 form do |_about|
-    text_field :title
-    text_field :subtitle
+    text_field :title_en
+    text_field :title_ru
+    text_field :subtitle_en
+    text_field :subtitle_ru
     file_field :image
-    text_area :advantages
-    text_area :benefits
+    text_area :advantages_en
+    text_area :advantages_ru
+    text_area :benefits_en
+    text_area :benefits_ru
 end
 
   #   row do

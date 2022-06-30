@@ -14,8 +14,10 @@ Trestle.resource(:programs) do
   # Customize the form fields shown on the new/edit views.
   #
   form do |_program|
-    text_field :name
-    text_area :content
+    text_field :name_en
+    text_field :name_ru
+    text_area :content_en
+    text_area :content_ru
     file_field :image
     text_field :kind, placeholder: 'Citizenship or Residency'
     collection_select :country_id, Country.order(:name), :id, :name
