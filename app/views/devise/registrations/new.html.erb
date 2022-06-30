@@ -1,56 +1,44 @@
-<div class="breadcrumbs">
-  <div class="container">
-    <div class="breadcrumbs-main">
-      <ol class="breadcrumb">
-        <li><a href="/">Main Page</a></li>
-        <li>Registration</li>
-      </ol>
-    </div>
-  </div>
-</div>
+<div>
+<section class="vh-100 bg-image mb-130">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-110">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5 bg-danger" >
+              <h2 class="text-uppercase text-center mb-5 text-white">Create an account</h2>
 
-<div class="prdt">
-  <div class="container">
-    <div class="prdt-top">
-      <div class="col-md-12">
-        <div class="product-one signup">
-          <div class="register-top heading">
-            <h2>REGISTER</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+                <div class="form-outline mb-4">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: {autocomplete: "email", class: "form-control form-control-lg", placeholder: "Enter your email"}
+            %>
           </div>
+                <div class="form-outline mb-4">
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: {autocomplete: "new-password", class: "form-control form-control-lg", placeholder: "Enter your password"}
+            %>
+          </div>
+                <div class="form-outline mb-4">
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: {autocomplete: "new-password", class: "form-control form-control-lg", placeholder: "Repeat your password"}
+            %>
+          </div>
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <div class="d-flex justify-content-center">
+                  <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block btn-lg gradient-custom-4 text-white" %>
+                  <% end %>
+              </div>
+              </div>
 
-          <div class="register-main">
-            <div class="col-md-6 account-left">
-
-              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                <%= f.error_notification %>
-                <div class="form-group has-feedback">
-                  <%= f.input :email,
-                              required: true,
-                              autofocus: true,
-                              input_html: {autocomplete: "email", class: "form-control", placeholder: "Email"}
-                  %>
-                </div>
-                <div class="form-group has-feedback">
-                  <%= f.input :password,
-                              required: true,
-                              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                              input_html: {autocomplete: "new-password", class: "form-control", placeholder: "Password"}
-                  %>
-                </div>
-                <div class="form-group has-feedback">
-                  <%= f.input :password_confirmation,
-                              required: true,
-                              input_html: {autocomplete: "new-password", class: "form-control", placeholder: "Confirm Password"}
-                  %>
-                </div>
-                <br>
-
-
-                <%= f.button :submit, "Sign up", class: "btn btn-primary" %>
-              <% end %>
-
-
-              <p><%= render "devise/shared/links" %></p>
+        <p><%= render "devise/shared/links" %></p>
 
 
             </div>
@@ -59,5 +47,6 @@
       </div>
     </div>
   </div>
+</section>
+
 </div>
-<!--product-end-->
