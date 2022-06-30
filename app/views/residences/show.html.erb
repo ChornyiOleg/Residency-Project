@@ -135,24 +135,11 @@
           <div class="categories widget-item">
             <h3>Categories</h3>
             <ul>
-              <li>
-                <a href="#">Home For Sale</a>
-              </li>
-              <li>
-                <a href="#">Home On Lease</a>
-              </li>
-              <li>
-                <a href="#">Matching Buyer</a>
-              </li>
-              <li>
-                <a href="#">Home For Buy</a>
-              </li>
-              <li>
-                <a href="#">Home For Mortgage</a>
-              </li>
-              <li>
-                <a href="#">Home For Rent</a>
-              </li>
+              <li><%= link_to 'The Best Residences', residences_path %></li>
+              <li><%= link_to 'Immigration Visa', programs_path %></li>
+              <li><%= link_to 'Country Of Your Dream', countries_path %></li>
+              <li><%= link_to 'Our Blog', blog_path %></li>
+              <li><%= link_to 'What We Do For You', abouts_path %></li>
             </ul>
           </div>
           <div class="popular widget-item">
@@ -177,26 +164,7 @@
                 </ul>
               </div>
             <% end %>
-          <div class="tags widget-item">
-            <h3>Tags</h3>
-            <ul>
-              <li>
-                <a href="#">Apartment</a>
-              </li>
-              <li>
-                <a href="#">New Properties</a>
-              </li>
-              <li>
-                <a href="#">House</a>
-              </li>
-              <li>
-                <a href="#">Villa</a>
-              </li>
-              <li>
-                <a href="#">Office</a>
-              </li>
-            </ul>
-          </div>
+
           <div id="turbo">
             <%= render partial: 'orders/form', locals: {residence: @residence} %>
           </div>
