@@ -1,6 +1,6 @@
 <div class="contact_from_box">
   <div class="contact_title pb-4">
-    <h3>Want a Free Consultation</h3>
+    <h3><%= t('orders.Want')%></h3>
   </div>
   <%= form_for Order.new do |f| %>
     <div class="row">
@@ -18,7 +18,7 @@
       </div>
       <div class="col-lg-12">
         <div class="form_box mb-15">
-          <%= f.label :phone, 'What Messenger Can We Contact You'%>
+          <%= f.label t('orders.Messenger') %>
           <%= f.select :messenger, [['Telegram', :telegram], ['Viber', :viber], ['Messenger', :messenger]], {}, {class:"form-select"} %>
         </div>
       </div>
@@ -29,7 +29,7 @@
           <%= f.text_area :info, required: true, placeholder: "Your question...", style: "resize: none" %>
         </div>
         <div class="quote_btn">
-          <button class="btn" type="submit">Send Request</button>
+          <button class="btn" type="submit"><%= t('orders.Request')%></button>
         </div>
       </div>
     </div>

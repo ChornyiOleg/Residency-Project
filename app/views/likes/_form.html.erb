@@ -3,13 +3,13 @@
     <% if @like.present? %>
       <div class="actions">
         <div class="quote_btn">
-          <button class="btn" type="submit">Remove from Liked ❤️</button>
+          <button class="btn" type="submit"><%= t('likes.form.Remove')%> ❤️</button>
         </div>
       </div>
     <% else %>
       <div class="actions">
         <div class="quote_btn">
-          <button class="btn" type="submit">Add to Liked 🖤</button>
+          <button class="btn" type="submit"><%= t('likes.form.add')%> 🖤</button>
         </div>
       </div>
     <% end %>

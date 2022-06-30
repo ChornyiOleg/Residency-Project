@@ -7,11 +7,11 @@
       <div class="col-lg-12">
         <div class="breatcome-content text-center">
           <div class="breatcome-content-title">
-            <h1>Programs</h1>
+            <h1><%= t('programs.index.Programs')%></h1>
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Programs List', programs_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i> <span><%= link_to 'Programs List', programs_path %></span></li>
             </ul>
           </div>
         </div>
@@ -22,7 +22,7 @@
 
 <% if @programs.empty? %>
   <div class="text-center">
-    <h2>The programs list is empty at the moment...</h2>
+    <h2><%= t('programs.index.programs_empty')%></h2>
   </div>
   <hr>
 <% else %>
@@ -53,7 +53,7 @@
                       <p><%= truncate(strip_tags(program.content.to_s), length: 120) %></p>
                     </div>
                     <div class="country-button">
-                      <%= link_to 'Read more >', program, class: 'btn'  %>
+                      <%= link_to t('programs.index.more'), program, class: 'btn'  %>
                     </div>
                   </div>
                 </div>
@@ -69,13 +69,13 @@
 </div>
 <div class="btn-group-fluid align-items-center">
   <div class="btn about-button pt-4">
-    <%= link_to 'Posts', posts_path %>
+    <%= link_to t('countries.index.Posts'), posts_path %>
   </div>
   <div class="btn about-button pt-4">
-    <%= link_to 'Countries', countries_path %>
+    <%= link_to t('countries.index.countries'), countries_path %>
   </div>
   <div class="btn about-button pt-4">
-    <%= link_to 'Programs', programs_path %>
+    <%= link_to t('countries.index.Programs'), programs_path %>
   </div>
 </div>
 
@@ -104,16 +104,16 @@
   </div>
   <div class="sidebar-box">
     <div class="sidebar-title">
-      <h2>Categories</h2>
+      <h2><%= t('posts.index.categories')%></h2>
     </div>
     <div class="dreamit-section-bar mb-20"></div>
     <div class="sidebar-category">
       <ul>
-        <li><%= link_to 'The Best Residences', residences_path %></li>
-        <li><%= link_to 'Immigration Visa', programs_path %></li>
-        <li><%= link_to 'Country Of Your Dream', countries_path %></li>
-        <li><%= link_to 'Our Blog', blog_path %></li>
-        <li><%= link_to 'What We Do For You', abouts_path %></li>
+        <li><%= link_to t('posts.index.Best'), residences_path %></li>
+        <li><%= link_to t('posts.index.immigration'), programs_path %></li>
+        <li><%= link_to t('posts.index.Country'), countries_path %></li>
+        <li><%= link_to t('posts.index.Blog'), blog_path %></li>
+        <li><%= link_to t('posts.index.What'), abouts_path %></li>
       </ul>
     </div>
   </div>

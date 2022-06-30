@@ -1,4 +1,164 @@
 ru:
+  home:
+    index:
+      caption1: Мир без приград
+      caption2: Виза & Иммиграция
+      consultation_qw: Хотите бесплатную консультацию
+      previous: Предыдущая
+      next: Следующая
+      about: О НАС
+      360NPAC: 360NPAC
+      firm: Иммиграционная Фирма
+      advise: Мы советуем лучшую программу для вас и вашей семьи
+      onboard: Мы принимаем вас в качестве иммиграционной службы 360NPAC
+      assist: Мы помогаем вам на протяжении всего процесса подачи заявки
+      granted: Вам предоставлено новое место жительства или гражданство
+      continue: Мы продолжим поддерживать вас
+      read_more: читать дальше >
+      country_choose: ВЫБЕРИТЕ СТРАНУ
+      immigration_choose: Иммиграция - Выбрать
+      your_country: Ваша страна!
+      most_trusted: Самый надежный консультант по иммиграции и визам.
+      view_all: Посмотреть все страны!
+      vise_category: КАТЕГОРИЯ ВИЗЫ
+      im_choose: Выберите свою иммиграцию
+      vise_serv: Визовые услуги
+      citizenship: ГРАЖДАНСТВО
+      citizenship_info: Программы гражданства за инвестиции позволяют семьям получить альтернативное второе гражданство, которое дает им множество захватывающих преимуществ и возможностей в разных желаемых странах мира.
+      learn_more: Читать больше
+      RESIDENCY: РЕЗИДЕНЦИЯ
+      RESIDENCY_info: Программы резидентства позволяют состоятельным и квалифицированным лицам получать вид на жительство и жить в желаемой принимающей стране, не требуя гражданства страны.
+      free_viza: Бесплатная онлайн-оценка визы
+      free_consul: Хотите бесплатную консультацию?
+      get_free: Получить бесплатную оценку >
+      clients_rev: ОТЗЫВЫ КЛИЕНТОВ
+      clients: Что клиенты
+      saying_about: говорят о 360NPAC Immigration
+      business_innovation: Наши бизнес-новинки!
+      enjoy: Наслаждайтесь возможностью свободно переехать в Европу или другие страны, вдали от политической и экономической нестабильности.
+  about:
+    index:
+      about: О Нас
+      home: Главная
+      main: 360NPAC Immigration
+      happy: счастливые семьи
+      benefits: Преимущества гражданства за инвестиции и Золотой Визы
+      discover: узнать больше
+  contacts:
+    index:
+     contacts: Свяжитесь с нами
+     location: Расположение компании
+     telephone: Номер телефона
+     email: Наш адрес электронной почты
+  countries:
+    index:
+      countries: Страны
+      countries_empty: Список стран пока пуст...
+      read_more: Читать дальше >
+      Posts: Пости
+      Programs: Программы
+      Categories: Категории
+      business_visa: Деловая виза
+      immigration_visa: Иммиграционная виза
+      pr_visa: PR виза
+      student_visa: Студенческая виза
+      working_visa: Рабочая виза
+    show: 
+      updated: Эта страна была обновлена
+      ago: назад.
+  bottom_header:
+    Welcome: Добро пожаловать,
+    Language: Язык
+    Residences: Резиденции
+    Blog: Блог
+    About: О нас
+    Contact: Свяжитесь с нами
+    Account: Акаунт
+    Out: Выход
+    Edit: Редактировать
+    Likes: Лайки
+    Views: Просмотры
+    In: Войти
+    up: Зарегистрироваться
+  footer:
+    find: Ищите нас в социальных сетях!
+    links: Важные ссылки
+    countries: Страны
+    programs: Программы
+    residences: Резиденции
+    blog: Блог
+    abouts: О нас
+    address: Адрес компании
+    360NPAC: 360NPAC Immigration
+    portugal: Portugal, Avenue 25 de Abril 805, 1A Cascais, Lisbon
+    newsletter: Рассылка новостей
+    cursus_porta: Cursus porta, feugiat primis in ultrice ligula risus auctor tempus dolor feugiat, felis lacinia
+    copyright: Copyright © GeekHub 2022 Best Team.
+    privacy: Политика конфиденциальности
+    services: Услуги
+  top_header:
+    portugal: Portugal, Lisbon
+  posts:
+    index:
+      blog: Блог
+      posts_empty: Список постов пока пуст...
+      posted: Опубликовано
+      categories: Категории
+      Best: Лучшие резиденции
+      immigration: Иммиграционная виза
+      Country: Страна твоей мечты
+      Blog: Наш блог
+      What: Что мы делаем для вас
+    show: 
+      updated: Этот пост был обновлен 
+      ago: назад.
+      Posts: Сообщения
+      Countries: Страны
+      Programs: Программы
+      Categories: Категории
+  programs:
+    index: 
+      Programs: Программы
+      programs_empty: Список программ пока пуст...
+      more: Читать дальше >
+    show:
+      updated: Эта программа была обновлена
+      ago: назад.
   residences:
-    sub-title: Последние Cвойства
-    sub-title2: Мы Предоставляем Полный Сервис На Каждом Этапе. Что Вам Нужно?
+    sub-title: Последние Поместия
+    sub-title2: Мы Предоставляем Полный Сервис На Каждом Этапе. Как мы можем вам помочь?
+    sub-title3: Недвижимость, которую вы недавно видели
+    sub-title4: Недвижимость, которая вам понравилась
+    index: 
+      Residences: Резиденции
+      sell: На продажу
+      from: От
+      bd: Спа.
+      ba: Ван.
+      sf: К/М
+      rm: Комн.
+      Features: Наши особенности
+      Offer: Мы предлагаем безупречные услуги в сфере недвижимости и многое другое
+      Worldwide: Международная компания
+      Agent: Опытный агент
+      Lowest: Самая низкая комиссия
+      Property: Страхование собственности
+      Fastest: Самый быстрый сервис
+      Largest: Крупнейшая недвижимость
+    show:
+      Property: Сведения о собственности
+      Essential: Важная информация
+      bedroom: Спальня
+      bathroom: Ванная комната
+      squarefeet: Квадратных метров
+      rooms: Всего комнат
+      views: Последняя просмотренная недвижимость
+  likes:
+    form:
+      Remove: Удалить из понравившихся
+      add: Добавить в избранное
+  orders:
+    Want: Хотите получить бесплатную консультацию
+    Messenger: В каком мессенджере мы можем с вами связаться
+    Request: Послать запрос
+

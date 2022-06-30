@@ -9,7 +9,7 @@
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><%= link_to 'Home', root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'Blog List', posts_path %></span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %><i class="fas fa-chevron-right"></i> <span><%= link_to 'Blog List', posts_path %></span></li>
             </ul>
           </div>
         </div>
@@ -45,18 +45,18 @@
                   <p><%= @post.content %></p>
                 </div>
                 <div class="d-flex justify-content-center d-flex align-items-center">
-                  <h5>This post has been updated <%= distance_of_time_in_words(Time.now, @post.updated_at) %> ago.</h5>
+                  <h5><%= t('posts.show.updated')%><%= distance_of_time_in_words(Time.now, @post.updated_at) %><%= t('posts.show.ago')%> </h5>
                 </div>
 
                 <div class="btn-group-fluid align-items-center">
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Posts', posts_path %>
+                    <%= link_to t('posts.show.Posts'), posts_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Countries', countries_path %>
+                    <%= link_to t('posts.show.Countries'), countries_path %>
                   </div>
                   <div class="btn about-button pt-4">
-                    <%= link_to 'Programs', programs_path %>
+                    <%= link_to t('posts.show.Programs'), programs_path %>
                   </div>
                 </div>
 
@@ -85,13 +85,13 @@
             </form>
           </div>
           <div class="categories widget-item">
-            <h3>Categories</h3>
+            <h3><%= t('posts.show.Categories')%></h3>
             <ul>
-              <li><%= link_to 'The Best Residences', residences_path %></li>
-              <li><%= link_to 'Immigration Visa', programs_path %></li>
-              <li><%= link_to 'Country Of Your Dream', countries_path %></li>
-              <li><%= link_to 'Our Blog', blog_path %></li>
-              <li><%= link_to 'What We Do For You', abouts_path %></li>
+              <li><%= link_to t('posts.index.Best'), residences_path %></li>
+              <li><%= link_to t('posts.index.immigration'), programs_path %></li>
+              <li><%= link_to t('posts.index.Country'), countries_path %></li>
+              <li><%= link_to t('posts.index.Blog'), blog_path %></li>
+              <li><%= link_to t('posts.index.What'), abouts_path %></li>
             </ul>
           </div>
           <div id="turbo2">

@@ -1,7 +1,4 @@
 en:
-  residences:
-    sub-title: Recent Properties
-    sub-title2: We Provide Full Service At Every Step. What You Need?
   home:
     index:
       caption1: World without borders
@@ -107,9 +104,63 @@ en:
       posts_empty: The posts list is empty at the moment...
       posted: Posted on
       categories: Categories
-      
-      
-    
+      Best: The Best Residences
+      immigration: Immigration Visa
+      Country: Country Of Your Dream
+      Blog: Our Blog
+      What: What We Do For You
+    show: 
+      updated: This post has been updated 
+      ago: ago.
+      Posts: Posts
+      Countries: Countries
+      Programs: Programs
+      Categories: Categories
+  programs:
+    index: 
+      Programs: Programs
+      programs_empty: The programs list is empty at the moment...
+      more: Read more >
+    show:
+      updated: This program has been updated 
+      ago: ago.
+  residences:
+    sub-title: Recent Properties
+    sub-title2: We Provide Full Service At Every Step. What You Need?
+    sub-title3: Properties Which You Saw Recently
+    sub-title4: Properties Which You Liked
+    index: 
+      Residences: Residences
+      sell: For Sell
+      from: From
+      bd: BD
+      ba: BA
+      sf: SF
+      rm: RM
+      Features: Our Features
+      Offer: We Offer Perfect Real Estate Services And More
+      Worldwide: Worldwide Company
+      Agent: Experience Agent
+      Lowest: Lowest Commission
+      Property: Property Insurance
+      Fastest: Fastest Service
+      Largest: Largest Real Estate
+    show:
+      Property: Property Details
+      Essential: Essential Information
+      bedroom: Bed-Room
+      bathroom: Bath-Room
+      squarefeet: Square-Feet
+      rooms: Total-Room
+      views: Last Viewed Properties
+  likes:
+    form:
+      Remove: Remove from Liked
+      add: Add to Liked
+  orders:
+    Want: Want a Free Consultation
+    Messenger: What Messenger Can We Contact You
+    Request: Send Request
 
 
 

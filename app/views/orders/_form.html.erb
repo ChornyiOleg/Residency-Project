@@ -2,7 +2,7 @@
   <div class="row">
     <div class="contact_from_box">
       <div class="contact_title pb-4">
-        <h3>Appointment</h3>
+        <h3><%= t('orders.Want')%></h3>
       </div>
 
         <%= form_with model: [@residence, Order.new] do |f| %>
@@ -20,7 +20,7 @@
           </div>
           <div class="col-lg-12">
             <div class="form_box mb-15">
-              <p>What Messenger Can We Contact You</p>
+              <p><%= t('orders.Messenger')%></p>
               <%= f.select :messenger, [['Telegram', :telegram], ['Viber', :viber], ['Messenger', :messenger]], {}, {class:"form-select"} %>
             </div>
           </div>
@@ -32,7 +32,7 @@
           </div>
           <div class="col-lg-12">
             <div class="quote_btn">
-              <button class="btn" type="submit">Send Request</button>
+              <button class="btn" type="submit"><%= t('orders.Request')%></button>
             </div>
           </div>
 
