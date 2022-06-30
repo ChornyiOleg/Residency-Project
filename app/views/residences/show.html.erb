@@ -11,7 +11,7 @@
           </div>
           <div class="breatcome-content-text">
             <ul>
-              <li><a href="index.html">Home </a> <i class="fas fa-chevron-right"></i> <span>Property Details</span></li>
+              <li><%= link_to t('about.index.home'), root_path, class: "nav-link active" %> <i class="fas fa-chevron-right"></i><span><%= link_to 'Residences List', residences_path %></span></li>
             </ul>
           </div>
         </div>
