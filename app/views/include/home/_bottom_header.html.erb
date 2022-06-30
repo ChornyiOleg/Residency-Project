@@ -36,11 +36,11 @@
               <li><%= link_to 'Programs', programs_path%><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
                 <div class="sub-menu">
                   <ul>
-                    <li>Citizenship:</li>
+                    <li><%= link_to 'Citizenship', programs_path %></li>
                     <% @citizenship.each do |citizenship| %>
                       <li><%= link_to citizenship.name, citizenship %></li>
                     <% end %> 
-                    <li>Residency:</li>
+                    <li><%= link_to 'Residency', programs_path %></li>
                     <% @residency.each do |residency| %>
                       <li><%= link_to residency.name, residency %></li>
                     <% end %>     
@@ -84,10 +84,10 @@
                         <%= link_to 'Edit', edit_user_registration_path %>
                       </li>
                       <li>
-                        <%= link_to 'Likes', likes_path, class: "nav-link active"%>
+                        <%= link_to 'Likes', likes_path %>
                       </li>
                       <li>
-                        <%= link_to 'Views', views_path, class: "nav-link active"%>
+                        <%= link_to 'Views', views_path %>
                       </li>
                     <% else %>
                       <li>
@@ -100,13 +100,35 @@
                   </ul>
                 </div>
               </li>
+              <li><a href="#">Language</a><span><i class="fas fa-angle-down"></i></span><span class="mobile-menu-icon"><i class="fas fa-angle-right"></i></span>
+                <div class="sub-menu">
+                  <ul>
+                    <% I18n.available_locales.each do |locale| %>
+                      <li>
+                        <%= link_to locale, root_path(locale: locale) %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="header-src-btn">
+                  <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
+                </div>
+                <div class="sub-menu">
+                  <div class="widget-area">
+                    <div class="search widget-item">
+                      <form action="/search">
+                        <input name="q" type="text" class="form-control" placeholder="Search Here...">
+                        <button type="submit" class="btn">
+                          <i class='bx bx-search'></i>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
-            <div class="header-button">
-              <a href="#">apply now</a>
-            </div>
-            <div class="header-src-btn">
-              <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
-            </div>
             <div class="mobile-menu-social-icon d-lg-none mt-40">
               <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
