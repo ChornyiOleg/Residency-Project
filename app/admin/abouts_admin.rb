@@ -1,6 +1,6 @@
-Trestle.resource(:contacts) do
+Trestle.resource(:abouts) do
   menu do
-    item :contacts, icon: "fa fa-phone"
+    item :abouts, icon: "fa fa-info-circle"
   end
 
   # Customize the table columns shown on the index view.
@@ -12,17 +12,20 @@ Trestle.resource(:contacts) do
   # end
 
   # Customize the form fields shown on the new/edit views.
-  #
- form do |_contact|
-   text_field :location
-   text_field :phone
-   text_field :email
+
+form do |_about|
+    text_field :title
+    text_field :subtitle
+    file_field :image
+    text_area :advantages
+    text_area :benefits
+end
 
   #   row do
   #     col { datetime_field :updated_at }
   #     col { datetime_field :created_at }
   #   end
-  end
+
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
@@ -32,6 +35,6 @@ Trestle.resource(:contacts) do
   #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
   #
   # params do |params|
-  #   params.require(:contact).permit(:name, ...)
+  #   params.require(:about).permit(:name, ...)
   # end
 end
