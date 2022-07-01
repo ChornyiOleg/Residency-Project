@@ -21,5 +21,4 @@ class Residence < ApplicationRecord
   validates :squarefeet, presence: true
   validates :rooms, presence: true
   validates :cost, presence: true
-
 end

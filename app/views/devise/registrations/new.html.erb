@@ -6,7 +6,7 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-110">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5 bg-danger" >
-              <h2 class="text-uppercase text-center mb-5 text-white">Create an account</h2>
+              <h2 class="text-uppercase text-center mb-5 text-white"><%= t('devise.Create')%></h2>
 
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -33,7 +33,7 @@
           </div>
                 <div class="form-check d-flex justify-content-center mb-5">
                   <div class="d-flex justify-content-center">
-                  <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block btn-lg gradient-custom-4 text-white" %>
+                  <%= f.button :submit, t('devise.up'), class: "btn btn-primary btn-block btn-lg gradient-custom-4 text-white" %>
                   <% end %>
               </div>
               </div>

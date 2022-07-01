@@ -96,6 +96,11 @@ en:
     copyright: Copyright © GeekHub 2022 Best Team.
     privacy: Privacy Policy
     services: Services
+    Contact: Contact Us
+    Want: Want a free consultation?
+    advise: We advise on the best program for you and your family
+    More: Get More
+    Cookie: Cookie Policy
   top_header:
     portugal: Portugal, Lisbon
   posts:
@@ -129,6 +134,7 @@ en:
     sub-title2: We Provide Full Service At Every Step. What You Need?
     sub-title3: Properties Which You Saw Recently
     sub-title4: Properties Which You Liked
+    search: Search Here...
     index: 
       Residences: Residences
       sell: For Sell
@@ -161,6 +167,25 @@ en:
     Want: Want a Free Consultation
     Messenger: What Messenger Can We Contact You
     Request: Send Request
+    name: Name
+    phone: Phone Number
+    info: Your question...
+  devise:
+    Resend: Resend confirmation instructions
+    Change: Change Your Password
+    characters: characters minimum
+    Confirm: Confirm new password
+    new-password: new-password
+    password: Change my password
+    Send: Send me reset password instructions
+    PROFILE: EDIT PROFILE
+    Currently: "Currently waiting confirmation for:"
+    Update: Update
+    Delete: Delete my account
+    Back: Back
+    Create: Create an account
+    up: Sign up
+
 
 
 

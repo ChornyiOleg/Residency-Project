@@ -1,7 +1,7 @@
 class Program < ApplicationRecord
   translates :name, :content
   globalize_accessors locales: I18n.available_locales, attributes: %i[name content]
-  
+
   belongs_to :country, optional: true
   has_many :residences, dependent: :destroy
   has_one_attached :image

@@ -3,16 +3,16 @@ class OrdersController < ApplicationController
   after_action :new, only: [:create]
 
   def new
-    @order = Order.new(user: current_user, residence_id: params[:residence_id])
+    @order = current_user.orders.new(residence_id: params[:residence_id])
   end
 
   def create
     if params[:residence_id]
-      @order = Order.new(user: current_user, residence_id: params[:residence_id])
+      @order = current_user.orders.new(user: current_user, residence_id: params[:residence_id])
       @order.update(order_params)
       redirect_to @order.residence
     else
-      @order = Order.new(user: current_user)
+      @order = current_user.orders.new(user: current_user)
       @order.update(order_params)
       redirect_to root_path
     end

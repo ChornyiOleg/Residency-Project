@@ -1,6 +1,6 @@
 Trestle.resource(:abouts) do
   menu do
-    item :abouts, icon: "fa fa-info-circle"
+    item :abouts, icon: 'fa fa-info-circle'
   end
 
   # Customize the table columns shown on the index view.
@@ -13,7 +13,7 @@ Trestle.resource(:abouts) do
 
   # Customize the form fields shown on the new/edit views.
 
-form do |_about|
+  form do |_about|
     text_field :title_en
     text_field :title_ru
     text_field :subtitle_en
@@ -23,13 +23,12 @@ form do |_about|
     text_area :advantages_ru
     text_area :benefits_en
     text_area :benefits_ru
-end
+  end
 
   #   row do
   #     col { datetime_field :updated_at }
   #     col { datetime_field :created_at }
   #   end
-
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

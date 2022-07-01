@@ -6,7 +6,7 @@
           <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5 bg-primary" >
-                <h2 class="text-uppercase text-center mb-5 text-white">EDIT PROFILE</h2>
+                <h2 class="text-uppercase text-center mb-5 text-white"><%=t('devise.PROFILE')%></h2>
 
               <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                 <%= f.error_notification %>
@@ -16,7 +16,7 @@
                 </div>
                     <div class="form-outline mb-4">
                   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                    <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                    <p><%=t('devise.Currently')%> <%= resource.unconfirmed_email %></p>
                   <% end %>
                 </div>
                     <div class="form-outline mb-4">
@@ -41,16 +41,16 @@
                 </div>
 
                 <div class="form-actions mb-15">
-                  <%= f.button :submit, "Update", class: "btn btn-success" %>
+                  <%= f.button :submit, t('devise.Update'), class: "btn btn-success" %>
                 </div>
               <% end %>
 
                   <div class="form-actions">
-                  <%= button_to "Delete my account", registration_path(resource_name), form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete, class: "btn btn-danger" %> </p>
+                  <%= button_to t('devise.Delete'), registration_path(resource_name), form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete, class: "btn btn-danger" %> </p>
                   </div>
 
                     <div class="form-actions">
-                    <%= link_to "Back", :back, class: "btn btn-dark" %>
+                    <%= link_to t('devise.Back'), :back, class: "btn btn-dark" %>
                     </div>
 
                 </div>

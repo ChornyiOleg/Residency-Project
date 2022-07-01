@@ -13,16 +13,4 @@ class ProgramsController < ApplicationController
     @pagy, @records = pagy(@programs, items: 10)
     @pagy, @records = pagy(@residences, items: 10)
   end
-
-  def search
-    @programs = Program.where('content ILIKE ? OR title ILIKE ?', "%#{params[:query]}%", "%#{params[:query]}%")
-    @pagy, @records = pagy(@programs, items: 6)
-    render :index
-  end
-
-  private
-
-  def program_params
-    params.require(:program).permit(:name, :content, :image, :kind)
-  end
 end

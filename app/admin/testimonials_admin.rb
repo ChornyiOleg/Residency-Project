@@ -12,8 +12,8 @@ Trestle.resource(:testimonials) do
   # end
 
   # Customize the form fields shown on the new/edit views.
-  
-  form do |testimonial|
+
+  form do |_testimonial|
     text_field :name_of_user_en
     text_field :name_of_user_ru
     text_field :content_en

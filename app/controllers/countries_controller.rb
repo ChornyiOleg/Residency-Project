@@ -7,12 +7,6 @@ class CountriesController < ApplicationController
     @pagy, @countries = pagy(Country.order(created_at: :desc), items: 6)
   end
 
-  def search
-    @countries = Country.where('content ILIKE ? OR title ILIKE ?', "%#{params[:query]}%", "%#{params[:query]}%")
-    @pagy, @records = pagy(@countries, items: 6)
-    render :index
-  end
-
   def show
     @country = Country.find(params[:id])
     @residences = @country.residences

@@ -7,7 +7,7 @@
       <div class="col-lg-12">
         <div class="breatcome-content text-center">
           <div class="breatcome-content-title">
-            <h1>Property Details</h1>
+            <h1><%= t('residences.show.Property')%></h1>
           </div>
           <div class="breatcome-content-text">
             <ul>
@@ -82,25 +82,25 @@
             </div>
           </div>
           <div class="information">
-            <h3>Essential Information</h3>
+            <h3><%= t('residences.show.Essential')%></h3>
             <ul>
               <li>
-                <h4>Bed-Room</h4>
+                <h4><%= t('residences.show.bedroom')%></h4>
                 <i class="bx bx-bed"></i>
                 <%= @residence.bedroom %>
               </li>
               <li>
-                <h4>Bath-Room</h4>
+                <h4><%= t('residences.show.bathroom')%></h4>
                 <i class="bx bx-bath"></i>
                 <%= @residence.bathroom %>
               </li>
               <li>
-                <h4>Square-Feet</h4>
+                <h4><%= t('residences.show.squarefeet')%></h4>
                 <i class='bx bx-square'></i>
                 <%= @residence.squarefeet %>
               </li>
               <li>
-                <h4>Total-Room</h4>
+                <h4><%= t('residences.show.rooms')%></h4>
                 <i class="bx bx-building-house"></i>
                 <%= @residence.rooms %>
               </li>
@@ -118,7 +118,6 @@
               </ul>
             </div>
           </div>
-
           <div id="map"></div>
         </div>
       </div>
@@ -126,7 +125,7 @@
         <div class="widget-area">
           <div class="search widget-item">
           <form action="/search">
-            <input name="q" type="text" class="form-control" placeholder="Search Here...">
+            <input name="q" type="text" class="form-control" placeholder= <%=t('residences.search')%>>
             <button type="submit" class="btn">
               <i class='bx bx-search'></i>
             </button>
@@ -134,17 +133,17 @@
         </div>
           
           <div class="categories widget-item">
-            <h3>Categories</h3>
+            <h3><%= t('posts.show.Categories')%></h3>
             <ul>
-              <li><%= link_to 'The Best Residences', residences_path %></li>
-              <li><%= link_to 'Immigration Visa', programs_path %></li>
-              <li><%= link_to 'Country Of Your Dream', countries_path %></li>
-              <li><%= link_to 'Our Blog', blog_path %></li>
-              <li><%= link_to 'What We Do For You', abouts_path %></li>
+              <li><%= link_to t('posts.index.Best'), residences_path %></li>
+              <li><%= link_to t('posts.index.immigration'), programs_path %></li>
+              <li><%= link_to t('posts.index.Country'), countries_path %></li>
+              <li><%= link_to t('posts.index.Blog'), blog_path %></li>
+              <li><%= link_to t('posts.index.What'), abouts_path %></li>
             </ul>
           </div>
           <div class="popular widget-item">
-            <h3>Last Viewed Properties</h3>
+            <h3><%= t('residences.show.views')%></h3>
             <% @views.each do |view| %>
               <div class="inner">
                 <ul class="align-items-center">
@@ -172,17 +171,17 @@
         </div>
       </div>
     </div>
-      <div class="btn-group-fluid align-items-center">
-        <div class="btn about-button pt-4">
-          <%= link_to 'Posts', posts_path %>
-        </div>
-        <div class="btn about-button pt-4">
-          <%= link_to 'Countries', countries_path %>
-        </div>
-        <div class="btn about-button pt-4">
-          <%= link_to 'Programs', programs_path %>
-        </div>
+    <div class="btn-group-fluid align-items-center">
+      <div class="btn about-button pt-4">
+        <%= link_to t('posts.show.Posts'), posts_path %>
       </div>
+      <div class="btn about-button pt-4">
+        <%= link_to t('posts.show.Countries'), countries_path %>
+      </div>
+      <div class="btn about-button pt-4">
+        <%= link_to t('posts.show.Programs'), programs_path %>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -194,8 +193,8 @@
     boxZoom: false,
     tap: false,
     touchZoom: false,
-    zoom: 13
-});
+    zoom: 15
+  });
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,

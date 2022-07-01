@@ -1,6 +1,6 @@
 Trestle.resource(:contacts) do
   menu do
-    item :contacts, icon: "fa fa-phone"
+    item :contacts, icon: 'fa fa-phone'
   end
 
   # Customize the table columns shown on the index view.
@@ -13,15 +13,15 @@ Trestle.resource(:contacts) do
 
   # Customize the form fields shown on the new/edit views.
   #
- form do |_contact|
-   text_field :location
-   text_field :phone
-   text_field :email
+  form do |_contact|
+    text_field :location
+    text_field :phone
+    text_field :email
 
-  #   row do
-  #     col { datetime_field :updated_at }
-  #     col { datetime_field :created_at }
-  #   end
+    #   row do
+    #     col { datetime_field :updated_at }
+    #     col { datetime_field :created_at }
+    #   end
   end
 
   # By default, all parameters passed to the update and create actions will be

@@ -72,6 +72,14 @@
   }
 }
 
+#map {
+  height: 400px;
+}
+
+#color_black {
+  color: black;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

@@ -56,6 +56,5 @@ Rails.application.routes.draw do
     resources :abouts do
       resources :testimonials
     end
-
   end
 end

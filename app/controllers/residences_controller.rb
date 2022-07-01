@@ -9,13 +9,13 @@ class ResidencesController < ApplicationController
 
   def show
     @residence = Residence.find(params[:id])
-    @like = Like.find_by(user: current_user, residence_id: params[:id]) if Like.where(user: current_user, residence_id: params[:id]).exists?
-    unless View.where(user: current_user, residence_id: params[:id]).exists?
-      @view = View.new(user: current_user, residence_id: params[:id])
+    @like = current_user.likes.find_by(residence_id: params[:id]) if current_user.likes.where(residence_id: params[:id]).exists?
+    unless current_user.views.where(residence_id: params[:id]).exists?
+      @view = current_user.views.new(residence_id: params[:id])
       @view.save
     end
     @pros = @residence.pros.split('-/-')
-    @views = View.where(user: current_user).last(3)
+    @views = current_user.views.last(3)
   end
 
   def search

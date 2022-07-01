@@ -7,8 +7,19 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[github facebook google_oauth2]
 
   has_many :authorizations
+  has_many :views
+  has_many :likes
+  has_many :orders
   validates :email, presence: true
-  validates :password, presence: true
+  validates_format_of :email, with: /(^[+A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$)/i
+
+  PASSWORD_ERROR_MESSAGE = 'must be between 6 and 18 characters,
+    must contain letters in mixed case, must contain numbers'.freeze
+
+  validates :password, presence: true, format: {
+    with: /\A(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,18}\z/,
+    message: PASSWORD_ERROR_MESSAGE
+  }
 
   def self.create_from_omniauth(params)
     send(params.provider, params)

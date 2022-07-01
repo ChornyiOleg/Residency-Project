@@ -1,0 +1,20 @@
+var map = L.map('map', {
+    center: [<%= @latitude %>, <%= @longitude %>],
+    keyboard: false,
+    zoomControl: false,
+    boxZoom: false,
+    tap: false,
+    touchZoom: false,
+    zoom: 13
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+
+var circle = L.circle([<%= @latitude %>, <%= @longitude %>], {
+    color: 'blue',
+
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);

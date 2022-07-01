@@ -6,7 +6,7 @@
           <div class="col-12 col-md-9 col-lg-7 col-xl-6 mt-110">
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5 bg-secondary" >
-                <h2 class="text-uppercase text-center mb-5 text-white">Change Your Password</h2>
+                <h2 class="text-uppercase text-center mb-5 text-white"><%= t('devise.Change')%></h2>
 
               <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
                 <%= render "devise/shared/error_messages", resource: resource %>
@@ -15,18 +15,18 @@
                 <div class="form-outline mb-4">
                   <%= f.label :password, "New password" %><br />
                   <% if @minimum_password_length %>
-                    <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                    <em>(<%= @minimum_password_length %> <%= t('devise.characters')%>)</em><br />
                   <% end %>
                   <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <%= f.label :password_confirmation, "Confirm new password" %><br />
-                  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                  <%= f.label :password_confirmation, t('devise.Confirm') %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: t('devise.new-password') %>
                 </div>
 
                 <div class="form-actions">
-                  <%= f.submit "Change my password", class: "btn btn-primary" %>
+                  <%= f.submit t('devise.password'), class: "btn btn-primary" %>
                 </div>
               <% end %>
               <br>
