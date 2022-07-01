@@ -7,9 +7,9 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[github facebook google_oauth2]
 
   has_many :authorizations
-  has_many :views
-  has_many :likes
-  has_many :orders
+  has_many :views, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :orders, dependent: :destroy
   validates :email, presence: true
   validates_format_of :email, with: /(^[+A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$)/i
 
