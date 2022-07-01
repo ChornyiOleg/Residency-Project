@@ -4,5 +4,7 @@ class ContactsController < ApplicationController
     @pagy, @contacts = pagy(Contact.order(created_at: :desc), items: 5)
   end
 
-  def show; end
+  def show
+    @contact = Contact.find(params[:id])
+  end
 end

@@ -4,5 +4,7 @@ class PostsController < ApplicationController
     @pagy, @posts = pagy(Post.order(created_at: :desc), items: 5)
   end
 
-  def show; end
+  def show
+    @post = Post.find(params[:id])
+  end
 end
