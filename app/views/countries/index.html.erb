@@ -86,12 +86,8 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="pagiation">
-      <div class="page-number pt-30">
-        <ul>
-          <li><a class="active" href="blog-grid.html">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-        </ul>
+      <div class="pagination-area mt-5">
+        <%= render 'posts/pagination', locals: { pagy: @pagy } %>
       </div>
     </div>
   </div>
@@ -99,15 +95,16 @@
 </div>
 <div class="col-lg-4">
   <div class="sidebar-box">
-            <div class="widget-area">
-          <div class="search widget-item">
+    <div class="widget-area">
+      <div class="search widget-item">
           <form action="/search">
             <input name="q" type="text" class="form-control" placeholder=<%=t('residences.search')%>>
             <button type="submit" class="btn">
               <i class='bx bx-search'></i>
             </button>
           </form>
-        </div>
+      </div>
+    </div>
   </div>
   <div class="sidebar-box">
     <div class="sidebar-title">

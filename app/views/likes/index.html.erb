@@ -70,16 +70,9 @@
       </div>
     </div>
     <div class="pagination-area">
-      <ul>
-        <li>
-          <a class="active" href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
+      <div class="pagination-area mt-5">
+        <%= render 'posts/pagination', locals: { pagy: @pagy } %>
+      </div>
       </ul>
     </div>
   </div>

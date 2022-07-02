@@ -57,126 +57,26 @@
         </div>
       </div>
       <% end %>
-      <div class="btn-group-fluid align-items-center">
-        <div class="btn about-button pt-4">
-          <%= link_to t('countries.index.Posts'), posts_path %>
-        </div>
-        <div class="btn about-button pt-4">
-          <%= link_to t('countries.index.countries'), countries_path %>
-        </div>
-        <div class="btn about-button pt-4">
-          <%= link_to t('countries.index.Programs'), programs_path %>
-        </div>
+
+    </div>
+
+    <div class="col-lg-12 btn-group-fluid align-items-center mb-5">
+      <div class="btn about-button pt-4">
+        <%= link_to t('countries.index.Posts'), posts_path %>
+      </div>
+      <div class="btn about-button pt-4">
+        <%= link_to t('countries.index.countries'), countries_path %>
+      </div>
+      <div class="btn about-button pt-4">
+        <%= link_to t('countries.index.Programs'), programs_path %>
+      </div>
+
+      <div class="pagination-area mt-5">
+          <%= render 'posts/pagination', locals: { pagy: @pagy } %>
       </div>
     </div>
-    <div class="pagination-area">
-      <ul>
-        <li>
-          <a class="active" href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-      </ul>
-    </div>
+
+
   </div>
 </section>
 
-
-<section class="offer-area pt-100 pb-70">
-  <div class="container">
-    <div class="section-title">
-      <span class="sub-title"><%= t('residences.index.Features')%></span>
-      <h2><%= t('residences.index.Offer')%></h2>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-world-grid"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Worldwide')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-real-estate-agent"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Agent')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-commission"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Lowest')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-life-insurance"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Property')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-fast-delivery"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Fastest')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="offer-item">
-          <ul class="align-items-center">
-            <li>
-              <i class="flaticon-sales"></i>
-            </li>
-            <li>
-              <h3>
-                <a><%= t('residences.index.Largest')%></a>
-              </h3>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
