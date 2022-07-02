@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'pagy/extras/bootstrap'
-
+require 'pagy/extras/i18n'
 # Pagy initializer file (5.9.2)
 # Customize only what you really need and notice that the core Pagy works also without any of the following lines.
 # Should you just cherry pick part of this file, please maintain the require-order of the extras
