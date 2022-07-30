@@ -1,0 +1,17 @@
+<%= form_with model: [@residence, @residence.compares.build] do |f| %>
+  <% if current_user %>
+    <% if @compare.present? %>
+      <div class="actions">
+        <div class="quote_btn">
+          <button class="btn" type="submit"><%= t('likes.form.Remove')%> ❤️2</button>
+        </div>
+      </div>
+    <% else %>
+      <div class="actions">
+        <div class="quote_btn">
+          <button class="btn" type="submit"><%= t('likes.form.add')%> 🖤2</button>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

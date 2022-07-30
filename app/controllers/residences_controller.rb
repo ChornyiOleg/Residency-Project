@@ -19,8 +19,26 @@ class ResidencesController < ApplicationController
   end
 
   def search
-    @residences = Residence.where('name ILIKE?', '%' + params[:q] + '%').order('name')
-    @pagy, @records = pagy(@residences, items: 10)
+    @id_residences = []
+    @id_residences = Array.new
+    Residence.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
+      @id_residences.push t.residence_id
+    end
+    @residences = Residence.where(id: @id_residences).order('name')
+
+    @id_programs = []
+    @id_programs = Array.new
+    Program.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
+      @id_programs.push t.program_id
+    end
+    @programs = Program.where(id: @id_programs).order('name')
+
+    @id_countries = []
+    @id_countries = Array.new
+    Country.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
+      @id_countries.push t.country_id
+    end
+    @countries = Country.where(id: @id_countries).order('name')
   end
 
   private

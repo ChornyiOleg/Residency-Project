@@ -7,6 +7,7 @@ class Residence < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :views, dependent: :destroy
+  has_many :compares, dependent: :destroy
 
   has_many_attached :images
 

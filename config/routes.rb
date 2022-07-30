@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :residences do
       resources :orders
       resources :likes
+      resources :compares
     end
 
     resources :countries do
@@ -56,5 +57,6 @@ Rails.application.routes.draw do
     resources :abouts do
       resources :testimonials
     end
+    resources :compares
   end
 end

@@ -20,6 +20,88 @@
     </div>
   </div>
 </div>
+<% if @programs.empty? %>
+  <div class="text-center">
+    <h2><%= t('programs.index.programs_empty')%></h2>
+  </div>
+  <hr>
+<% else %>
+
+  <div class="property-details-area ptb-100">
+    <div class="container">
+      <div class="row pt-20">
+        <div class="col-lg-8">
+          <div class="row">
+            <% @programs.each do |program| %>
+              <div class="col-lg-6 col-md-6">
+
+                <div class="dreamit-single-blog-box">
+                  <div class="dreamit-blog-thumb">
+                    <%= link_to image_tag(program.image, width: '200', class: "mx-auto d-block") %>
+                    <div class="post-catgory">
+                      <%= link_to program.name %>
+                      <%= link_to program.kind %>
+                    </div>
+                  </div>
+                  <div class="dreamit-blog-content">
+                    <div class="dreamit-blog-title">
+                      <h2>
+                        <%= link_to program.name, program %>
+                      </h2>
+                    </div>
+                    <div class="dreamit-blog-text">
+                      <p><%= truncate(strip_tags(program.content.to_s), length: 120) %></p>
+                    </div>
+                    <div class="country-button">
+                      <%= link_to t('programs.index.more'), program, class: 'btn'  %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+<% end %>
+
+<% if @countries.empty? %>
+  <div class="text-center">
+    <h2><%= t('countries.index.countries_empty')%></h2>
+  </div>
+  <hr>
+<% else %>
+
+  <div class="blog-area style-four pt-65 pb-60">
+    <div class="container">
+      <div class="row pt-20">
+        <div class="col-lg-8">
+          <div class="row">
+            <% @countries.each do |country| %>
+              <div class="col-lg-6 col-md-6">
+                <div class="dreamit-single-blog-box">
+                  <div class="dreamit-blog-thumb">
+                     <%= link_to image_tag(country.image, width: '200', class: "mx-auto d-block"), country  %>
+                    <div class="post-catgory">
+                      <%= link_to country.name, country %>
+                    </div>
+                  </div>
+                  <div class="country-flag-img">
+                      <%= image_tag(country.flag, alt: "about")%>
+                    </div>
+                  <div class="dreamit-blog-content">
+                    <div class="dreamit-blog-title">
+                      <h2>
+                        <%= link_to country.name, country %>
+                      </h2>
+                    </div>
+                    <div class="dreamit-blog-text">
+                      <p><%= truncate(strip_tags(country.content.to_s), length: 120) %></p>
+                    </div>
+                    <div class="country-button">
+                      <%= link_to t('countries.index.read_more'), country, class: 'btn'  %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+<% end %>
 
 <section class="properties-area two ptb-100">
   <div class="container">
@@ -57,6 +139,81 @@
         </div>
       </div>
       <% end %>
+    </div>
+    <div class="row">
+      <% if @countries.empty? %>
+        <div class="text-center">
+          <h2><%= t('countries.index.countries_empty')%></h2>
+        </div>
+        <hr>
+      <% else %>
+        <% @countries.each do |country| %>
+              <div class="col-lg-6 col-md-6">
+                <div class="dreamit-single-blog-box">
+                  <div class="dreamit-blog-thumb">
+                     <%= link_to image_tag(country.image, width: '200', class: "mx-auto d-block"), country  %>
+                    <div class="post-catgory">
+                      <%= link_to country.name, country %>
+                    </div>
+                  </div>
+                  <div class="country-flag-img">
+                      <%= image_tag(country.flag, alt: "about")%>
+                    </div>
+                  <div class="dreamit-blog-content">
+                    <div class="dreamit-blog-title">
+                      <h2>
+                        <%= link_to country.name, country %>
+                      </h2>
+                    </div>
+                    <div class="dreamit-blog-text">
+                      <p><%= truncate(strip_tags(country.content.to_s), length: 120) %></p>
+                    </div>
+                    <div class="country-button">
+                      <%= link_to t('countries.index.read_more'), country, class: 'btn'  %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+      <% end %>
+    </div>
+    <div class="row">
+      <% if @programs.empty? %>
+        <div class="text-center">
+          <h2><%= t('programs.index.programs_empty')%></h2>
+        </div>
+        <hr>
+      <% else %>
+        <% @programs.each do |program| %>
+              <div class="col-lg-6 col-md-6">
+
+                <div class="dreamit-single-blog-box">
+                  <div class="dreamit-blog-thumb">
+                    <%= link_to image_tag(program.image, width: '200', class: "mx-auto d-block") %>
+                    <div class="post-catgory">
+                      <%= link_to program.name %>
+                      <%= link_to program.kind %>
+                    </div>
+                  </div>
+                  <div class="dreamit-blog-content">
+                    <div class="dreamit-blog-title">
+                      <h2>
+                        <%= link_to program.name, program %>
+                      </h2>
+                    </div>
+                    <div class="dreamit-blog-text">
+                      <p><%= truncate(strip_tags(program.content.to_s), length: 120) %></p>
+                    </div>
+                    <div class="country-button">
+                      <%= link_to t('programs.index.more'), program, class: 'btn'  %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+      <% end %>
+    </div>
+    <div class="row">
       <div class="btn-group-fluid align-items-center">
         <div class="btn about-button pt-4">
           <%= link_to t('countries.index.Posts'), posts_path %>
