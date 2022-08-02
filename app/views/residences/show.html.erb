@@ -59,11 +59,13 @@
               <button class="position-static rounded-circle btn btn-secondary mx-3 px-3" data-bs-slide="next" data-bs-target="#carouselExampleIndicators">&#8250</button>
             </div>
           </div>
-          <div class="col-lg-12 mt-4">
-            <%= render 'likes/form' %>
-          </div>
-          <div class="col-lg-12 mt-4">
-            <%= render 'compares/form' %>
+          <div class="btn-group-fluid align-items-center">
+            <div class="btn about-button pt-4">
+              <%= render 'likes/form' %>
+            </div>
+            <div class="btn about-button pt-4">
+              <%= render 'compares/form' %>
+            </div>
           </div>
           <div class="property-details-slider owl-theme owl-carousel">
             <% @residence.images.each do |image| %>

@@ -1,15 +1,15 @@
 <%= form_with model: [@residence, @residence.compares.build] do |f| %>
   <% if current_user %>
-    <% if @compare.present? %>
+    <% if  @residence.compares.where(user: current_user).exists? %>
       <div class="actions">
         <div class="quote_btn">
-          <button class="btn" type="submit"><%= t('likes.form.Remove')%> ❤️2</button>
+          <button class="btn" type="submit">Move from compare</button>
         </div>
       </div>
     <% else %>
       <div class="actions">
         <div class="quote_btn">
-          <button class="btn" type="submit"><%= t('likes.form.add')%> 🖤2</button>
+          <button class="btn" type="submit">Add compare</button>
         </div>
       </div>
     <% end %>

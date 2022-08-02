@@ -8,11 +8,12 @@ class ComparesController < ApplicationController
     if in_progress?
       @compare = current_user.compares.find_by(residence_id: params[:residence_id])
       @compare.destroy
+      redirect_to @compare.residence
     else
       @compare = current_user.compares.new(residence_id: params[:residence_id])
       @compare.save
+      redirect_to @compare.residence
     end
-    redirect_to @compare.residence
   end
 
   def destroy;
@@ -21,6 +22,6 @@ class ComparesController < ApplicationController
   private
 
   def in_progress?
-    current_user.compares.where(residence_id: params[:residence_id]).exists?
+    Compare.where(user: current_user, residence_id: params[:residence_id]).exists?
   end
 end

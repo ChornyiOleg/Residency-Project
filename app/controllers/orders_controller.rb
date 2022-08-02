@@ -10,11 +10,23 @@ class OrdersController < ApplicationController
     if params[:residence_id]
       @order = current_user.orders.new(user: current_user, residence_id: params[:residence_id])
       @order.update(order_params)
-      redirect_to @order.residence
+      respond_to do |format|
+        format.turbo_stream do
+          render turbo_stream: [
+            turbo_stream.update('turbo', partial: 'orders/form', locals: { residence: @residence })
+          ]
+        end
+      end
     else
       @order = current_user.orders.new(user: current_user)
       @order.update(order_params)
-      redirect_to root_path
+      respond_to do |format|
+        format.turbo_stream do
+          render turbo_stream: [
+            turbo_stream.update('turbo2', partial: 'orders/form_for_home')
+          ]
+        end
+      end
     end
   end
 

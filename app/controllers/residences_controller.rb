@@ -19,26 +19,30 @@ class ResidencesController < ApplicationController
   end
 
   def search
-    @id_residences = []
-    @id_residences = Array.new
-    Residence.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
-      @id_residences.push t.residence_id
-    end
-    @residences = Residence.where(id: @id_residences).order('name')
+    residences_search(params[:q])
+    programs_search(params[:q])
+    countries_search(params[:q])
+  end
 
-    @id_programs = []
-    @id_programs = Array.new
-    Program.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
-      @id_programs.push t.program_id
+  def full_search
+    if params[:category].empty?
+      residences_search(params[:q])
+      programs_search(params[:q])
+      countries_search(params[:q])
+    elsif params[:category] == 'country'
+      countries_search(params[:q])
+    elsif params[:category] == 'program'
+      programs_search(params[:q])
+    else
+      residences_search(params[:q])
+      @residences = Residence.where('cost >= ? && cost <= ?', params[:min], params[:max])
+      @residences = Residence.where(rooms: params[:rooms])
+      @residences = Residence.where(bedroom: params[:bedroom])
+      @residences = Residence.where(bathroom: params[:bathroom])
+      @residences = Residence.where('squarefeet >= ? && squarefeet <= ?', params[:min_sq], params[:max_sq])
+      @residences = Residence.where(country_id: params[:country])
+      @residences = Residence.where(program_id: params[:program])
     end
-    @programs = Program.where(id: @id_programs).order('name')
-
-    @id_countries = []
-    @id_countries = Array.new
-    Country.translation_class.where('name ILIKE?', '%' + params[:q] + '%').all.each do |t|
-      @id_countries.push t.country_id
-    end
-    @countries = Country.where(id: @id_countries).order('name')
   end
 
   private
@@ -47,5 +51,32 @@ class ResidencesController < ApplicationController
     @residence = Residence.find(params[:id])
     @latitude = @residence.latitude + rand(-0.003..0.003)
     @longitude = @residence.longitude + rand(-0.003..0.003)
+  end
+
+  def residences_search(search)
+    @id_residences = []
+    @id_residences = Array.new
+    Residence.translation_class.where('name ILIKE?', '%' + search + '%').all.each do |t|
+      @id_residences.push t.residence_id
+    end
+    @residences = Residence.where(id: @id_residences).order('name')
+  end
+
+  def programs_search(search)
+    @id_programs = []
+    @id_programs = Array.new
+    Program.translation_class.where('name ILIKE?', '%' + search + '%').all.each do |t|
+      @id_programs.push t.program_id
+    end
+    @programs = Program.where(id: @id_programs).order('name')
+  end
+
+  def countries_search(search)
+    @id_countries = []
+    @id_countries = Array.new
+    Country.translation_class.where('name ILIKE?', '%' + search + '%').all.each do |t|
+      @id_countries.push t.country_id
+    end
+    @countries = Country.where(id: @id_countries).order('name')
   end
 end
